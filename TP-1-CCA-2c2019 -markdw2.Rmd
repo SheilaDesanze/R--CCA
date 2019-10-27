@@ -1,0 +1,115 @@
+---
+title: "TP-1-CCA-2c2019 -mkd2"
+author: "Sheila"
+date: "26/10/2019"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+
+library(readr)
+library(stringr)
+library(plyr)
+library(dplyr)
+library(funModeling)
+library(knitr)
+library(kableExtra)
+library(skimr)
+knitr::opts_chunk$set(echo = TRUE)
+library(formattable)
+library(DT)
+```
+
+# _Trabajo Práctico Nº 1_
+
+El objetivo de este primer trabajo práctico es simular una situación de la vida real en la que se solicita analizar
+un conjunto de datos.
+El dataset contiene información acerca de todos los encuentros disputados en la UFC desde 1993 hasta 2019,
+donde cada encuentro es una fila distinta. Cuenta con un total de 5144 registros y 145 variables. Algunas de
+esas variables son inherentes a cada participante (datos del participante de la esquina roja o azul), mientras
+que otros son datos referentes a la pelea en sí (fecha, referee, ganador del encuentro, duración del mismo,
+etc.)
+
+
+
+## Punto 1:
+### Importar el dataset, guardarlo en un objeto bidimensional.
+```{r}
+setwd("D:/Documentos/FACULTAD/Comput Cientif Act/TP1")
+getwd()
+
+UFC <- read_csv("UFC_fight_data.csv")
+class(UFC)
+
+as.datatable(formattable(UFC))
+
+```
+
+
+
+### Punto 2:
+##### Dividir el dataset original en dos datasets distintos, uno con toda la información referente al participante de la esquina roja y la información en común del encuentro y otro con la información referente al participante de la esquina azul y la información en común del encuentro.
+
+```{r echo=TRUE, paged.print=TRUE }
+#Usamos el paquete dplr:
+UFCR_<-select(UFC,starts_with("R_")) #creamos un dataframe solo con la información referente al participante de la esquina roja.
+UFCnoR_noB_<-select(UFC,-starts_with("R_"),-starts_with("B_")) #creamos un dataframe solo con la información en común del encuentro.
+UFCR_comun<-cbind(UFCR_,UFCnoR_noB_) #creamos un dataframe con toda la información referente al participante de la esquina roja y la información en común del encuentro. 
+
+as.datatable(formattable(UFCR_comun[1:5,]))
+
+```
+
+```{r echo=TRUE, paged.print=TRUE}
+UFCB_<-select(UFC,starts_with("B_")) #creamos un dataframe solo con la información referente al participante de la esquina azul.
+UFCB_comun<-cbind(UFCB_,UFCnoR_noB_) #creamos un dataframe con toda la información referente al participante de la esquina azul y la información en común del encuentro.
+
+as.datatable(formattable(UFCB_comun[1:5,]))
+
+```
+
+
+### Punto 3:
+##### Punto 3A: Reemplazar el prefijo que indica el color de la esquina en los nombres de las columnas (R_ o B_) por un ” (un campo vacío). Por ejemplo, el nombre de la columna “R_fighter” tiene que pasar a llamarse “fighter”. Ambos datasets tendrian que tener nombres de columnas identicos al finalizar.
+
+```{r echo=TRUE, paged.print=TRUE}
+#Estamos seleccionando las columnas cuyos nombres comienzan con "R_" dentro de la función vars y luego, estamos usando la función str_replace del paquete stringr R para reemplazar "R_" con " " dentro de la función funs.
+UFCR_comunFINAL <- UFCR_comun %>% rename_at(vars(starts_with("R_")), 
+                                         funs(str_replace(., "R_", " ")))
+
+as.datatable(formattable(UFCR_comunFINAL[1:5,]))
+```
+
+
+```{r echo=TRUE, paged.print=TRUE}
+#Estamos seleccionando las columnas cuyos nombres comienzan con "B_" dentro de la función vars y luego, estamos usando la función str_replace del paquete stringr R para reemplazar "B_" con " " dentro de la función funs.
+UFCB_comunFINAL <- UFCB_comun %>% rename_at(vars(starts_with("B_")), 
+                                        funs(str_replace(., "B_", " ")))
+
+as.datatable(formattable(UFCB_comunFINAL[1:5,]))
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

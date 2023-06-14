@@ -1,0 +1,15 @@
+import numpy as np
+
+# Obtener el índice de la fila correspondiente al "31/12/2022"
+indice_inicio_deflactor = df_completo[df_completo['Date'] == '2022-12-31'].index[0]
+
+# Calcular los valores de la columna "deflactor" a partir de la fila "31/12/2022"
+for i in range(indice_inicio_deflactor, len(df_completo)):
+    if i == indice_inicio_deflactor:
+        continue
+    else:
+        prev_period_index = i - 1
+        df_completo.at[i, 'deflactor'] = df_completo.at[prev_period_index, 'deflactor'] * (df_completo.at[indice_inicio_deflactor, 'calculo'] / df_completo.at[prev_period_index, 'calculo'])
+
+# Imprimir el dataframe actualizado
+print(df_completo)

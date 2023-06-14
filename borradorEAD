@@ -13,3 +13,15 @@ for i in range(indice_inicio_deflactor, len(df_completo)):
 
 # Imprimir el dataframe actualizado
 print(df_completo)
+
+
+
+
+for i in range(indice_inicio_deflactor, len(df_completo)):
+    prev_period_index = i - 1
+    df_completo.at[i, 'deflactor'] = df_completo.at[prev_period_index, 'deflactor'] * (df_completo.at[indice_inicio_deflactor, 'calculo'] / df_completo.at[prev_period_index, 'calculo'])
+
+valor_deflactor_90 = df_completo.at[90, 'deflactor']
+print(valor_deflactor_90)
+
+

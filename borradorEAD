@@ -47,3 +47,19 @@ while i < len(df1_ok_vf):
 
 
 df1_ok_vf['calculo'] = df1_ok_vf['calculo'].astype('float64')
+
+
+
+
+
+
+    case
+      when date = '31MAR2009'd then 11.265666
+      when date = '30JUN2009'd then 12.4534
+      when date = '30SEP2009'd then 12.2427
+      when date = '31MAR2010'd then 10.9310
+      when date = '30JUN2010'd then 9.2759
+      else .
+    end as ARG_RES_DOL_M format=10.2
+    
+

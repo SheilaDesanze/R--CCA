@@ -33,3 +33,13 @@ for i in range(indice_inicio_deflactor, len(df1_ok_vf)):
 
 valor_deflactor_90 = df1_ok_vf.at[90, 'deflactor']
 print(valor_deflactor_90)
+
+
+
+indice_inicio_deflactor = 91
+
+i = indice_inicio_deflactor
+while i < len(df1_ok_vf):
+    prev_period_index = i - 1
+    df1_ok_vf.at[i, 'deflactor'] = df1_ok_vf.at[prev_period_index, 'deflactor'] * (df1_ok_vf.at[indice_inicio_deflactor, 'calculo'] / df1_ok_vf.at[prev_period_index, 'calculo'])
+    i += 1

@@ -43,3 +43,7 @@ while i < len(df1_ok_vf):
     prev_period_index = i - 1
     df1_ok_vf.at[i, 'deflactor'] = df1_ok_vf.at[prev_period_index, 'deflactor'] * (df1_ok_vf.at[indice_inicio_deflactor, 'calculo'] / df1_ok_vf.at[prev_period_index, 'calculo'])
     i += 1
+
+
+
+df1_ok_vf['calculo'] = df1_ok_vf['calculo'].astype('float64')

@@ -1,39 +1,3 @@
-import numpy as np
-
-# Obtener el índice de la fila correspondiente al "31/12/2022"
-indice_inicio_deflactor = df_completo[df_completo['Date'] == '2022-12-31'].index[0]
-
-# Calcular los valores de la columna "deflactor" a partir de la fila "31/12/2022"
-for i in range(indice_inicio_deflactor, len(df_completo)):
-    if i == indice_inicio_deflactor:
-        continue
-    else:
-        prev_period_index = i - 1
-        df_completo.at[i, 'deflactor'] = df_completo.at[prev_period_index, 'deflactor'] * (df_completo.at[indice_inicio_deflactor, 'calculo'] / df_completo.at[prev_period_index, 'calculo'])
-
-# Imprimir el dataframe actualizado
-print(df_completo)
-
-
-
-
-for i in range(indice_inicio_deflactor, len(df_completo)):
-    prev_period_index = i - 1
-    df_completo.at[i, 'deflactor'] = df_completo.at[prev_period_index, 'deflactor'] * (df_completo.at[indice_inicio_deflactor, 'calculo'] / df_completo.at[prev_period_index, 'calculo'])
-
-valor_deflactor_90 = df_completo.at[90, 'deflactor']
-print(valor_deflactor_90)
-
-
-
-
-for i in range(indice_inicio_deflactor, len(df1_ok_vf)):
-    prev_period_index = i - 1
-    df1_ok_vf.at[i, 'deflactor'] = df1_ok_vf.at[prev_period_index, 'deflactor'] * (df1_ok_vf.at[indice_inicio_deflactor, 'calculo'] / df1_ok_vf.at[prev_period_index, 'calculo'])
-
-valor_deflactor_90 = df1_ok_vf.at[90, 'deflactor']
-print(valor_deflactor_90)
-
 
 
 indice_inicio_deflactor = 91
@@ -62,4 +26,43 @@ df1_ok_vf['calculo'] = df1_ok_vf['calculo'].astype('float64')
       else .
     end as ARG_RES_DOL_M format=10.2
     
+
+
+ necesitamos que te tomes un
+ un único mes y otro random ("al tún tún")
+  record f contra 24 (idea adria, pero no)
+tomar  24 contra la tabla de IFRS (según Dario)
+
+IFRS está en dólares
+Hay que transformarlo a pesos y verificar que  sea lo mismo
+ y si hubiera alguna diferencia
+hay que poder justificarlo 
+(según Diego debiera haber alguna poca diferencia por el lado de cards)
+
+  para no controlar todo MIF, ver sólo:
+sistemas 015, 000 y 043
+(según Diego en sistema 043 y en sistema 000 no deberia haber diferencias porque viene de PDR)
+  pero hay que chequear igual
+  y ver sólo los clientes que cruzan con IFRS porque los demás son retail (del 24)
+
+  así que arrancar con el motor de wholesale 
+ particularmente esos productos e ir avisando más o menos que es lo que da
+
+
+pdr es sólo subsistema de 1 (porque el 4 son acuerdos y garantias)
+
+después tomamos entonces el más reciente al momento de desarrollo 
+tomamos el último cierre anual, que es lo que importa para previsiones
+  si verificamos que está bien el último que yo tomo para desarrollo 
+y voy al   último anual y también cierra bien, listo 
+no hace falta reconciliar tooda la data de PDR
+
+
+
+
+la idea es mostrar que ahora pdr es el driver que me genera el número para usar el motor
+ecl ,así incluso hubieran diferido en el pasado,  lo que me
+  importa es que los saldos de pdr ahora son el driver del motor. entonces
+ modelo con los drivers del motor. ..que el último cierre anual
+  esté bien y que el más reciente esté bien...que no se haya roto
 

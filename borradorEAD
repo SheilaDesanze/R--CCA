@@ -57,3 +57,17 @@ where
     b.LIMITE_DE_COMPRA ne 999999999 and b.LIMITE_DE_COMPRA > 0
 ;
 quit;
+
+
+
+
+
+
+
+
+/* Paso 3: Exporta el conjunto de datos a un archivo Excel */
+proc export data=sample_data
+   outfile=cats('c:/users/yo/Documents/Soverein_', &mes, '.xlsx') 
+   dbms=xlsx replace; 
+   sheet='Sheet1'; 
+run;

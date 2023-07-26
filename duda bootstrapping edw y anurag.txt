@@ -1,0 +1,197 @@
+EDW	  I've been in calls non-stop from the morning, so I haven't been able to answer any of them.
+	  I read what you said, but I haven't opened the attachments, the screenshots.
+	  And anyway, I did not receive this, so can you start explaining from scratch if you don't mind?
+SD	  Yes, I'm sharing screen now. Can you see?
+	  Yeah.
+	  Okay. It's a little question. It's about the bootstrapping.
+	  I have done bootstrapping for the variables of the champion model, and I have the results,
+	  but I have not clear what do I have to calculate to have the same results as UA to have this percentage.
+	  I don't know if it's clear my question.
+	  I have the confidence interval here for every variable of the champion model.
+EDW	  Sorry, remind me Anurag, do you...
+	  I don't know, what do we do? I forgot anyway.
+ANURAG	  So in UAE, it's in these three steps.
+	  Actually, if you just open the screens, meaning the document, we have to do these three things.
+	  So we take a thousand resamples and we keep the model each time.
+	  And you look at the size and sign and significance of each of these models.
+	  So fit the champion model for each of these thousand resamples and look at the sign and significance of the coefficients.
+EDW	  Okay. So have you done this, Sheila?
+	  Have you done this resampling and building all these models?
+	  But should they do this because they have a whole load sample, ANURAG?
+	  Aren't we doing this because we don't have a whole load sample?
+ANURAG	  So that is true.
+	  So basically, I think the logic was that if there is not sufficient data to build a whole load sample, we should do this.
+EDW	  Okay. So anyway, we can see the results here.
+	  But in general, Sheila, if you have a whole load sample, you should build the model of the whole load sample
+	  and compare the coefficients of the sign and the significance to the champion model.
+	  So the results from the champion model.
+	  Okay, so you rebuild the same model of the whole load only and make sure that the signs are the same and that the p-values are significant.
+	  So I recommend you try this first of all as well.
+	  Okay.
+SD	  Okay. Okay. I will try this.
+	  So you see what I mean? So the framework suggests that if you have a whole load, you build the model of the whole load
+	  and you check all the signs and all the coefficients, all the significance.
+	  If you don't have a whole load, then you do the bootstrapping.
+	  The bootstrapping is plan B, if you could say, if you don't have the...
+ANURAG	  So if we have the framework document as well, then we can just go through this section.
+	  She can have a look here. You can have a look at the framework document and it explains for when you have a whole load.
+	  You just need to build the model really.
+SD	  Okay, here I have the framework.
+	  One second, go a bit more up. A little bit more up.
+	  Up, up, no, no.
+	  Yeah, yeah, yeah. So do not include...
+EDW	  So model-separate tests for models which do not include the whole load.
+	  So you need model-separate tests which do include the whole load.
+	  So if you go more up...
+	  Yeah, this one, this one. So we reach 4.3.1, but it's very simple.
+	  It's what I told you. Just build the model of the whole load and check...
+	  You see what I mean? You just build the model of the whole load.
+	  Just run one regression. It's very simple.
+	  You take the whole load sample, you build the model with the same drivers as in the champion
+	  and check that they have the same sign and the significance is below 5%.
+	  And that's it.
+	  You don't need to do anything else.
+SD	  Okay, but is the same sign as the estimating?
+	  As the champion, right?
+ANURAG	  I think there will be one more on the same.
+	  Yeah, the same sign as the champion.
+EDW	  So if utilization has a negative sign in your champion model, in your final model,
+	  you build the same model with the same drivers on the holdout only
+	  and you check that it also has a negative sign.
+	  Because if the driver was robust, you should get the same sign on the holdout.
+	  Otherwise, the sign is not robust.
+SD	  Okay, I understand.
+EDW	  Okay, if you have any further questions, you can ask .
+	  But that's what you should do on this.
+	  The fact that you've done the bootstrap, let's discuss it.
+	  Anyway, it doesn't go to waste.
+	  So you have all the bootstraps.
+	  Yes.
+	  What do you mean by origin and samples, column B?
+	  What are these numbers?
+SD	  These are the numbers of this variable adjusted at isotonic from the model.
+ANURAG	  You mean the beta functions?
+	  For what driver?
+	  For example, this is for the DEBT PRE-default.
+	  This is for share price index.
+EDW	  I think you just have small samples when you're bootstrapping it.
+	  Can you go on utilization? Let's see.
+	
+	
+	  No, I don't.
+	  I'm sorry.
+	  What is 443?
+	  What are these?
+	  What is 443?
+SD	  This is the development sample.
+	  The quantity.
+	  They are...
+	  Yes.
+EDW	  No, but where do you have the development sample?
+	  You need to build them.
+	  You need to do a bootstrapping and get the coefficients every time.
+	  Did you run our code for this?
+	  No, no, no.
+	  For bootstrapping, no.
+	  Okay.
+	  This one, I mean...
+	  I don't think this is correct.
+	  Because what you need to do is run 1,000 models.
+	  So you run...
+	  You take a sample and you build it.
+	  You take a sample and you build it.
+	  You run...
+	  You take a sample of the development sample and you build a model.
+	  And you take note of the coefficients.
+	  You take another sample, you build another model.
+	  And you take note of the coefficients.
+	  You build another sample and you take note of the coefficients.
+	  So we have all this code to do this.
+	  It's in Anurag's code for bootstrapping.
+	  I don't think...
+	  There are 1,000...
+	  ...samples.
+ANURAG	  You are saying this only includes the genetic?
+	  It's not the full model, right?
+	  These are all the development samples.
+EDW	  No, but you shouldn't do this.
+	  You should take a boot...
+	  Like this.
+	  I see what you mean.
+	  This is just the sample, Anurag.
+	  Okay.
+	  So this is the bootstrapped sample.
+	  Now you need to run a regression on row 1.
+	  Run a regression on column C.
+	  C, sorry.
+	  Run a regression on column C.
+	  Not this, right?
+	  On all of them, on the 440 or whatever.
+	443
+	  So you rerun a regression.
+	  And you utilize it.
+	  You don't need to do this by driver.
+	  So you do bootstrapping once.
+	  So you get 1,000 samples.
+	  For each sample, rerun the model.
+	  Using the same drivers.
+	  Using all drivers, the same ones.
+	  And you compare the signs of each bootstrapped sample
+	  to the champion one.
+	  So you don't need a tab
+	  by driver.
+	  You have 1,000 samples, that's it.
+	  For each sample, you rerun the model.
+	  You rerun the regression
+	  for this sample.
+	  Okay.
+SD	  So there is left the regression.
+EDW	  Where are the results of the regression?
+	  For column C?
+SD	  No, no.
+	  It's not here.
+ED{	  Okay.
+	  Okay, so what you need to do
+	  is if you want to do bootstrapping,
+	  but I recommend doing the simpler approach
+	  because you have a whole lot.
+	  But if you want to do the bootstrapping,
+	  you need to run a regression on column C
+	  and take a note of all the coefficients.
+	  Run it on column D,
+	  take a note of all the coefficients.
+	  E, F, or all of them.
+	  And you always take note of the coefficients.
+ANURAG	  So I think it will depend on how
+	  well the pull-up sample validation
+	  looks like on this.
+ED	  Yes, start with the holdout
+	  and just run one regression on the holdout.
+	  So basically, Sheila, when you have the holdout,
+	  you have one holdout sample, right?
+	  You can just run the coefficients on that.
+	  When you don't have that,
+	  we are creating 1,000 artificial samples
+	  and then running
+	  1,000 regressions.
+	  It's like 1,000 holdout samples.
+	  It's like 1,000 holdouts, yeah, exactly.
+	  But this is a huge overkill for you
+	  because you have a holdout,
+	  so you have to run the regression on the holdout.
+SD	  Okay, I will try this.
+	  Okay.
+EDW	  Yeah, just get the holdout,
+	  run the model with those drivers,
+	  take the coefficients and the p-values
+	  and compare them to the live model.
+	  Reread a bit this 4.3.1,
+	  which I think is very clear.
+	  Okay, yes.
+	  Thank you.
+	  Okay.
+	  Alright, thank you.
+	  If there is anything, just ping us, okay?
+	  Thank you very much.
+	  Thank you, bye-bye.
+	  Thank you.

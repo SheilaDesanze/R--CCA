@@ -10,64 +10,15 @@ while i < len(df1_ok_vf):
 
 
 
-df1_ok_vf['calculo'] = df1_ok_vf['calculo'].astype('float64')
+-------------------------------
+adj utulization:
 
-
-
-
-
-
-    case
-      when date = '31MAR2009'd then 11.265666
-      when date = '30JUN2009'd then 12.4534
-      when date = '30SEP2009'd then 12.2427
-      when date = '31MAR2010'd then 10.9310
-      when date = '30JUN2010'd then 9.2759
-      else .
-    end as ARG_RES_DOL_M format=10.2
-    
-
-proc sql;
-create table ifrs_cc_&mes. as
-select
-    a.*,
-    "cuenta corriente" as producto,
-    b.IMPORTE_ACUERDO
-from
-    ifrs a
-    left join Acu.ACUERDOS_&mes. b on DNI_y_CUIT = TIPO_DE_DOCUMENTO||NUMERO_DE_DOCUMENTO
-where
-    b.IMPORTE_ACUERDO > 0
-;
-quit;
-
-
-
-
-
-proc sql;
-create table ifrs_cc_v2_&mes. as
-select
-    a.*,
-    b.LIMITE_DE_COMPRA
-from
-    ifrs a
-    left join adi.ADINTFP_&mes. b on DNI_y_CUIT = TIPO_DOCUMENTO_PDR||NUMERO_DOCUMENTO
-where
-    b.LIMITE_DE_COMPRA ne 999999999 and b.LIMITE_DE_COMPRA > 0
-;
-quit;
-
-
-
-
-
-
-
-
-/* Paso 3: Exporta el conjunto de datos a un archivo Excel */
-proc export data=sample_data
-   outfile=cats('c:/users/yo/Documents/Soverein_', &mes, '.xlsx') 
-   dbms=xlsx replace; 
-   sheet='Sheet1'; 
-run;
+=SI(Y(O(R8="Overdrafts", R8="Cards"), O(O(ESNUMERO(S8), S8=1), S8=2), T8="CAPAR", O(O(U8="CMB", U8="GB&M"), UTI<=9.6446969696965E-07)),
+    0.6820,
+    SI(Y(O(R8="Overdrafts", R8="Cards"), O(O(ESNUMERO(S8), S8=1), S8=2), T8="CAPAR", O(O(U8="CMB", U8="GB&M"), UTI<=0.4056)),
+        0.2739,
+        SI(Y(O(R8="Overdrafts", R8="Cards"), O(O(ESNUMERO(S8), S8=1), S8=2), T8="CAPAR", O(O(U8="CMB", U8="GB&M"), UTI<=1.0505)),
+            0.0097,
+            SI(Y(O(R8="Overdrafts", R8="Cards"), O(O(ESNUMERO(S8), S8=1), S8=2), T8="CAPAR", O(O(U8="CMB", U8="GB&M"), UTI>1.0505)),
+                -1.1092,
+                -1.1092)))

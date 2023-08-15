@@ -45,3 +45,10 @@ adj utulization:
             SI(Y(O(R8="Overdrafts", R8="Cards"), O(S8=1, S8=2)), T8="CAPAR", O(U8="CMB", U8="GB&M"), UTI>1.0505),
                 -1.1092,
                 -1.1092)))
+
+
+=Y(O(R8="Overdrafts", R8="Cards"), O(S8=1, S8=2), T8="CAPAR", O(U8="CMB", U8="GB&M"))
+=SI(V8, SI(W8<=9.6446969696965E-07, 0.6820, SI(W8<=0.4056, 0.2739, SI(W8<=1.0505, 0.0097, -1.1092))), -1.1092)
+
+
+

@@ -28,7 +28,7 @@ adj utulization:
 =SI(Y(O(R8="Overdrafts", R8="Cards"), O(S8=1, S8=2)), T8="CAPAR", O(U8="CMB", U8="GB&M"), REDONDEAR(AA8, 15)<=0.000000964469696965),
     0.6820,
     SI(Y(O(R8="Overdrafts", R8="Cards"), O(S8=1, S8=2)), T8="CAPAR", O(U8="CMB", U8="GB&M"), REDONDEAR(AA8, 15)<=0.4056),
-        0.2739,
+        0.2739,>
         SI(Y(O(R8="Overdrafts", R8="Cards"), O(S8=1, S8=2)), T8="CAPAR", O(U8="CMB", U8="GB&M"), REDONDEAR(AA8, 15)<=1.0505),
             0.0097,
             SI(Y(O(R8="Overdrafts", R8="Cards"), O(S8=1, S8=2)), T8="CAPAR", O(U8="CMB", U8="GB&M"), AA8>1.0505),

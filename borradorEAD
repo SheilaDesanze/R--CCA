@@ -224,13 +224,16 @@ Sub EliminarDuplicadosDosColumnas()
         For j = LastRow To 2 Step -1 ' Compara cada fila con todas las demás
             If Cells(i, 1).Value = Cells(j, 1).Value And Cells(i, 2).Value = Cells(j, 2).Value And i <> j Then
                 Rows(i).Delete ' Si encuentra duplicado, elimina la fila
+                Rows(j - 1).Delete ' Elimina también la otra fila duplicada
+                LastRow = LastRow - 1 ' Reduce el conteo de filas
                 Exit For
             End If
         Next j
     Next i
-End Su
+End Sub
 
 
-%identificarMissings(tu_dataset_original, dataset_con_faltantes);
+
+
 
 

@@ -213,27 +213,30 @@ run;
 
 
 -----------------
-Sub EliminarDuplicadosDosColumnas()
+Sub EliminarTodosDuplicados()
     Dim LastRow As Long
-    Dim Rng As Range
-    Dim i As Long, j As Long
-    
-    LastRow = Cells(Rows.Count, "A").End(xlUp).Row ' Encuentra la última fila en Columna A
+    Dim i As Long
+    Dim dict As Object
+    Set dict = CreateObject("Scripting.Dictionary")
 
-    For i = LastRow To 2 Step -1 ' Comenzando desde la última fila y retrocediendo
-        For j = LastRow To 2 Step -1 ' Compara cada fila con todas las demás
-            If Cells(i, 1).Value = Cells(j, 1).Value And Cells(i, 2).Value = Cells(j, 2).Value And i <> j Then
-                Rows(i).Delete ' Si encuentra duplicado, elimina la fila
-                Rows(j - 1).Delete ' Elimina también la otra fila duplicada
-                LastRow = LastRow - 1 ' Reduce el conteo de filas
-                Exit For
-            End If
-        Next j
+    LastRow = Cells(Rows.Count, "A").End(xlUp).Row
+
+    ' Almacena todos los valores en un diccionario
+    For i = 1 To LastRow
+        If Not dict.Exists(Cells(i, 1).Value) Then
+            dict.Add Cells(i, 1).Value, 1
+        Else
+            ' Si el valor ya existe, marca para eliminar la fila
+            Cells(i, 1).Value = ""
+        End If
     Next i
+
+    ' Elimina las filas marcadas
+    Columns("A").SpecialCells(xlCellTypeBlanks).EntireRow.Delete
+
+    ' Limpiar el diccionario de memoria
+    Set dict = Nothing
 End Sub
-
-
-
 
 
 

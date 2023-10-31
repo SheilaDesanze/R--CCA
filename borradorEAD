@@ -207,6 +207,30 @@ run;
 %tablaMevs(GBL);
 
 
+
+
+
+
+
+-----------------
+Sub EliminarDuplicadosDosColumnas()
+    Dim LastRow As Long
+    Dim Rng As Range
+    Dim i As Long, j As Long
+    
+    LastRow = Cells(Rows.Count, "A").End(xlUp).Row ' Encuentra la última fila en Columna A
+
+    For i = LastRow To 2 Step -1 ' Comenzando desde la última fila y retrocediendo
+        For j = LastRow To 2 Step -1 ' Compara cada fila con todas las demás
+            If Cells(i, 1).Value = Cells(j, 1).Value And Cells(i, 2).Value = Cells(j, 2).Value And i <> j Then
+                Rows(i).Delete ' Si encuentra duplicado, elimina la fila
+                Exit For
+            End If
+        Next j
+    Next i
+End Su
+
+
 %identificarMissings(tu_dataset_original, dataset_con_faltantes);
 
 

@@ -213,15 +213,39 @@ run;
 
 
 -----------------
-Sub EliminarTodosDuplicados()
-    Dim LastRow As Long
-    Dim i As Long
+Sub EliminarDuplicados()
 
-    LastRow = Cells(Rows.Count, "A").End(xlUp).Row
+' Declarar variables
+Dim rngOriginal As Range
+Dim rngDuplicados As Range
+Dim i As Long
 
-    For i = LastRow To 1 Step -1
-        If WorksheetFunction.CountIf(Range("A1:A" & i), Cells(i, 1).Value) > 1 Then
-            Cells(i, 1).EntireRow.Delete
-        End If
-    Next i
+' Obtener el rango de la columna A
+Set rngOriginal = Range("A:A")
+
+' Iterar sobre el rango para encontrar duplicados
+For i = 1 To rngOriginal.Rows.Count
+
+' Obtener el valor actual de la celda
+Dim vValorActual As String
+vValorActual = rngOriginal(i, 1).Value
+
+' Comprobar si el valor actual ya existe
+If rngOriginal.Find(vValorActual, After:=rngOriginal(i, 1), LookIn:=xlValues, LookAt:=xlWhole).Address <> "" Then
+
+' Si el valor actual ya existe, agregarlo al rango de duplicados
+Set rngDuplicados = rngDuplicados.Union(rngOriginal(i, 1))
+
+' Eliminar el valor actual
+rngOriginal(i, 1).Value = ""
+
+End If
+Next i
+
+' Eliminar las celdas vacías
+rngOriginal.SpecialCells(xlCellTypeBlanks).Delete
+
+' Eliminar el rango de duplicados
+rngDuplicados.Delete
+
 End Sub

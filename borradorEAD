@@ -216,27 +216,12 @@ run;
 Sub EliminarTodosDuplicados()
     Dim LastRow As Long
     Dim i As Long
-    Dim dict As Object
-    Set dict = CreateObject("Scripting.Dictionary")
 
     LastRow = Cells(Rows.Count, "A").End(xlUp).Row
 
-    ' Almacena todos los valores en un diccionario
-    For i = 1 To LastRow
-        If Not dict.Exists(Cells(i, 1).Value) Then
-            dict.Add Cells(i, 1).Value, 1
-        Else
-            ' Si el valor ya existe, marca para eliminar la fila
-            Cells(i, 1).Value = ""
+    For i = LastRow To 1 Step -1
+        If WorksheetFunction.CountIf(Range("A1:A" & i), Cells(i, 1).Value) > 1 Then
+            Cells(i, 1).EntireRow.Delete
         End If
     Next i
-
-    ' Elimina las filas marcadas
-    Columns("A").SpecialCells(xlCellTypeBlanks).EntireRow.Delete
-
-    ' Limpiar el diccionario de memoria
-    Set dict = Nothing
 End Sub
-
-
-

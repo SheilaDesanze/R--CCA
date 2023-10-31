@@ -49,4 +49,42 @@ END
     %iterar;
 %mend identificarMissings;
 
+----------------------
+-------------------
+----------------------
+
+%macro identificarMissings(tabla, nuevoDataSet);
+    proc contents data=&tabla. out=a noprint;
+    run;
+    
+    proc sql noprint;
+    select max(varnum) into: i
+    from a;
+    quit;
+
+    %macro iterar;
+        data &nuevoDataSet.;
+        set &tabla.;
+        %do j=1 %to &i.;
+            proc sql noprint;
+            select name into: var from a
+            where varnum=&j.;
+            select type into: type from a
+            where varnum=&j.;
+            select MAX(&var.) into: value from &tabla.;
+            quit;
+
+            %if &type. eq 1 %then %do;
+                %if %sysfunc(abs(&value.)) eq . %then %do;
+                    output; /* Solo guarda la observación si hay un valor faltante */
+                %end;
+            %end;
+        %end;
+        %mend iterar;
+    run;
+    %iterar;
+%mend identificarMissings;
+
+%identificarMissings(tu_dataset_original, dataset_con_faltantes);
+
 

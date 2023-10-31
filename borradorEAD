@@ -212,7 +212,7 @@ run;
 
 
 
------------------ok
+-----------------ok2
 Sub EliminarDuplicados()
 
 ' Declarar variables
@@ -222,12 +222,6 @@ Dim i As Long
 
 ' Obtener el rango de la columna A
 Set rngOriginal = Range("A:A")
-
-' Declarar la variable rngDuplicados como un objeto Range
-Dim rngDuplicados As Range
-
-' Inicializar la variable rngDuplicados
-rngDuplicados = Range("A:A")
 
 ' Iterar sobre el rango para encontrar duplicados
 For i = 1 To rngOriginal.Rows.Count
@@ -239,16 +233,13 @@ vValorActual = rngOriginal(i, 1).Value
 ' Comprobar si el valor actual ya existe
 If rngOriginal.Find(vValorActual, After:=rngOriginal(i, 1), LookIn:=xlValues, LookAt:=xlWhole).Address <> "" Then
 
-' Si el valor actual ya existe, agregarlo al rango de duplicados
-Set rngDuplicados = rngDuplicados.Union(rngOriginal(i, 1))
+' Si el valor actual ya existe, reemplazarlo por ""
+rngOriginal(i, 1).Value = ""
 
 End If
 Next i
 
 ' Eliminar las celdas vacías
 rngOriginal.SpecialCells(xlCellTypeBlanks).Delete
-
-' Eliminar el rango de duplicados
-rngDuplicados.Delete
 
 End Sub

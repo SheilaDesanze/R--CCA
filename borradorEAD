@@ -85,6 +85,128 @@ END
     %iterar;
 %mend identificarMissings;
 
+
+---------------------------------------
+---NUEVOO -------------------------------
+
+
+
+
+
+
+options compress=yes;						
+options symbolgen;						
+options nonotes;						
+*Libname CARM meta library = RMAD_D_CARM_LATAM;/*LATAMDCC*/
+*Libname DPDRARG meta library = RMAD_D_PDRMIF_ARG;
+*Libname PAPL_LA meta library= GRA_APL_LATAM;
+libname RMADFEGD meta library=rmad_D_Feg;
+*libname CLLATAM meta library=rmad_d_cl_latam;
+libname FXRATESH meta library=RMAD_D_EXCHANGE_RATES_SH;
+LIBNAME aux SPDE "/sas/data/rmad/analytics/data_output/model_development_arg/development/ARG/EAD" 
+     DATAPATH=("/sas/data/rmad/analytics/data_output/model_development_arg/development/ARG/EAD") 
+     INDEXPATH=("/sas/data/rmad/analytics/data_output/model_development_arg/development/ARG/EAD") 
+           hdfshost=default PARTSIZE= 1048576 IOBLOCKSIZE=1048576;
+libname _AR_EAD spde "/sas/data/rmad/data/argentina/detail/model/ar_ifrs9_ead"
+        datapath=("/sas/data/rmad/data/argentina/detail/model/ar_ifrs9_ead/data")
+        indexpath=("/sas/data/rmad/data/argentina/detail/model/ar_ifrs9_ead/index")
+        hdfshost=default partsize=1048576 ioblocksize=1048576;
+Libname CARM spde "/sas/data/rmad/data/argentina/detail/carm"
+     datapath=("/sas/data/rmad/data/argentina/detail/carm/data") 
+     indexpath=("/sas/data/rmad/data/argentina/detail/carm/index") 
+     hdfshost=default PARTSIZE= 1048576;
+Libname DPDRARG spde "/sas/data/rmad/data/argentina/detail/pdr_mif"
+     datapath=("/sas/data/rmad/data/argentina/detail/pdr_mif/data") 
+     indexpath=("/sas/data/rmad/data/argentina/detail/pdr_mif/index") 
+     hdfshost=default PARTSIZE= 1048576;
+Libname CLLATAM spde "/sas/data/rmad/data/argentina/detail/creditlens"
+     datapath=("/sas/data/rmad/data/argentina/detail/creditlens/data") 
+     indexpath=("/sas/data/rmad/data/argentina/detail/creditlens/index") 
+     hdfshost=default PARTSIZE= 1048576;
+
+/********************** MEVS *****************************/
+%macro eliminaMissings(tabla);
+    proc contents data=&tabla. out=a noprint;
+    run;
+    proc sql noprint;
+    select max(varnum) into: i
+    from a;
+    quit;
+    %macro iterar;
+    %do j=1 %to &i.;
+        proc sql noprint;
+        select name into: var  from a
+        where varnum=&j.;
+        select type into: type  from a
+        where varnum=&j.;
+        ;quit;
+        proc sql noprint;
+        select nmiss(&var.) into: miss_count from &tabla.;
+        quit;
+        %if &miss_count. > 0 %then %do;
+            %put Variable &var. tiene valores faltantes.;
+            data variables_con_missings;
+                length variable $32.;
+                variable = "&var.";
+                output;
+            run;
+        %end;
+    %end;
+    %mend iterar; 
+    %iterar;
+%mend eliminaMissings;
+
+%macro guardaMissings(tabla);
+    proc contents data=&tabla. out=a noprint;
+    run;
+    proc sql noprint;
+    select name into: varlist separated by ' ' 
+    from a
+    where nmiss(name) > 0;
+    quit;
+    
+    %if &sqlobs > 0 %then %do;
+        data variables_con_missings;
+            length variable $32.;
+            do i = 1 to countw("&varlist");
+                variable = scan("&varlist", i);
+                output;
+            end;
+        run;
+    %end;
+%mend guardaMissings;
+
+%macro tablaMevs(pais);
+data mevs_&pais.(drop=isocodes);
+set RMADFEGD.RMAD_D_FEG_IFRS9_HIST_Q22023;
+drop FILE_LAST_UPDATED
+ACTL_IND
+country
+;
+where isocodes="&pais." and date >= '01jan2009'd;
+run;
+%guardaMissings(mevs_&pais.);
+proc sql noprint;
+select trim(name) || '=' || "&pais._" || name 
+into :renamelist separated by ' '  
+from dictionary.columns
+where libname='WORK' and memname = "MEVS_&pais." and name<>'date';
+quit;
+ 
+%PUT &renamelist.;
+data mevs_&pais.;
+set mevs_&pais.;
+rename
+&renamelist
+;
+run;
+%mend tablaMevs;
+%tablaMevs(ARG);
+%tablaMevs(BRA);
+%tablaMevs(USA);
+%tablaMevs(GBL);
+
+
 %identificarMissings(tu_dataset_original, dataset_con_faltantes);
 
 

@@ -223,8 +223,11 @@ Dim i As Long
 ' Obtener el rango de la columna A
 Set rngOriginal = Range("A:A")
 
+' Declarar la variable rngDuplicados como un objeto Range
+Dim rngDuplicados As Range
+
 ' Inicializar la variable rngDuplicados
-Set rngDuplicados = Nothing
+rngDuplicados = Range("A:A")
 
 ' Iterar sobre el rango para encontrar duplicados
 For i = 1 To rngOriginal.Rows.Count

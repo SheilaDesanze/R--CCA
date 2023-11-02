@@ -1,5 +1,10 @@
-
-
+CAPPEO ENTRE 0 Y 1 :
+=IF(A1 < 0, 0, IF(A1 > 1, 1, A1))
+Esta fórmula verificará si el valor en la celda A1 es menor que 0.
+Si es así, establecerá el valor en la celda correspondiente en 0. 
+Si es mayor que 1, se establecerá en 1. 
+De lo contrario, si el valor está entre 0 y 1, se mantendrá el mismo valor.
+---------------------------------------------------------------------------
 
 CASE 
     WHEN INSTR = 0 THEN 0

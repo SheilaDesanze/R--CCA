@@ -1,2 +1,15 @@
 CAPPEO ENTRE 0 Y 1 :
 =IF(A1 < 0, 0, IF(A1 > 1, 1, A1))
+
+
+
+
+El índice de precios de acciones MERVAL, como medida clave del rendimiento del mercado bursátil argentino, emerge como una macrovariable representativa para evaluar el Exposure at Default (EAD) en el contexto de la macroeconomía de Argentina. Este índice comprende una canasta diversificada de acciones de empresas líderes en diversos sectores, lo que le confiere una capacidad única para reflejar las condiciones económicas generales del país.
+
+Desde un enfoque técnico, el MERVAL captura la variabilidad en los precios de las acciones, que, a su vez, está intrínsecamente vinculada a factores macroeconómicos. Por ejemplo, cambios en las tasas de interés, políticas gubernamentales, niveles de inversión extranjera y fluctuaciones en el tipo de cambio impactan directamente en el rendimiento de las empresas que componen el índice. Este vínculo proporciona una perspectiva integral sobre el riesgo crediticio, ya que las condiciones macroeconómicas afectan la capacidad de las empresas para cumplir con sus obligaciones financieras.
+
+Consecuentemente, las fluctuaciones en el MERVAL pueden tener consecuencias significativas en el EAD. En períodos de incertidumbre económica, el índice puede experimentar descensos, reflejando una disminución en la confianza de los inversionistas y un aumento en el riesgo de incumplimiento. Esto, a su vez, podría tener un impacto en la evaluación del riesgo crediticio de las instituciones financieras y en la formulación de políticas económicas.
+
+Un ejemplo concreto es la crisis económica en Argentina en 2001. Durante ese período, el MERVAL sufrió caídas drásticas como resultado de la devaluación de la moneda, la moratoria de la deuda y la recesión económica. Estos eventos tuvieron un impacto directo en la percepción del riesgo crediticio, afectando la capacidad de las empresas para cumplir con sus compromisos financieros y generando implicaciones a nivel macroeconómico.
+
+En resumen, el índice MERVAL se erige como una herramienta crucial para evaluar el EAD en la macroeconomía argentina, al proporcionar una representación holística de las condiciones económicas y su impacto en el riesgo crediticio a través de su diversificación sectorial y su sensibilidad a factores macroeconómicos clave.

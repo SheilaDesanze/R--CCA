@@ -50,42 +50,40 @@ https://es.investing.com/indices/merv-components
 ---------
 Hola,
 
-Es genial tener la oportunidad de compartir contigo los detalles del modelo de Estimación del Riesgo de Pérdida en Caso de Incumplimiento (EAD) que hemos desarrollado en nuestro banco. Quiero asegurarte que hemos dedicado tiempo y esfuerzo para construir un modelo sólido y confiable que cumple con los estándares más altos.
-
-Nuestro proceso de creación de este modelo ha sido minucioso. Desde el inicio, nos enfocamos en utilizar datos confiables y completos, sabiendo que la calidad de la información es clave para obtener resultados precisos. Para llevar a cabo este proyecto, empleamos herramientas como SAS, lo que nos permitió crear un código compacto y eficiente que luego desglosamos en un archivo Excel.
-
-Este Excel es crucial, ya que muestra cada paso del proceso de manera clara y detallada. Cada cálculo, suposición y variable se encuentra documentado para que puedas revisar y comprender completamente cómo hemos llegado a cada resultado. Además, hemos llevado a cabo pruebas exhaustivas para garantizar que cada fórmula y línea de código estén libres de errores y produzcan resultados coherentes.
-
-En términos de la robustez del modelo, hemos realizado múltiples pruebas en diferentes escenarios para asegurarnos de que el modelo se comporte de manera consistente y predecible en diversas situaciones. Esto nos ha permitido validar su estabilidad y confiabilidad.
-
-En cuanto a la integridad de los datos y la reconciliación, hemos sido extremadamente cuidadosos. Todos los datos utilizados han sido verificados y sometidos a rigurosas pruebas. Además, hemos comparado los resultados con datos históricos y otros modelos para asegurarnos de que todo esté en orden y concuerde.
-
-En resumen, quiero transmitirte mi total confianza en la calidad y confiabilidad de nuestro modelo de EAD. Estamos completamente preparados para responder cualquier pregunta que puedas tener y proporcionar más detalles sobre nuestro proceso de modelado. Nuestro compromiso con la precisión y la transparencia es sólido, así que no dudes en profundizar en cualquier aspecto que desees.
-
-Agradecemos sinceramente tu tiempo y consideración al revisar nuestro trabajo. Estamos aquí para colaborar contigo en todo lo que necesites.
-
-Saludos cordiales,
+Te cuento comité: que Implementamos un modelo de EAD.
+  Ahora, para el primer Quarter de 2024 lo implementamos para libros locales.  En el 1Q24 sale  con el motor   de GRUPO.
+  Lo que hace  el modelo de EAD  es dejar   de previsionar   en función de los saldos (para los productos "overdrafts" y "cards")   y comienza  a previsionar   en función de   la utilización   esperada del límite.
+  
+Entonces es esperable   que los que tienen   mínima utilización hoy  por hoy los  previsione más  en función de  la utilización  promedio,
+  y los que tienen mucho tomado les reduzca previsiones ,  estabilizando  el nivel de previsiones  en función de  un valor  esperado del límite.
+ 
+ Y...  comentás  un poquito  de lo que depende (parametros) 
+ 
+  
+y chau.
+No es más que eso.
 
 
 
 
+  ¿Y contamos ahí
+  los pasos de implementación  o...  o es solamente  contar el modelo?
+  Mirá,  es una página.  No tenés mucho más.
 
-Nuestro modelo de Estimación del Riesgo de Pérdida en Caso de Incumplimiento (EAD) ha sido desarrollado con datos confiables y completos desde el principio.
+  Te cuento:  salí vivo así  en diciembre , en el libro de locales , el 1Q con GRUPO
+  ya tengo casi todo listo,
+  "uat OK"
+  "el impacto es tanto"
+  "se trata de esto"
 
-Utilizamos SAS para crear un código compacto que luego desglosamos en un archivo Excel, detallando cada paso del proceso de manera clara y comprensible.
+  ahí después fíjate más  preguntale  si lo podés tener  relativamente temprano
+  che, ¿qué más necesitarías Diego Igenes?
 
-Realizamos pruebas exhaustivas para garantizar la precisión y consistencia de cada cálculo y línea de código en el modelo.
 
-Validamos la robustez del modelo mediante pruebas en diferentes escenarios, asegurándonos de su comportamiento consistente y predecible.
-
-La integridad de los datos ha sido prioridad, verificando y comparando los resultados con datos históricos y otros modelos para garantizar su precisión.
-
-Nos comprometemos a la transparencia y estamos listos para responder cualquier pregunta o proporcionar más detalles sobre nuestro proceso de modelado.
-
-Gracias por tu tiempo y consideración. Estamos aquí para colaborar y asegurarnos de que nuestro modelo cumpla con los estándares más altos.
-
-Saludos cordiales,
-
+  ¿De esto tenemos algún modelo?
+  es el One Pager
+  donde pones  la fotito  del que va a presentar   Adrián
+  la fotito del sponsor  que creo que también  va a ser  Valeria
 
 
 

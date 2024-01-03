@@ -45,7 +45,23 @@ https://es.investing.com/indices/merv-components
 
 
 
+# Suponiendo que df1uu es tu DataFrame
 
+# Filtrar por scenario_name igual a "reported"
+df_filtered = df1uu[df1uu['scenario_name'] == 'reported']
+
+# Filtrar por ifrs9_stage igual a "1" o "2"
+df_filtered = df_filtered[df_filtered['ifrs9_stage'].isin(['1', '2'])]
+
+# Filtrar por global_business_ref igual a "cmb" o "gb&m"
+df_filtered = df_filtered[df_filtered['global_business_ref'].isin(['cmb', 'gb&m'])]
+
+# Filtrar por pd_model_name_ref que contenga las palabras "primary", "secondary" o "tertiary"
+keywords = ['primary', 'secondary', 'tertiary']
+df_filtered = df_filtered[df_filtered['pd_model_name_ref'].str.contains('|'.join(keywords))]
+
+# Filtrar por GRP_SYSTEM_ID igual a "CAPAR"
+df_filtered = df_filtered[df_filtered['GRP_SYSTEM_ID'] == 'CAPAR']
 
 ---------
 Hola,

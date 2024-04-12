@@ -1,6 +1,16 @@
 CAPPEO ENTRE 0 Y 1 :
 =IF(A1 < 0, 0, IF(A1 > 1, 1, A1))
 
+https://store.cfainstitute.org/data-science-for-investment-professionals-certificate/
+https://www.argentina.gob.ar/cnv/idoneidad-en-el-mercado-de-capitales/requisitos
+https://store.cfainstitute.org/content/DS-Cert-Syllabus-formatted-v2.pdf
+
+
+
+
+
+
+
 
 from tqdm import tqdm
 import time

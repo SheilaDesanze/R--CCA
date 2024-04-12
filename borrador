@@ -2,3 +2,26 @@ CAPPEO ENTRE 0 Y 1 :
 =IF(A1 < 0, 0, IF(A1 > 1, 1, A1))
 
 
+from tqdm import tqdm
+import time
+
+# Iniciar la barra de progreso
+pbar = tqdm(total=100, desc="Progreso", unit="%")
+
+
+
+# tu código 
+time.sleep(3)
+pbar.update(25)  # actualizamos
+
+# tu código
+time.sleep(3)
+pbar.update(25)  #  actualizamos
+
+# tu código 
+time.sleep(3)
+pbar.update(50)  # actualizamos 
+
+
+# Finalizar la barra de progreso
+pbar.close()

@@ -5,23 +5,20 @@ CAPPEO ENTRE 0 Y 1 :
 from tqdm import tqdm
 import time
 
-# Iniciar la barra de progreso
+# iniciar la barra de progreso
 pbar = tqdm(total=100, desc="Progreso", unit="%")
 
 
 
-# tu código 
-time.sleep(3)
+# tu código, ejemplo para probar: time.sleep(3)
 pbar.update(25)  # actualizamos
 
-# tu código
-time.sleep(3)
+# tu código, ejemplo para probar: time.sleep(3)
 pbar.update(25)  #  actualizamos
 
-# tu código 
-time.sleep(3)
+# tu código, ejemplo para probar: time.sleep(3)
 pbar.update(50)  # actualizamos 
 
 
-# Finalizar la barra de progreso
+#finalizar la barra de progreso
 pbar.close()

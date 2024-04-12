@@ -10,13 +10,13 @@ pbar = tqdm(total=100, desc="Progreso", unit="%")
 
 
 
-# tu código, ejemplo para probar: time.sleep(3)
+#tu código, ejemplo para probar: time.sleep(3)
 pbar.update(25)  # actualizamos
 
-# tu código, ejemplo para probar: time.sleep(3)
+#sigue tu código, ejemplo para probar: time.sleep(3)
 pbar.update(25)  #  actualizamos
 
-# tu código, ejemplo para probar: time.sleep(3)
+#y sigue tu código, ejemplo para probar: time.sleep(3)
 pbar.update(50)  # actualizamos 
 
 

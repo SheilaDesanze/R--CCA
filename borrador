@@ -1,3 +1,20 @@
+import xlsxwriter
+
+# Creamos un objeto de escritura
+workbook = xlsxwriter.Workbook('example.xlsx')
+worksheet = workbook.add_worksheet()
+
+# Iteramos sobre las filas de la worksheet
+for row_num, row_data in enumerate(worksheet.iter_rows()):
+    # Verificamos si la fila está vacía
+    if all(cell.value is None for cell in row_data):
+        print(f"La primera fila vacía es la fila {row_num+1}")
+        break
+
+
+
+
+
 CAPPEO ENTRE 0 Y 1 :
 =IF(A1 < 0, 0, IF(A1 > 1, 1, A1))
 

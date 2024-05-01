@@ -1,38 +1,5 @@
-import openpyxl
-
-# Cargar el archivo existente o crear uno nuevo si no existe
-workbook = openpyxl.load_workbook('nombre_del_archivo.xlsx')
-worksheet = workbook.active
-
-# Encontrar la primera fila vacía en la columna A
-fila_vacia = 1
-while worksheet.cell(row=fila_vacia, column=1).value is not None:
-    fila_vacia += 1
-
-# Escribir "Hola" en la primera fila vacía
-worksheet.cell(row=fila_vacia, column=1, value="Hola")
-
-# Guardar el archivo
-workbook.save('nombre_del_archivo.xlsx')
 
 
-
-
-
-
-
-import xlsxwriter
-
-# Creamos un objeto de escritura
-workbook = xlsxwriter.Workbook('example.xlsx')
-worksheet = workbook.add_worksheet()
-
-# Iteramos sobre las filas de la worksheet
-for row_num, row_data in enumerate(worksheet.iter_rows()):
-    # Verificamos si la fila está vacía
-    if all(cell.value is None for cell in row_data):
-        print(f"La primera fila vacía es la fila {row_num+1}")
-        break
 
 
 

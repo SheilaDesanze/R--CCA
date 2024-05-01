@@ -1,3 +1,73 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 30 19:13:48 2024
+
+@author: she
+"""
+
+import pandas as pd
+from openpyxl import Workbook
+from openpyxl.utils.dataframe import dataframe_to_rows
+
+# Crear el DataFrame1
+data = {'edad': [9, 11],
+        'nombre': ['nieta', 'nieto']}
+df1 = pd.DataFrame(data)
+
+
+# Crear el DataFrame2
+data = {'edad': [70, 61],
+        'nombre': ['abuelo', 'abuela']}
+df2 = pd.DataFrame(data)
+
+
+
+
+
+# Crear un nuevo libro de Excel
+wb = Workbook()
+ws = wb.active
+
+
+
+# primera tabla:-------------------------------------------
+ws.append(["titulo1"])
+
+for tabla1 in dataframe_to_rows(df1, index=False, header=True):   # convertir el dataframe a filas de Excel y escribirlo en la hoja
+    ws.append(tabla1)
+
+
+
+# espacio, agregar filas en blanco al finalizar la primer tabla
+for filas in range(4):
+    ws.append([])
+
+
+
+# segunda tabla:-------------------------------------------
+ws.append(["titulo2"])
+
+for tabla2 in dataframe_to_rows(df2, index=False, header=True):   # convertir el dataframe a filas de Excel y escribirlo en la hoja
+    ws.append(tabla2)
+
+
+
+
+
+# Guardar el archivo Excel
+wb.save("datos pruebita.xlsx")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

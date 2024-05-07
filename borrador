@@ -1,5 +1,5 @@
 https://www.coursera.org/learn/modelizacion-cuantitativa-para-finanzas-corporativas?action=enroll#modules
-
+DIPLOMATURA EN INTELIGENCIA ARTIFICIAL APLICADA EN GESTIÓN Y ANALÍTICA DE DATOS
 CAPPEO ENTRE 0 Y 1 :
 =IF(A1 < 0, 0, IF(A1 > 1, 1, A1))
 

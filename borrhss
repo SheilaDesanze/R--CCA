@@ -190,3 +190,12 @@ result_df = merged_df[['TITULO_ESPECIE', 'COMITENTE', 'CANTIDAD', 'FECHA', 'H8CR
 
 # Mostrar el DataFrame resultante
 print(result_df)
+
+
+
+
+# Identificar los valores de COMITENTE en df_base_A que no están en matched_rows
+comitentes_no_en_matched_rows = df_base_A[~df_base_A['COMITENTE'].isin(matched_rows['COMITENTE'])]['COMITENTE']
+
+# Mostrar los comitentes que no están en matched_rows
+print(comitentes_no_en_matched_rows.unique())

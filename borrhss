@@ -170,3 +170,23 @@ result_df = result_df[df_base_A.columns.tolist() + ['H8CREF']]
 
 # Mostrar el DataFrame resultante
 print(result_df)
+
+
+
+
+
+
+
+#######$$$&&
+
+# Realizar el cruce de datos
+merged_df = pd.merge(df_base_A, df_base_B[['H8SCID', 'H8ASOS', 'H8SQTY', 'H8ATSD', 'H8CREF']], 
+                     left_on=['TITULO_ESPECIE', 'COMITENTE', 'CANTIDAD', 'FECHA'], 
+                     right_on=['H8SCID', 'H8ASOS', 'H8SQTY', 'H8ATSD'], 
+                     how='inner')
+
+# Crear el DataFrame resultante con las columnas de base_A y H8CREF de base_B
+result_df = merged_df[['TITULO_ESPECIE', 'COMITENTE', 'CANTIDAD', 'FECHA', 'H8CREF']]
+
+# Mostrar el DataFrame resultante
+print(result_df)

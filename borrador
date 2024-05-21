@@ -175,6 +175,27 @@ print(listado_de_ref)
 
 
 
+!!!!!!!!!!!!!!!!!!!!!
+# Buscar y extraer los bloques de texto para cada H8CREF_CONCAT
+for h8cref_concat in listado_de_ref['H8CREF_CONCAT']:
+    # Buscar la posición del H8CREF_CONCAT
+    h8cref_pos = content.find(h8cref_concat)
+    
+    if h8cref_pos != -1:
+        # Buscar el primer <PEPITO:"GRILLO"> anterior a la posición de H8CREF_CONCAT
+        pepito_start_pos = content.rfind('<PEPITO:"GRILLO">', 0, h8cref_pos)
+        
+        if pepito_start_pos != -1:
+            # Buscar el primer </Message> después del H8CREF_CONCAT
+            message_end_pos = content.find('</Message>', h8cref_pos)
+            
+            if message_end_pos != -1:
+                # Extraer el bloque de texto desde <PEPITO:"GRILLO"> hasta </Message>
+                extracted_text = content[pepito_start_pos:message_end_pos + len('</Message>')]
+                
+                # Guardar el texto extraído en un nuevo archivo
+                with open(f'{h8cref_concat}.txt', 'w', encoding='utf-8') as output_file:
+                    output_file.write(extracted_text)
 
 
 

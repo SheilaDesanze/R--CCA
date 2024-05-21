@@ -222,3 +222,26 @@ result_df = matched_rows[['TITULO_ESPECIE', 'COMITENTE', 'CANTIDAD', 'FECHA', 'H
 
 # Mostrar el DataFrame resultante
 print(result_df)
+
+
+
+
+
+
+
+
+
+
+
+
+# Ahora agregar la columna H8CREF de df_base_B a matched_rows
+matched_with_h8cref = pd.merge(matched_rows, df_base_B[['H8SCID', 'H8ASOS', 'H8SQTY', 'H8ATSD', 'H8CREF']],
+                               left_on=['TITULO_ESPECIE', 'COMITENTE', 'CANTIDAD', 'FECHA'],
+                               right_on=['H8SCID', 'H8ASOS', 'H8SQTY', 'H8ATSD'],
+                               how='left')
+
+# Seleccionar las columnas necesarias
+result_df = matched_with_h8cref[['TITULO_ESPECIE', 'COMITENTE', 'CANTIDAD', 'FECHA', 'H8CREF']]
+
+# Mostrar el DataFrame resultante
+print(result_df)

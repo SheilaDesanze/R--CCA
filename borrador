@@ -96,6 +96,61 @@ print(listado_de_ref)
 
 
 
+.............nueo
+import pandas as pd
+
+# Cargar el archivo de Excel
+file_path = 'ruta_al_archivo.xlsx'
+
+# Leer las hojas en DataFrames
+df_base_A = pd.read_excel(file_path, sheet_name='base_A')
+df_base_B = pd.read_excel(file_path, sheet_name='base_B')
+
+# Convertir las columnas relevantes a tipo numérico y fecha
+df_base_A['TITULO_ESPECIE'] = pd.to_numeric(df_base_A['TITULO_ESPECIE'], errors='coerce')
+df_base_A['COMITENTE'] = pd.to_numeric(df_base_A['COMITENTE'], errors='coerce')
+df_base_A['CANTIDAD'] = pd.to_numeric(df_base_A['CANTIDAD'], errors='coerce')
+# Convertir la columna FECHA de base_A de formato DD-MM-AAAA a datetime
+df_base_A['FECHA'] = pd.to_datetime(df_base_A['FECHA'], format='%d-%m-%Y', errors='coerce')
+
+df_base_B['H8SCID'] = pd.to_numeric(df_base_B['H8SCID'], errors='coerce')
+df_base_B['H8ASOS'] = pd.to_numeric(df_base_B['H8ASOS'], errors='coerce')
+df_base_B['H8SQTY'] = pd.to_numeric(df_base_B['H8SQTY'], errors='coerce')
+# Convertir la columna H8ATSD de base_B de formato AAAAMMDD a datetime
+df_base_B['H8ATSD'] = pd.to_datetime(df_base_B['H8ATSD'], format='%Y%m%d', errors='coerce')
+
+# Realizar el cruce de datos
+merged_df = pd.merge(df_base_A, df_base_B, 
+                     left_on=['TITULO_ESPECIE', 'COMITENTE', 'CANTIDAD', 'FECHA'], 
+                     right_on=['H8SCID', 'H8ASOS', 'H8SQTY', 'H8ATSD'],
+                     how='inner')
+
+# Crear el DataFrame info_completa_listado_de_ref con todas las filas encontradas
+info_completa_listado_de_ref = merged_df.copy()
+
+# Crear el DataFrame listado_de_ref con la columna H8CREF y la nueva columna con "542" concatenado
+listado_de_ref = merged_df[['H8CREF']].copy()
+listado_de_ref['H8CREF_CONCAT'] = '542' + listado_de_ref['H8CREF'].astype(str)
+
+# Guardar los resultados en nuevos archivos de Excel (opcional)
+info_completa_listado_de_ref.to_excel('info_completa_listado_de_ref.xlsx', index=False)
+listado_de_ref.to_excel('listado_de_ref.xlsx', index=False)
+
+# Mostrar los DataFrames resultantes
+print("info_completa_listado_de_ref")
+print(info_completa_listado_de_ref)
+
+print("\nlistado_de_ref")
+print(listado_de_ref)
+
+
+
+
+
+
+
+
+
 
 
 

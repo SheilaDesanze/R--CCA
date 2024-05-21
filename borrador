@@ -143,6 +143,7 @@ print(info_completa_listado_de_ref)
 print("\nlistado_de_ref")
 print(listado_de_ref)
 
+listado_de_ref['FECHA'] = listado_de_ref['FECHA'].dt.strftime('%Y%m')
 
 
 

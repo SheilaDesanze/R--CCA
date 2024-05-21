@@ -199,3 +199,6 @@ comitentes_no_en_matched_rows = df_base_A[~df_base_A['COMITENTE'].isin(matched_r
 
 # Mostrar los comitentes que no están en matched_rows
 print(comitentes_no_en_matched_rows.unique())
+
+# Identificar las filas de df_base_A cuyos COMITENTE no están en matched_rows
+comitentes_no_en_matched_rows = df_base_A[~df_base_A.index.isin(matched_rows.index)]

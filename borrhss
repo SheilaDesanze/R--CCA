@@ -1,0 +1,37 @@
+# Iterar sobre los valores de AAAAMM desde 201801 hasta 201809
+for year_month in range(201801, 201810):
+    # Generar el nombre del archivo de entrada
+    input_file_name = f'saa_query_final_{year_month}.txt'
+    
+    # Leer el contenido del archivo de texto
+    try:
+        with open(input_file_name, 'r', encoding='utf-8') as file:
+            content = file.read()
+    except FileNotFoundError:
+        print(f"Archivo {input_file_name} no encontrado. Se omite.")
+        continue
+    
+    # Filtrar filas en listado_de_ref por FECHA (AAAAMM)
+    filtered_df = listado_de_ref[listado_de_ref['FECHA'] == str(year_month)]
+    
+    # Buscar y extraer los bloques de texto para cada H8CREF_CONCAT en el archivo actual
+    for h8cref_concat in filtered_df['H8CREF_CONCAT']:
+        # Buscar la posición del H8CREF_CONCAT
+        h8cref_pos = content.find(h8cref_concat)
+        
+        if h8cref_pos != -1:
+            # Buscar el primer <PEPITO:"GRILLO"> anterior a la posición de H8CREF_CONCAT
+            pepito_start_pos = content.rfind('<PEPITO:"GRILLO">', 0, h8cref_pos)
+            
+            if pepito_start_pos != -1:
+                # Buscar el primer </Message> después del H8CREF_CONCAT
+                message_end_pos = content.find('</Message>', h8cref_pos)
+                
+                if message_end_pos != -1:
+                    # Extraer el bloque de texto desde <PEPITO:"GRILLO"> hasta </Message>
+                    extracted_text = content[pepito_start_pos:message_end_pos + len('</Message>')]
+                    
+                    # Guardar el texto extraído en un nuevo archivo en la carpeta de salida
+                    output_file_name = os.path.join(output_folder, f'{h8cref_concat}.txt')
+                    with open(output_file_name, 'w', encoding='utf-8') as output_file:
+                        output_file.write(extracted_text)

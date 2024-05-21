@@ -110,5 +110,15 @@ print(listado_de_ref)
 
 
 
+# Realizar el cruce de datos con indicator=True
+merged_df = pd.merge(df_base_A, df_base_B, 
+                     left_on=['TITULO_ESPECIE', 'COMITENTE', 'CANTIDAD', 'FECHA'], 
+                     right_on=['H8SCID', 'H8ASOS', 'H8SQTY', 'H8ATSD'],
+                     how='outer', indicator=True)
 
+# Filtrar los datos que no cruzan (diferentes en base_A y base_B)
+non_matching_df = merged_df[merged_df['_merge'] != 'both']
+
+# Opcional: Eliminar la columna '_merge' si no es necesaria
+non_matching_df.drop(columns=['_merge'], inplace=True)
 

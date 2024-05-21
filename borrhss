@@ -122,3 +122,51 @@ non_matching_df = merged_df[merged_df['_merge'] != 'both']
 # Opcional: Eliminar la columna '_merge' si no es necesaria
 non_matching_df.drop(columns=['_merge'], inplace=True)
 
+
+
+
+
+
+
+#######$$$&&
+
+import pandas as pd
+
+# Leer el archivo de Excel
+file_path = 'ruta_al_archivo.xlsx'
+
+# Leer las hojas en DataFrames
+df_base_A = pd.read_excel(file_path, sheet_name='base_A')
+df_base_B = pd.read_excel(file_path, sheet_name='base_B')
+
+# Convertir las columnas relevantes a tipo numérico y fecha
+df_base_A['TITULO_ESPECIE'] = pd.to_numeric(df_base_A['TITULO_ESPECIE'], errors='coerce')
+df_base_A['COMITENTE'] = pd.to_numeric(df_base_A['COMITENTE'], errors='coerce')
+df_base_A['CANTIDAD'] = pd.to_numeric(df_base_A['CANTIDAD'], errors='coerce')
+df_base_A['FECHA'] = pd.to_datetime(df_base_A['FECHA'], format='%d-%m-%Y', errors='coerce')
+
+df_base_B['H8SCID'] = pd.to_numeric(df_base_B['H8SCID'], errors='coerce')
+df_base_B['H8ASOS'] = pd.to_numeric(df_base_B['H8ASOS'], errors='coerce')
+df_base_B['H8SQTY'] = pd.to_numeric(df_base_B['H8SQTY'], errors='coerce') / 1000000
+df_base_B['H8ATSD'] = pd.to_datetime(df_base_B['H8ATSD'], format='%Y%m%d', errors='coerce')
+
+# Realizar la comparación y filtrado
+matched_rows = df_base_A[
+    (df_base_A['TITULO_ESPECIE'].isin(df_base_B['H8SCID'])) &
+    (df_base_A['COMITENTE'].isin(df_base_B['H8ASOS'])) &
+    (df_base_A['CANTIDAD'].isin(df_base_B['H8SQTY'])) &
+    (df_base_A['FECHA'].isin(df_base_B['H8ATSD']))
+]
+
+# Agregar la columna H8CREF de df_base_B al DataFrame resultante
+result_df = matched_rows.copy()
+result_df = result_df.merge(df_base_B[['H8SCID', 'H8ASOS', 'H8SQTY', 'H8ATSD', 'H8CREF']], 
+                            left_on=['TITULO_ESPECIE', 'COMITENTE', 'CANTIDAD', 'FECHA'], 
+                            right_on=['H8SCID', 'H8ASOS', 'H8SQTY', 'H8ATSD'], 
+                            how='left')
+
+# Seleccionar solo las columnas de base_A más H8CREF
+result_df = result_df[df_base_A.columns.tolist() + ['H8CREF']]
+
+# Mostrar el DataFrame resultante
+print(result_df)

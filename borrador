@@ -231,3 +231,30 @@ df.rename(columns={'H8SCID': 'TITULO_ESPECIE',
                    'H8ASOS': 'COMITENTE', 
                    'H8SQTY': 'CANTIDAD', 
                    'H8ATSD': 'FECHA'}, inplace=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Realizar un left join entre df1 y resultado_outer
+merged = pd.merge(df1, resultado_outer, on=['FECHA', 'COMITENTE', 'CANTIDAD'], how='left', indicator=True)
+
+# Seleccionar las filas donde el indicador _merge sea 'left_only' (no hay coincidencia en resultado_outer)
+result = merged[merged['_merge'] == 'left_only']
+
+# Eliminar la columna _merge, que ya no es necesaria
+result.drop(columns=['_merge'], inplace=True)
+
+print(result)

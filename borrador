@@ -220,6 +220,7 @@ print(info_completa_listado_de_ref)
 
 
 
+=SUMAR.SI.CONJUNTO(base_A!B:B; MES(base_A!B:B); 1; AÑO(base_A!B:B); 2018)
 
 
 

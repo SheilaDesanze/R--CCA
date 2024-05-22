@@ -201,3 +201,18 @@ for h8cref_concat in listado_de_ref['H8CREF_CONCAT']:
 
 
 
+# Crear una máscara booleana para filtrar las filas coincidentes
+mask = (base_A['TITULO_ESPECIE'] == base_B['H8SCID']) & \
+       (base_A['COMITENTE'] == base_B['H8ASOS']) & \
+       (base_A['CANTIDAD'] == base_B['H8SQTY']) & \
+       (base_A['FECHA'] == base_B['H8ATSD'])
+
+# Aplicar la máscara a los DataFrames originales
+coincidencias_A = base_A[mask]
+coincidencias_B = base_B[mask]
+
+# Combinar los DataFrames filtrados en uno nuevo
+info_completa_listado_de_ref = pd.concat([coincidencias_A, coincidencias_B], axis=1)
+
+# Mostrar el nuevo DataFrame
+print(info_completa_listado_de_ref)

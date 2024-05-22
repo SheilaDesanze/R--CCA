@@ -222,6 +222,7 @@ print(info_completa_listado_de_ref)
 
 =SUMAR.SI.CONJUNTO(base_A!B:B; MES(base_A!B:B); 1; AÑO(base_A!B:B); 2018)
 
+=SUMIFS(base_B!N:N,MONTH(base_B!N:N),1,YEAR(base_B!N:N),2018)
 
 
 

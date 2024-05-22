@@ -280,3 +280,22 @@ not_in_merged_df = df_base_A.merge(df_base_B,
                              .drop(columns=['_merge'])
 
 
+
+
+
+
+
+
+
+
+
+
+
+# Obtener las filas de df_base_A que no están en dfresultado
+not_in_dfresultado = df_base_A.merge(df_base_B, 
+                                     on=['TITULO_ESPECIE', 'COMITENTE', 'CANTIDAD', 'FECHA'], 
+                                     how='left', 
+                                     indicator=True) \
+                               .query('_merge == "left_only"') \
+                               .drop(columns=['_merge'])
+

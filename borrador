@@ -216,3 +216,15 @@ info_completa_listado_de_ref = pd.concat([coincidencias_A, coincidencias_B], axi
 
 # Mostrar el nuevo DataFrame
 print(info_completa_listado_de_ref)
+
+
+
+
+
+
+
+
+df.rename(columns={'H8SCID': 'TITULO_ESPECIE', 
+                   'H8ASOS': 'COMITENTE', 
+                   'H8SQTY': 'CANTIDAD', 
+                   'H8ATSD': 'FECHA'}, inplace=True)

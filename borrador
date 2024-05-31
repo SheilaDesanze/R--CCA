@@ -94,3 +94,19 @@ archivo_destino = 'ruta/a/tu/archivo_comprimido'
 
 
 comprimir_carpeta(carpeta_origen, archivo_destino)
+
+
+
+
+
+
+# Obtener los nombres de las columnas
+columns = [column[0] for column in cursor.description]
+
+# Crear el DataFrame
+df = pd.DataFrame([tuple(row) for row in rows], columns=columns)
+
+# Cerrar la conexión
+conn.close()
+
+print(df)

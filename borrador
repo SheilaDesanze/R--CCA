@@ -38,7 +38,47 @@ pbar.update(50)  # actualizamos
 pbar.close()
 
 
+Claro, puedes usar un bucle `for` para comprimir varias carpetas utilizando la función `comprimir_carpeta`. Aquí tienes un ejemplo:
 
+```python
+import shutil
+
+def comprimir_carpeta(carpeta_origen, archivo_destino):
+    """
+    Comprime una carpeta en un archivo ZIP.
+
+    :param carpeta_origen: Ruta de la carpeta que se desea comprimir.
+    :param archivo_destino: Ruta del archivo ZIP de destino (sin extensión).
+    """
+    shutil.make_archive(archivo_destino, 'zip', carpeta_origen)
+
+# Lista de carpetas a comprimir
+carpetas_a_comprimir = [
+    'ruta/a/tu/carpeta1',
+    'ruta/a/tu/carpeta2',
+    'ruta/a/tu/carpeta3'
+]
+
+# Directorio de destino para los archivos comprimidos
+directorio_destino = 'ruta/a/tu/directorio_destino/'
+
+# Comprimir cada carpeta
+for carpeta in carpetas_a_comprimir:
+    nombre_carpeta = carpeta.split('/')[-1]  # Obtiene el nombre de la carpeta
+    archivo_destino = f"{directorio_destino}{nombre_carpeta}_comprimido"
+    comprimir_carpeta(carpeta, archivo_destino)
+```
+
+### Explicación:
+1. **Definición de la función**: La función `comprimir_carpeta` toma una carpeta de origen y un destino, y la comprime en un archivo ZIP.
+2. **Lista de carpetas a comprimir**: Se define una lista `carpetas_a_comprimir` que contiene las rutas de las carpetas que deseas comprimir.
+3. **Directorio de destino**: Se especifica `directorio_destino` donde se almacenarán los archivos ZIP generados.
+4. **Bucle `for`**: Se itera sobre cada carpeta en la lista. Para cada carpeta:
+   - Se obtiene el nombre de la carpeta (usando `split('/')[-1]` para obtener la última parte de la ruta).
+   - Se construye el nombre del archivo ZIP de destino.
+   - Se llama a la función `comprimir_carpeta` para comprimir la carpeta.
+
+Este enfoque permite comprimir múltiples carpetas en un solo paso, almacenando los archivos comprimidos en un directorio especificado. Puedes ajustar las rutas y los nombres de las carpetas según tus necesidades.
 
 
 

@@ -110,3 +110,34 @@ df = pd.DataFrame([tuple(row) for row in rows], columns=columns)
 conn.close()
 
 print(df)
+
+
+
+
+
+
+
+
+import pyodbc
+import pandas as pd
+
+# Conectar a la base de datos (ajusta la cadena de conexión según tu configuración)
+conn = pyodbc.connect('DRIVER={SQL Server};SERVER=your_server;DATABASE=your_db;UID=your_user;PWD=your_password')
+
+# Ejecutar una consulta
+cursor = conn.cursor()
+cursor.execute('SELECT * FROM your_table')
+
+# Obtener todos los resultados en una lista de pyodbc.Row objects
+rows = cursor.fetchall()
+
+# Obtener los nombres de las columnas
+columns = [column[0] for column in cursor.description]
+
+# Crear el DataFrame
+df = pd.DataFrame([tuple(row) for row in rows], columns=columns)
+
+# Cerrar la conexión
+conn.close()
+
+print(df)

@@ -1,3 +1,39 @@
+
+import pandas as pd
+
+# Crear un DataFrame con los datos proporcionados
+data = {
+    'C1': ['Pepe', 'pipo', 'popo'],
+    'C2': ['jiji', 'jojo', 'juju'],
+    'C3': ['keke', 'Kiki', 'koko']
+}
+df = pd.DataFrame(data)
+
+# Función para ajustar el texto a 21 caracteres
+def ajustar_a_21_caracteres(texto):
+    if len(texto) < 21:
+        return texto + ' ' * (21 - len(texto))
+    return texto
+
+# Aplicar la función a la columna 1, fila 2 (índice 1)
+df.at[1, 'C1'] = ajustar_a_21_caracteres(df.at[1, 'C1'])
+
+# Exportar el DataFrame a un archivo txt separado por espacios
+df.to_csv('output.txt', sep=' ', index=False, header=False)
+
+# Mostrar el DataFrame resultante
+print(df)
+
+
+
+
+
+
+
+
+
+
+
 import pandas as pd
 
 # Crear un DataFrame de ejemplo

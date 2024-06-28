@@ -141,3 +141,35 @@ df = pd.DataFrame([tuple(row) for row in rows], columns=columns)
 conn.close()
 
 print(df)
+
+
+
+
+
+
+
+
+
+
+
+.... nuevo .....
+import re
+
+def identificar_simbolos(ruta_archivo):
+  with open(ruta_archivo, "r", encoding="utf-8") as archivo:
+    contenido = archivo.read()
+
+  # Buscar patrones comunes
+  if re.search(r"^[a-zA-Z0-9\s.,;:\-()\[\]{}]+$", contenido):
+    return "Texto plano"
+  elif re.search(r"<html>", contenido):
+    return "HTML"
+  elif re.search(r"import|def|class", contenido):
+    return "Python"
+  # Agregar más patrones según sea necesario
+
+  return "Desconocido"
+
+ruta_archivo = "tu_archivo.txt"  # Reemplaza con la ruta real
+resultado = identificar_simbolos(ruta_archivo)
+print(f"El archivo parece contener: {resultado}")

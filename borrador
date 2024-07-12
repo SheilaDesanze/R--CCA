@@ -1,4 +1,22 @@
+df['nueva_columna'] = (
+    df['Prdtype'].str.contains('overdrafts|cards', case=False) &
+    df['Ifrsstage'].isin(['1', '2']) &
+    (df['System'] == 'CAPAR') &
+    df['Globalbuss'].isin(['cmd', 'gbm'])
+)
 
+Explicación:
+ * df['Prdtype'].str.contains('overdrafts|cards', case=False): Busca si la columna 'Prdtype' contiene 'overdrafts' o 'cards', ignorando mayúsculas/minúsculas.
+ * df['Ifrsstage'].isin(['1', '2']): Verifica si la columna 'Ifrsstage' es igual a '1' o '2'.
+ * (df['System'] == 'CAPAR'): Comprueba si la columna 'System' es igual a 'CAPAR'.
+ * df['Globalbuss'].isin(['cmd', 'gbm']): Verifica si la columna 'Globalbuss' es igual a 'cmd' o 'gbm'.
+ * & (operador AND): Combina todas las condiciones, de modo que la nueva columna solo será True si todas las condiciones se cumplen.
+
+
+
+
+
+wwwwewwwwwww
 import pandas as pd
 
 # Crear un DataFrame con los datos proporcionados

@@ -1,4 +1,2 @@
 CAPPEO ENTRE 0 Y 1 :
 =IF(A1 < 0, 0, IF(A1 > 1, 1, A1))
-
-https://media.licdn.com/dms/image/v2/C4E03AQGeHwWi2CitHA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516503660022?e=1729728000&v=beta&t=jSZ0JaeJ3ES3CMVkVunAP3sobXwgr_F6lXyhv9ikyPU

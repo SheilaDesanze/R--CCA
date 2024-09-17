@@ -1,2 +1,38 @@
 CAPPEO ENTRE 0 Y 1 :
 =IF(A1 < 0, 0, IF(A1 > 1, 1, A1))
+
+
+
+
+Si algunas variables del modelo de un segmento resultan ser no estacionarias, puedes justificar su inclusión en el modelo en función de varios argumentos teóricos y empíricos. Aquí te dejo varias justificaciones que puedes emplear:
+
+### 1. **Relación Económica Justificada**
+   - **Argumento:** Aunque las variables no sean estacionarias, su relación con la variable dependiente (PiT PD) puede estar sólidamente respaldada por teoría económica. Si hay una **justificación económica sólida** para incluir una variable, como su impacto en la probabilidad de incumplimiento, se puede argumentar que la variable tiene un valor explicativo importante.
+   - **Ejemplo:** Factores como tasas de interés o precios de commodities pueden ser no estacionarios en el corto plazo, pero tienen efectos bien establecidos en el ciclo económico y el riesgo de crédito a largo plazo.
+
+### 2. **Cointegración**
+   - **Argumento:** Si las variables no estacionarias están **cointegradas** con la variable dependiente, su inclusión sigue siendo válida. La cointegración implica que, aunque las variables no sean estacionarias individualmente, hay una relación de equilibrio a largo plazo entre ellas, lo que justifica su uso en el modelo.
+   - **Justificación técnica:** Puedes realizar una prueba de cointegración (como la prueba de Johansen) para demostrar que las variables no estacionarias tienen una tendencia compartida con el PiT PD, y por lo tanto, sus fluctuaciones a largo plazo están alineadas.
+
+### 3. **Transformaciones**
+   - **Argumento:** Si una variable es no estacionaria, puedes justificar su inclusión aplicando **transformaciones** que mitiguen este problema. Por ejemplo, tomar la **primera diferencia** de la variable puede convertirla en estacionaria, sin perder la relación subyacente con el PiT PD.
+   - **Ejemplo:** En lugar de usar directamente la tasa de interés, podrías utilizar el cambio en la tasa de interés (primera diferencia), que suele ser estacionaria.
+
+### 4. **Modelo de Corto Plazo vs Largo Plazo**
+   - **Argumento:** La inclusión de variables no estacionarias puede estar justificada si el modelo se enfoca en **análisis de largo plazo**. Las variables no estacionarias pueden ser esenciales para capturar tendencias estructurales en la economía que afectan al PiT PD en el tiempo, especialmente en contextos de riesgo crediticio y modelos que proyectan ciclos largos de incumplimiento.
+   - **Justificación teórica:** La no estacionariedad refleja fenómenos que evolucionan con el tiempo, como la inflación, los cambios en la política económica o el crecimiento del PIB, que pueden no ser estacionarios pero tienen un impacto fundamental en la probabilidad de incumplimiento.
+
+### 5. **Uso en Modelos de Series Temporales Específicos**
+   - **Argumento:** En algunos modelos, como los modelos de corrección de errores (ECM), se pueden incluir variables no estacionarias que están cointegradas. El ECM permite modelar tanto la relación de largo plazo entre las variables como los ajustes de corto plazo, lo que justifica el uso de variables no estacionarias.
+   - **Justificación:** Los modelos ECM combinan la tendencia de largo plazo (cointegración) con las fluctuaciones de corto plazo, permitiendo que variables no estacionarias coexistan en un marco estructurado y coherente.
+
+### 6. **Razones Empíricas: Buen Desempeño del Modelo**
+   - **Argumento:** Si el modelo que incluye variables no estacionarias demuestra un **buen desempeño predictivo** y estadístico (p.ej., altos R-cuadrado ajustados, bajos errores de predicción), puedes justificar su inclusión con base en resultados empíricos, argumentando que el objetivo principal del modelo es capturar relaciones predictivas útiles, independientemente de la estacionaridad estricta.
+   - **Justificación práctica:** Si el modelo mejora sustancialmente en la predicción del PiT PD cuando incluye las variables no estacionarias, esto puede justificar su uso, siempre y cuando no se comprometa la integridad del análisis.
+
+### Ejemplo de Justificación:
+“Despite the non-stationarity of some macroeconomic variables, their inclusion in the model is justified on both theoretical and empirical grounds. Firstly, economic theory strongly supports the inclusion of variables such as interest rates and external debt as they have a well-established long-term relationship with default probabilities. Additionally, the presence of cointegration between the variables suggests that they share a stable equilibrium in the long run, justifying their inclusion. Lastly, by applying appropriate transformations, such as using first differences, we ensure the model retains its explanatory power while addressing the issue of non-stationarity.”
+
+---
+
+Estas justificaciones permiten incluir variables no estacionarias en un modelo de manera coherente, siempre que se tenga en cuenta cómo afectan la estabilidad del modelo y la interpretación de los resultados.

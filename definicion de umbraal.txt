@@ -103,3 +103,62 @@ By defining these acceptance thresholds, we create a structured and transparent 
 
 
 
+-----------------------------------------------
+
+
+____________impacto toal:___________
+
+Para calcular el **impacto total en la Probabilidad de Incumplimiento a un Punto en el Tiempo (PiT PD)**, dado que el modelo es multivariante, no se puede simplemente sumar los efectos de cada variable individual. Se debe tener en cuenta el efecto combinado de las variables, lo que implica un enfoque basado en la sensibilidad multivariable y la estructura del modelo econométrico.
+
+Aquí te explico los pasos para realizar este cálculo:
+
+### 1. **Estructura del Modelo**
+El modelo de PiT PD generalmente se formula como una regresión lineal múltiple, donde el PiT PD depende de varias variables macroeconómicas (factores explicativos). La fórmula genérica del modelo sería:
+
+\[
+\text{PiT PD} = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_n X_n + \epsilon
+\]
+
+- \( \beta_0 \): Intercepto del modelo.
+- \( \beta_1, \beta_2, \dots, \beta_n \): Coeficientes de las variables macroeconómicas.
+- \( X_1, X_2, \dots, X_n \): Variables explicativas (p. ej., tasas de interés, consumo público, PIB).
+- \( \epsilon \): Error residual.
+
+### 2. **Impacto Individual de cada Variable**
+Para calcular el impacto de una variable específica en el PiT PD, puedes multiplicar la desviación estándar de esa variable (\( \Delta X_i \)) por su coeficiente (\( \beta_i \)) en el modelo:
+
+\[
+\Delta \text{PiT PD}_i = \beta_i \times \Delta X_i
+\]
+
+Donde \( \Delta X_i \) es el cambio en la variable \( X_i \) (normalmente una desviación estándar según el análisis de sensibilidad).
+
+### 3. **Interacción entre Variables**
+Dado que es un modelo multivariante, las variables no operan de forma independiente. Esto significa que el impacto de una variable podría estar condicionado por las otras variables del modelo. Si el modelo incluye términos de interacción entre variables (por ejemplo, \( X_1 \times X_2 \)), el impacto total se complica.
+
+### 4. **Cálculo del Impacto Total**
+El **impacto total en el PiT PD** puede calcularse de la siguiente manera:
+
+\[
+\Delta \text{Total PiT PD} = \sum_{i=1}^n \beta_i \times \Delta X_i + \sum_{i < j} \gamma_{ij} \times \Delta X_i \times \Delta X_j
+\]
+
+- \( \beta_i \times \Delta X_i \): Representa el impacto de cada variable individual.
+- \( \gamma_{ij} \): Coeficientes de interacción entre variables.
+- \( \Delta X_i \times \Delta X_j \): Representa los efectos conjuntos de dos variables cuando están correlacionadas.
+
+### 5. **Simulación de Escenarios**
+Un enfoque robusto para evaluar el impacto total sería realizar simulaciones con cambios simultáneos en las variables, aplicando una desviación estándar para cada una, y luego observar el cambio resultante en el PiT PD. Esto se puede hacer aplicando diferentes escenarios de shock económico a las variables explicativas, recalculando el PiT PD para cada escenario.
+
+### 6. **Evaluación del Impacto Total en la Práctica**
+En la práctica, podrías seguir los siguientes pasos:
+1. **Cargar los coeficientes** del modelo (ya sea a partir de un análisis de regresión lineal o proporcionados por el modelo econométrico).
+2. **Aplicar los cambios** en las variables explicativas utilizando los resultados del análisis de sensibilidad (es decir, una desviación estándar para cada variable).
+3. **Calcular el nuevo PiT PD** con los cambios en las variables, teniendo en cuenta cualquier interacción entre ellas.
+4. Comparar el **PiT PD inicial** con el **PiT PD ajustado**, lo que te dará el impacto total.
+
+Si tu modelo es muy complejo o involucra muchas variables con relaciones no lineales, una **simulación Monte Carlo** podría ser una buena herramienta para estimar cómo los cambios en las variables impactan el PiT PD en conjunto.
+
+### Conclusión
+El impacto total en el PiT PD se calcula considerando no solo el efecto directo de cada variable, sino también las interacciones entre las variables explicativas. Es importante usar el modelo subyacente de regresión o simulaciones para capturar estos efectos combinados de manera precisa.
+

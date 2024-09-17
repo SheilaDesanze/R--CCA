@@ -85,7 +85,7 @@ Este texto establece un umbral único para todos los segmentos, basado en "dos v
 
 
 ----------------------------------------------------------------------------
------------------------------------rta--------------------------------------
+-----------------------------------rta oot--------------------------------------
 Upon reviewing the performance of the champion model for the secondary segment during the backtesting period (March 2018 - March 2019), it is acknowledged that there is a visible underestimation in the predicted default rate (PD) compared to the observed market default rate (DR). However, this underestimation is largely concentrated in Q2 2018, where the deviation from the real data is more pronounced, as shown in the provided out-of-sample analysis. Despite this temporary deviation, it is important to emphasize that the overall divergence is not significant.
 
 ### Comparison with Challenger Model

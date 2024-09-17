@@ -1,1 +1,93 @@
-definicion de umbraal
+
+
+
+ 
+-------------------------------------------------------------------
+
+_____________________v1_____________________
+Definición del Umbral de Aceptación para el Rango de la Probabilidad de Incumplimiento a un Punto en el Tiempo (PiT PD)
+Con el objetivo de garantizar la robustez y estabilidad del modelo de Probabilidad de Incumplimiento a un Punto en el Tiempo (PiT PD), se ha definido un umbral de aceptación basado en los resultados del análisis de sensibilidad realizado para cada segmento económico. Este umbral permitirá evaluar de manera adecuada el impacto de las variaciones en las variables macroeconómicas sobre el PiT PD, asegurando que los resultados del modelo se mantengan dentro de un rango aceptable y alineado con los objetivos del negocio.
+Segmentos Modelados
+1.	Segmento 1: Primario y Manufactura de Alimentos
+El análisis de sensibilidad mostró que variaciones en el consumo del gobierno, precios de los commodities, deuda externa total y la tasa de política monetaria pueden impactar la PiT PD entre 0,3 y 0,8 puntos porcentuales (pp).
+Umbral de aceptación propuesto: Se define un umbral del ±0,5 pp, dado que las variaciones típicas se encuentran dentro de este rango.
+2.	Segmento 2: Secundario y Construcción
+Las variaciones en importaciones, índice Merval, tasas de interés a corto plazo en EE.UU. y deuda externa del gobierno impactan la PiT PD en un rango de 0,2 a 0,3 pp.
+Umbral de aceptación propuesto: Se establece un umbral del ±0,3 pp, alineado con las variaciones observadas en las variables macroeconómicas clave.
+3.	Segmento 3: Terciario y Manufactura de Textiles
+El impacto de las variaciones en las tasas de interés a largo plazo de EE.UU., el PIB de Argentina, el PIB de Brasil y el precio del petróleo genera un aumento en la PiT PD entre 0,2 y 0,3 pp.
+Umbral de aceptación propuesto: Se determina un umbral del ±0,3 pp, coherente con las variaciones históricas observadas en el análisis.
+Justificación del Umbral
+El umbral de aceptación se basa en las variaciones observadas en los análisis de sensibilidad de las variables explicativas. Estos umbrales reflejan la sensibilidad natural del modelo ante cambios económicos, permitiendo identificar cuándo una variación en las entradas del modelo podría generar un cambio significativo en las métricas de riesgo y requerir mayor atención o ajustes en las políticas de mitigación.
+Es importante recordar que, dado que el modelo es multivariante, los impactos acumulados no deben sumarse linealmente. El umbral definido asegura que cualquier desviación significativa del PiT PD será detectada oportunamente para evaluar el impacto en las métricas de crédito y el cumplimiento regulatorio.
+
+
+
+
+
+ 
+-------------------------------------------------------------------
+
+_____________________v2____________________
+Definition of the Acceptance Threshold for the Range of the Point-in-Time Probability of Default (PiT PD)
+In order to ensure the robustness and stability of the Point-in-Time Probability of Default (PiT PD) model, an acceptance threshold has been defined based on the results of the sensitivity analysis conducted for each economic segment. This threshold will allow for an adequate evaluation of the impact of macroeconomic variable fluctuations on PiT PD, ensuring that the model’s outcomes remain within an acceptable range and aligned with business objectives.
+
+Modeled Segments
+1.	Segment 1: Primary and Food Manufacturing
+The sensitivity analysis indicated that variations in government spending, commodity prices, total external debt, and monetary policy rates could impact PiT PD between 0.3 and 0.8 percentage points (pp).
+Proposed acceptance threshold: A threshold of ±0.5 pp is defined, as typical fluctuations fall within this range.
+
+2.	Segment 2: Secondary and Construction
+Variations in imports, the Merval index, short-term interest rates in the U.S., and government external debt impact PiT PD in the range of 0.2 to 0.3 pp.
+Proposed acceptance threshold: A threshold of ±0.3 pp is established, aligned with the observed fluctuations in key macroeconomic variables.
+
+
+3.	Segment 3: Tertiary and Textile Manufacturing
+The impact of variations in long-term U.S. interest rates, Argentina’s GDP, Brazil’s GDP, and oil prices results in PiT PD increasing by 0.2 to 0.3 pp.
+Proposed acceptance threshold: A threshold of ±0.3 pp is determined, consistent with the historical variations observed in the analysis.
+
+Threshold Justification
+The acceptance threshold is based on the variations observed in the sensitivity analyses of the explanatory variables. These thresholds reflect the model’s natural sensitivity to economic changes, allowing for the identification of when a variation in the model’s inputs could generate a significant change in risk metrics, warranting closer attention or adjustments to mitigation strategies.
+It is important to note that, as this is a multivariate model, the cumulative impacts should not be added linearly. The defined threshold ensures that any significant deviation in the PiT PD will be detected in a timely manner, allowing for a thorough evaluation of the impact on credit metrics and regulatory compliance.
+
+
+
+
+
+
+
+
+
+
+ 
+-------------------------------------------------------------------
+
+_____________________v3_____________________
+Definition of the Acceptance Threshold for the Range of the Point-in-Time Probability of Default (PiT PD)
+The objective of this document is to define an acceptance threshold for the Point-in-Time Probability of Default (PiT PD) models developed for Argentina. These models are designed to improve the accuracy of PiT PD estimations and thus support the calculation of Expected Credit Losses (ECL) under IFRS 9, as well as Stress Testing exercises. The acceptance threshold plays a critical role in ensuring that the model’s outcomes remain within acceptable ranges, reflecting the inherent risk dynamics of each economic segment, and providing reliable results for both local and international regulatory frameworks.
+Sensitivity Analysis and Segment-Specific Considerations
+Based on the results from the sensitivity analysis conducted for the various economic segments, the following thresholds have been defined. These are grounded in the observed impacts of deviations in key macroeconomic variables on PiT PD, ensuring that model outputs remain within ranges that reflect realistic economic conditions.
+1.	Segment 1: Primary and Food Manufacturing
+For this segment, the sensitivity analysis considered macroeconomic factors such as government consumption, monetary policy rates, commodity prices, and total external debt. The analysis revealed that PiT PD increases by 0.8 percentage points (pp) when government spending decreases, and by 0.3 pp when there are negative fluctuations in commodity prices or external debt levels. Monetary policy rate hikes also resulted in a 0.5 pp increase in PiT PD.
+Proposed acceptance threshold: Considering that the largest single-variable deviation is 0.8 pp, a threshold of ±0.5 pp is defined. This range allows for the normal fluctuations observed in these macroeconomic variables while ensuring that the PiT PD remains stable within an acceptable range for risk management purposes.
+
+2.	Segment 2: Secondary and Construction
+In the case of this segment, imports, the Merval index, U.S. short-term interest rates, and government external debt are key drivers. The sensitivity analysis showed that PiT PD increases by 0.3 pp due to negative variations in imports, the Merval, and U.S. interest rates. Additionally, government external debt fluctuations resulted in a 0.2 pp increase in PiT PD.
+Proposed acceptance threshold: A threshold of ±0.3 pp is defined for this segment. Given that the observed variations are smaller in magnitude compared to Segment 1, this narrower threshold is appropriate, ensuring that PiT PD outputs are reflective of changes in market conditions while remaining within an acceptable range.
+
+3.	Segment 3: Tertiary and Textile Manufacturing
+For this segment, the sensitivity analysis examined the impact of long-term U.S. interest rates, Argentina’s GDP, Brazil’s GDP, and global oil prices. Negative variations in Brazil’s GDP, U.S. interest rates, and oil prices led to a 0.2 pp increase in PiT PD, while fluctuations in Argentina’s GDP had a larger impact, increasing PiT PD by 0.3 pp.
+Proposed acceptance threshold: A threshold of ±0.3 pp is set for this segment, aligning with the observed sensitivity of PiT PD to macroeconomic changes. This threshold balances the need for model stability with the responsiveness required to capture economic shocks that impact these sectors.
+
+
+Justification of the Threshold
+The defined acceptance thresholds are based on the results of a rigorous sensitivity analysis across all segments. These thresholds reflect the model’s ability to handle reasonable deviations in macroeconomic variables without generating excessive volatility in PiT PD outputs. By aligning the thresholds with the observed impacts from key macroeconomic indicators, we ensure that the models are robust enough to capture economic cycles while maintaining reliability for credit risk assessments.
+It is important to emphasize that, given the multivariate nature of the models, the total impact on PiT PD is not the sum of individual variable deviations. Each model accounts for the complex interplay between factors such as government consumption, interest rates, and external debt, ensuring that the cumulative effects on PiT PD remain consistent with real-world conditions.
+Furthermore, the proposed thresholds provide a critical checkpoint for risk management. If PiT PD outputs exceed the defined thresholds, it may signal a need for further investigation, recalibration, or adjustments to the risk mitigation strategies. This approach also allows for proactive management of credit risks, particularly in stress testing scenarios where macroeconomic variables may exhibit greater-than-normal volatility.
+
+Conclusion
+By defining these acceptance thresholds, we create a structured and transparent framework for evaluating the output of PiT PD models. These thresholds ensure that the model remains sensitive to macroeconomic changes while preventing unwarranted deviations that could undermine its reliability. This method provides a consistent and measurable way to assess model performance under varying economic conditions, ensuring compliance with IFRS 9 and other regulatory standards.
+
+
+
+

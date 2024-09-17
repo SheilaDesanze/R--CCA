@@ -78,3 +78,30 @@ By establishing a unified acceptance threshold of **two times the historical mea
 Este texto establece un umbral único para todos los segmentos, basado en "dos veces la media", y proporciona coherencia y estabilidad en la gestión del riesgo de incumplimiento.
 
 
+
+
+
+
+
+
+----------------------------------------------------------------------------
+-----------------------------------rta--------------------------------------
+Upon reviewing the performance of the champion model for the secondary segment during the backtesting period (March 2018 - March 2019), it is acknowledged that there is a visible underestimation in the predicted default rate (PD) compared to the observed market default rate (DR). However, this underestimation is largely concentrated in Q2 2018, where the deviation from the real data is more pronounced, as shown in the provided out-of-sample analysis. Despite this temporary deviation, it is important to emphasize that the overall divergence is not significant.
+
+### Comparison with Challenger Model
+
+When compared to the challenger model, which was proposed as an alternative, the champion model demonstrates clear advantages. The underestimation observed in the champion model is much less material than the deviation found in the challenger model. The challenger exhibited a substantial and sustained out-of-time error, which was not acceptable for production use. In contrast, the champion model consistently maintained better alignment with the actual default rates, particularly outside the isolated Q2 2018 deviation.
+
+### Historical Consistency and Volatility Analysis
+
+One of the strengths of the champion model is that the volatility observed during the out-of-time validation is relatively consistent with the historical behavior seen during the development period. This similarity suggests that the model’s response to market fluctuations is stable and reliable, following the expected trends without unexpected spikes in error. The bias observed in Q2 2018 is comparable to the kind of deviations seen during the development phase, and therefore does not raise significant concerns regarding the model’s robustness or validity.
+
+Moreover, a key feature of the champion model is its ability to closely follow the shape and trend of the actual default rate. While it may slightly underestimate in some quarters, such as Q2 2018, its predictions effectively track the overall movements of the real data, capturing the dynamics of the market. This alignment is an essential indicator of model quality, as it demonstrates that the model is sensitive to real market conditions and adjusts accordingly, even if marginal deviations occur.
+
+### Transition from Underestimation to Overestimation
+
+It is also important to highlight that upon moving the champion model into production, the model alternated between periods of underestimation and overestimation. Specifically, after the initial backtesting period, the model began to show a tendency toward overestimation, particularly during atypical events such as the COVID-19 pandemic and other unprecedented global and national occurrences. This shift suggests that the model, while demonstrating a temporary underestimation in the backtesting period, can also adapt to new economic conditions and has proven to be resilient when faced with unforeseen challenges.
+
+### Conclusion
+
+In conclusion, while the underestimation during Q2 2018 is acknowledged, the overall deviation is not substantial. The champion model remains a superior choice when compared to the challenger model, whose out-of-time errors were far more material. The volatility and dispersion seen during the out-of-sample period are in line with historical performance, and the model’s ability to closely follow real market trends further supports its selection as the champion model. Moreover, its observed alternation between underestimation and overestimation, especially in response to extraordinary events like the COVID-19 pandemic, underscores its robustness in production. Therefore, the selection of the champion model is justified based on both its comparative performance and its demonstrated adaptability over time.

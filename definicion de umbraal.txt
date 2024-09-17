@@ -1,3 +1,15 @@
+Es necesario definir un umbral de aceptación para el rango potencial de la Probabilidad de Incumplimiento a un Punto en el Tiempo (PiT PD). Esto permite evaluar cómo los cambios en las variables afectan al PiT PD y asegurar que cualquier variación se mantenga dentro de un rango aceptable.
+
+Definición del umbral de aceptación:
+El umbral de aceptación puede definirse como un rango de variación permitido para el PiT PD, dentro del cual se considera que el modelo sigue siendo confiable y útil. Esto podría estar basado en los siguientes criterios:
+1.	Histórico del PiT PD: Se puede definir un rango de aceptación basado en la desviación estándar del PiT PD histórico. Por ejemplo, si el PiT PD histórico oscila entre el 2% y el 4%, se podría establecer un umbral del ±1% alrededor de ese rango.
+2.	Impacto en métricas de negocio: Otro enfoque sería definir el umbral según el impacto en las métricas clave, como las pérdidas esperadas (ECL). Si un aumento en el PiT PD del 1% produce un incremento significativo en las ECL que afecta la estabilidad del banco, entonces ese podría ser un límite de alerta.
+3.	Comparación con benchmarks: Se podría establecer un umbral basado en el comportamiento de modelos similares o los límites regulatorios definidos por entidades como el Banco Central o el marco IFRS 9.
+Evaluación del impacto dentro del umbral:
+Una vez definido el umbral, los análisis de sensibilidad se deberían realizar evaluando el impacto en el PiT PD dado el rango aceptado. Por ejemplo:
+•	Si el umbral es un incremento del 0.5% en el PiT PD, se evalúa si los cambios en las variables explicativas dentro del análisis de sensibilidad superan o no ese límite.
+•	Se puede realizar una simulación para ver qué tanto varía el PiT PD al alterar cada variable por una desviación estándar, asegurando que la variación no exceda el umbral.
+ 
 
 
 

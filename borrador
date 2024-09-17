@@ -105,3 +105,18 @@ It is also important to highlight that upon moving the champion model into produ
 ### Conclusion
 
 In conclusion, while the underestimation during Q2 2018 is acknowledged, the overall deviation is not substantial. The champion model remains a superior choice when compared to the challenger model, whose out-of-time errors were far more material. The volatility and dispersion seen during the out-of-sample period are in line with historical performance, and the model’s ability to closely follow real market trends further supports its selection as the champion model. Moreover, its observed alternation between underestimation and overestimation, especially in response to extraordinary events like the COVID-19 pandemic, underscores its robustness in production. Therefore, the selection of the champion model is justified based on both its comparative performance and its demonstrated adaptability over time.
+
+
+
+
+
+
+
+
+As shown in the qualitative test provided in the document, the figure below illustrates the out-of-sample performance of the secondary-segment champion model. This chart compares the observed market default rate (DR) in blue against the predicted default rate (PD) from the champion model in gray.
+
+Please refer to the attached figure:
+
+This analysis highlights the model’s ability to follow the overall trend of the market default rates, though some divergence is observed, particularly in Q2 2018 where the champion model slightly underestimates the default rate.
+
+

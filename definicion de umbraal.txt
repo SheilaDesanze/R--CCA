@@ -207,4 +207,29 @@ The predefined thresholds for PiT PD across the different segments were tested t
 
 ---
 
-En este texto, primero se establecen los umbrales y luego se presentan los resultados del análisis de sensibilidad como una forma de validar que estos thresholds funcionan correctamente.
+
+Sensitivity analysis
+It has been made a sensitivity analysis, where is verify the variables behaviour if each variable value deviates by one standard deviation respect to the historical mean of the variable.
+
+The previous figures show that the negative variations of the Government Consumption rise PD to 0.8 pp, while the Price of Commodities and External Debt in dollars 0.3 pp and the Monetary Policy Rate in 0.5 pp.
+
+
+
+
+Sensitivity analysis
+It has been made a sensitivity analysis, where is verify the variables behaviour if each variable value deviates by one standard deviation respect to the historical mean of the variable.
+
+The previous figures show that the negative variations of the Imports, the Merval and the Short-Term Rate of the United States increase the PD by 0.3 pp and the Government's External Debt in USD by 0.2%.
+
+
+
+Sensitivity analysis
+It has been made a sensitivity analysis, where is verify the variables behaviour if each variable value deviates by one standard deviation respect to the historical mean of the variable.
+
+The previous figures show that the negative variations in the GDP of Brazil, the Price of Oil and the Long-Term Rate of the United States increased 0.2 pp and the GDP of Argentina by 0.3 pp.
+
+
+
+
+
+It is necessary to remember that since it is a multivariate model, the total increase in PD does not correspond to the result of adding the movements of the variables taken individually.

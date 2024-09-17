@@ -36,3 +36,45 @@ Si algunas variables del modelo de un segmento resultan ser no estacionarias, pu
 ---
 
 Estas justificaciones permiten incluir variables no estacionarias en un modelo de manera coherente, siempre que se tenga en cuenta cómo afectan la estabilidad del modelo y la interpretación de los resultados.
+
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+
+
+
+
+
+
+Aquí tienes el texto actualizado con un **umbral (threshold)** unificado para todos los segmentos:
+
+---
+
+**Definition of the Acceptance Threshold for the Range of the Point-in-Time Probability of Default (PiT PD)**
+
+To ensure consistency and robustness across all Point-in-Time Cumulative Probabilities of Default (PIT CPD) models developed for Argentina, a unified acceptance threshold is established. This threshold applies uniformly to all economic segments and ensures that the PiT PD outputs remain within an acceptable range, even under extreme macroeconomic conditions.
+
+### Unified Acceptance Threshold
+
+The **acceptance threshold** for PiT PD across all segments is set at **two times the historical mean** of the PiT PD. This threshold reflects the maximum permissible variation in the PiT PD based on extreme economic conditions, defined as a two standard deviations change from the historical mean of the model’s macroeconomic variables.
+
+This means that even if the combined impact of significant macroeconomic fluctuations occurs, such as extreme shifts in interest rates, GDP, or commodity prices, the PiT PD should not increase by more than two times its historical mean. This threshold ensures that the model's outputs remain stable and within acceptable risk parameters across all segments, regardless of sector-specific dynamics.
+
+### Justification for the Unified Threshold
+
+The sensitivity analysis conducted across all segments evaluated the impact of both **one** and **two standard deviations changes** in macroeconomic variables. A **two standard deviations change** reflects an extreme shift, often seen in stress testing scenarios. By setting the threshold at **two times the mean**, we establish a robust framework that accounts for these extreme variations while ensuring that the PiT PD does not escalate beyond a manageable level.
+
+This unified threshold creates a consistent benchmark for measuring risk across all economic sectors and segments.
+
+### Sensitivity Analysis Results
+
+- Across **Segment 1: Primary and Food Manufacturing**, **Segment 2: Secondary and Construction**, and **Segment 3: Tertiary and Textile Manufacturing**, the impact of a two standard deviations change in key macroeconomic variables—such as government consumption, external debt, import/export dynamics, and interest rates—resulted in varying levels of increases in PiT PD. However, none of these exceeded two times the mean PiT PD, confirming that the threshold is suitable and effective for managing risk across all segments.
+
+### Conclusion
+
+By establishing a unified acceptance threshold of **two times the historical mean** of the PiT PD for all segments, we provide a clear and consistent benchmark for evaluating the impact of extreme macroeconomic variations on default probabilities. This threshold ensures that the models remain stable and reliable across all sectors, even under the most severe stress conditions, while maintaining alignment with internal risk management strategies and regulatory requirements.
+
+---
+
+Este texto establece un umbral único para todos los segmentos, basado en "dos veces la media", y proporciona coherencia y estabilidad en la gestión del riesgo de incumplimiento.
+
+

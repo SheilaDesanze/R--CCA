@@ -2,6 +2,17 @@ CAPPEO ENTRE 0 Y 1 :
 =IF(A1 < 0, 0, IF(A1 > 1, 1, A1))
 
 
+  Agarramos y hacemos un escenario donde tomamos: o el promedio de la historia de las variables macroeconómicas o las últimas recientes
+  y le metemos la desvios estándar y correr y veamos que da, o sea es una corrida de impacto
+
+  En la reunión nos objetaron eso
+  Entonces lo que hay que hacer es el análisis de sensibilidad
+  Tomando ya las proyecciones que te quedan de IFRS
+  Para
+  Las condiciones de portafolio, podemos tomar las actuales
+  Y le agregas un desvío estándar a cada uno
+  Entonces pbi, si...
+  Y pbi, bueno, que caiga o que crezca
 
                          pasos af:													
 [03:45.000 --> 03:47.000	  La primera variable de cada modelo y la subís a un desvío													

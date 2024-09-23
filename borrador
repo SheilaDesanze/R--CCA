@@ -9,3 +9,18 @@ Para garantizar la robustez del modelo y evitar relaciones espurias, se realizar
 Este resultado refuerza la validez del modelo, ya que la estacionariedad de los residuos es una indicación clave de que el modelo captura adecuadamente las dinámicas de la serie de tiempo y no presenta una relación espuria entre las variables independientes y la dependiente.
 
 Adicionalmente, cabe destacar que los predictores independientes han sido verificados como estacionarios mediante pruebas individuales, lo cual asegura que no hay un efecto de colinealidad espuria. Por lo tanto, el modelo se considera adecuado y consistente desde una perspectiva econométrica.
+
+
+
+
+
+
+
+
+The observation that the logarithm of the default rate for the secondary segment (the dependent variable in the regression) is non-stationary is valid, but the issue stems from the nature of the development series. The available time series was relatively short, which did not allow for the capture of expected long-term cycles. It is reasonable to expect that, with a longer history and additional data, cyclical patterns would emerge, making the variable stationary.
+
+To ensure the robustness of the model and avoid spurious relationships, several additional tests were conducted. Among these, we performed a unit root test on the residuals, whose results are presented in the attached table. Across different model specifications (Zero Mean, Single Mean, Trend), the p-values were consistently below 5% for most lags and configurations. This means that the null hypothesis of a unit root was rejected, as indicated by p-values lower than 0.05. This confirms that the residuals are stationary.
+
+The stationarity of the residuals is a crucial indicator of the model’s validity, as it suggests that the model adequately captures the dynamics of the time series, and there is no spurious relationship between the independent and dependent variables.
+
+Additionally, it's important to highlight that the independent predictors were verified to be stationary through individual tests, ensuring that no spurious correlation exists. Therefore, the model is considered econometrically sound and reliable.

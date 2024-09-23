@@ -24,3 +24,9 @@ To ensure the robustness of the model and avoid spurious relationships, several 
 The stationarity of the residuals is a crucial indicator of the model’s validity, as it suggests that the model adequately captures the dynamics of the time series, and there is no spurious relationship between the independent and dependent variables.
 
 Additionally, it's important to highlight that the independent predictors were verified to be stationary through individual tests, ensuring that no spurious correlation exists. Therefore, the model is considered econometrically sound and reliable.
+
+
+
+
+
+.

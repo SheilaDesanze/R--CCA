@@ -2,34 +2,21 @@ CAPPEO ENTRE 0 Y 1 :
 =IF(A1 < 0, 0, IF(A1 > 1, 1, A1))
 
 
-La observación de que el logaritmo de la tasa de incumplimiento para el segmento secundario (variable dependiente de la regresión) se encuentra no estacionaria es válida, pero la explicación radica en la naturaleza de la serie de desarrollo utilizada. La serie de tiempo disponible era relativamente corta, lo que no permitió capturar adecuadamente los ciclos esperados a largo plazo. Es razonable esperar que, con un horizonte temporal más amplio y con datos adicionales, se puedan observar ciclos que conviertan esta variable en estacionaria.
-
-Para garantizar la robustez del modelo y evitar relaciones espurias, se realizaron diversas pruebas adicionales. Entre ellas, el test de raíz unitaria de los residuos, cuyos resultados se observan en la tabla adjunta. En este test, al evaluar diferentes especificaciones del modelo (Zero Mean, Single Mean, Trend), los valores p obtenidos fueron consistentemente menores al 5% en la mayoría de los rezagos y configuraciones. Esto significa que se pudo rechazar la hipótesis nula de raíz unitaria, confirmando que los residuos son estacionarios.
-
-Este resultado refuerza la validez del modelo, ya que la estacionariedad de los residuos es una indicación clave de que el modelo captura adecuadamente las dinámicas de la serie de tiempo y no presenta una relación espuria entre las variables independientes y la dependiente.
-
-Adicionalmente, cabe destacar que los predictores independientes han sido verificados como estacionarios mediante pruebas individuales, lo cual asegura que no hay un efecto de colinealidad espuria. Por lo tanto, el modelo se considera adecuado y consistente desde una perspectiva econométrica.
-
-
-
-
-
-
-
-
-The observation that the logarithm of the default rate for the secondary segment (the dependent variable in the regression) is non-stationary is valid, but the issue stems from the nature of the development series. The available time series was relatively short, which did not allow for the capture of expected long-term cycles. It is reasonable to expect that, with a longer history and additional data, cyclical patterns would emerge, making the variable stationary.
-
-To ensure the robustness of the model and avoid spurious relationships, several additional tests were conducted. Among these, we performed a unit root test on the residuals, whose results are presented in the attached table. Across different model specifications (Zero Mean, Single Mean, Trend), the p-values were consistently below 5% for most lags and configurations. This means that the null hypothesis of a unit root was rejected, as indicated by p-values lower than 0.05. This confirms that the residuals are stationary.
-
-The stationarity of the residuals is a crucial indicator of the model’s validity, as it suggests that the model adequately captures the dynamics of the time series, and there is no spurious relationship between the independent and dependent variables.
-
-Additionally, it's important to highlight that the independent predictors were verified to be stationary through individual tests, ensuring that no spurious correlation exists. Therefore, the model is considered econometrically sound and reliable.
+ARG_TDEBT_USD, 	 -
+ARG_CASHOVER, 	 +
+GBL_WPFOOD, 	 -
+ARG_GC_N, 	 -
+ARG_PSH, 	 +
+ARG_M, 	 +
+USA_RSH, 	 +
+ARG_TDEBT_DOL_G, 	 +
+ARG_GDP, 	 -
+BRA_GDP, 	 -
+USA_RLG, 	 +
+GBL_WPO_WTI	 +
 
 
 
-
-
----------------falta-------------------
 The observation that the logarithm of the default rate for the secondary segment (the dependent variable in the regression) is non-stationary is valid, but the issue stems from the nature of the development series. While the series may be sufficient for development purposes, it is too limited to perform this specific test effectively. The relatively short time series did not allow for the capture of expected long-term cycles. It is reasonable to expect that, with a longer history and additional data, cyclical patterns would emerge, making the variable stationary.
 
 To ensure the robustness of the model and avoid spurious relationships, several additional tests were conducted. Among these, we performed a unit root test on the residuals, whose results are presented in the attached table. Across different model specifications (Zero Mean, Single Mean, Trend), the p-values were consistently below 5% for most lags and configurations. This means that the null hypothesis of a unit root was rejected, as indicated by p-values lower than 0.05. This confirms that the residuals are stationary.

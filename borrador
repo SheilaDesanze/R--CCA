@@ -2,65 +2,10 @@ CAPPEO ENTRE 0 Y 1 :
 =IF(A1 < 0, 0, IF(A1 > 1, 1, A1))
 
 
-Perfecto, lo que necesitas es realizar un **análisis de sensibilidad** paso a paso sobre las proyecciones de PiT CPD, ajustando las variables macroeconómicas. Aquí está el flujo del proceso que mencionaste, estructurado para que lo puedas llevar a cabo:
+La observación de que el logaritmo de la tasa de incumplimiento para el segmento secundario (variable dependiente de la regresión) se encuentra no estacionaria es válida, pero la explicación radica en la naturaleza de la serie de desarrollo utilizada. La serie de tiempo disponible era relativamente corta, lo que no permitió capturar adecuadamente los ciclos esperados a largo plazo. Es razonable esperar que, con un horizonte temporal más amplio y con datos adicionales, se puedan observar ciclos que conviertan esta variable en estacionaria.
 
-### 1. Preparación de los CSV:
-- **Primero**, asegúrate de tener las proyecciones de las PDs iniciales (las proyecciones que ya tienes según IFRS) en un archivo CSV.
-- **Luego**, vas a modificar cada variable macroeconómica relevante, una por una, añadiendo un **desvío estándar**.
+Para garantizar la robustez del modelo y evitar relaciones espurias, se realizaron diversas pruebas adicionales. Entre ellas, el test de raíz unitaria de los residuos, cuyos resultados se observan en la tabla adjunta. En este test, al evaluar diferentes especificaciones del modelo (Zero Mean, Single Mean, Trend), los valores p obtenidos fueron consistentemente menores al 5% en la mayoría de los rezagos y configuraciones. Esto significa que se pudo rechazar la hipótesis nula de raíz unitaria, confirmando que los residuos son estacionarios.
 
-### 2. Análisis de Sensibilidad:
-- **Paso 1: Subir un desvío estándar a la primera variable**.
-  - Para cada modelo, selecciona la primera variable macroeconómica, añade un desvío estándar (hacia arriba) a su valor histórico.
-  - Guarda los cambios en el CSV, **sin modificar** otras variables.
+Este resultado refuerza la validez del modelo, ya que la estacionariedad de los residuos es una indicación clave de que el modelo captura adecuadamente las dinámicas de la serie de tiempo y no presenta una relación espuria entre las variables independientes y la dependiente.
 
-- **Paso 2: Ejecutar en SAS**.
-  - Sube el CSV modificado a SAS y corre el modelo.
-  - Guarda los resultados obtenidos de las **PDs proyectadas**.
-
-- **Paso 3: Repetir para las otras variables**.
-  - Vuelve al CSV original (sin modificaciones).
-  - Ahora, cambia la **segunda variable**, subiendo su valor un desvío estándar y ejecuta de nuevo en SAS.
-  - Guarda los resultados.
-  - Repite el mismo proceso para la **tercera variable**, y así sucesivamente para todas las variables independientes del modelo.
-
-### 3. Documentar Resultados:
-- **Resultados por variable**: Guarda los resultados de las PDs para cada cambio en las variables (uno a la vez).
-- **Comparación**: Comparar las PDs resultantes con las proyecciones originales para evaluar el impacto de cada variable.
-
-### 4. Respuesta a la Crítica:
-Una vez que tengas los resultados, puedes justificar cómo este análisis de sensibilidad con los desvíos estándar en las variables clave evalúa de manera efectiva el **impacto en el PiT PD final**, conforme a las condiciones actuales de la cartera y las fluctuaciones económicas.
-
-
-
-
-
-
-
-
-
-Para ajustar cada valor de una columna por su desviación estándar en Excel, puedes seguir estos pasos. Suponiendo que cada columna representa una variable macroeconómica y que cada fila corresponde a una fecha, realizarás el ajuste de cada valor individualmente por su desviación estándar correspondiente:
-
-### Pasos para Añadir un Desvío Estándar en Excel:
-
-1. **Calcular la Desviación Estándar**:
-   - Si aún no tienes calculada la desviación estándar para cada columna, puedes hacerlo fácilmente en Excel. 
-   - Supón que tienes datos en la columna B desde B2 hasta B100. Puedes colocar la desviación estándar de esta columna en cualquier celda vacía con la fórmula: `=STDEV.S(B2:B100)`
-
-2. **Añadir la Desviación Estándar a cada Valor**:
-   - Supongamos que colocaste la desviación estándar de la columna B en la celda C1. Para añadir esta desviación estándar a cada valor de la columna B y poner el resultado en la columna C, podrías usar la siguiente fórmula en la celda C2 y luego arrastrar hacia abajo hasta C100:
-     ```
-     =B2 + $C$1
-     ```
-   - Esta fórmula toma el valor original de la columna B y le suma la desviación estándar de toda la columna, que se encuentra fijada en la celda C1 (el símbolo `$` fija la referencia a esa celda específica, así que no cambia al arrastrar la fórmula).
-
-3. **Repetir para Otras Columnas**:
-   - Realiza el mismo procedimiento para las otras columnas correspondientes a las otras variables macroeconómicas, asegurándote de calcular la desviación estándar para cada columna y añadir esa desviación a los valores correspondientes.
-
-### Consideraciones:
-- Asegúrate de que tu columna de fechas no sea modificada.
-- Puedes crear una copia de tu archivo original antes de hacer estos cambios para mantener una versión sin modificar.
-
-### Automatización:
-- Si tienes muchas columnas y quieres automatizar este proceso, podrías considerar usar una macro de VBA en Excel que automáticamente calcule y añada las desviaciones estándares para cada columna.
-
-Si necesitas más ayuda con algún paso específico o una explicación más detallada sobre cómo configurar las fórmulas o la macro en Excel, no dudes en preguntar.
+Adicionalmente, cabe destacar que los predictores independientes han sido verificados como estacionarios mediante pruebas individuales, lo cual asegura que no hay un efecto de colinealidad espuria. Por lo tanto, el modelo se considera adecuado y consistente desde una perspectiva econométrica.

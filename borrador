@@ -246,62 +246,67 @@ variables_signos = {
     'GBL_WPO_WTI': 1
 }
 
-# 3. Convertir la columna 'Date' en formato datetime compatible con pandas 1.1.5
+# 3. Convertir la columna 'Date' a datetime con compatibilidad para pandas 1.1.5
 df['Date'] = pd.to_datetime(df['Date'], format='%d/%m/%Y', errors='coerce')
 
-# 4. Filtrar las fechas desde 31/03/2010 hasta 31/03/2024 (necesitamos 2010 para los cálculos)
+# 4. Filtrar las fechas desde 31/03/2010 hasta 31/03/2024
 start_date = pd.Timestamp('2010-03-31')
 end_date = pd.Timestamp('2024-03-31')
-df_filtered = df[(df['Date'] >= start_date) & (df['Date'] <= end_date)]
+df_filtered = df[(df['Date'] >= start_date) & (df['Date'] <= end_date)].copy()
 
-# 5. Inicializar DataFrames para almacenar resultados
+# 5. Crear DataFrames de resultados positivos y negativos a partir del DataFrame filtrado
 df_positive = df_filtered.copy()
 df_negative = df_filtered.copy()
 
-# 6. Procesar cada variable del modelo
+# 6. Procesar cada variable
 for variable, signo in variables_signos.items():
     
-    # Inicializar lista para almacenar los logaritmos naturales de los cocientes
+    # Inicializar lista para almacenar los logaritmos naturales de los cocientes desde 2011
     ln_ratios = []
 
-    # Para cada fecha desde 31/03/2011 hasta 31/03/2024, calcular el cociente con el mismo trimestre del año anterior
-    for i in range(4, len(df_filtered)):  # Empezamos desde el índice 4 para tener datos del año anterior
+    # 7. Calcular los cocientes desde 31/03/2011 hasta 31/03/2024
+    for i in range(4, len(df_filtered)):  # Comenzamos en el índice 4 (31/03/2011)
         current_value = df_filtered[variable].iloc[i]
-        previous_value = df_filtered[variable].iloc[i - 4]  # Restar 4 filas para un año
+        previous_value = df_filtered[variable].iloc[i - 4]  # Mismo trimestre del año anterior
         
         # Evitar divisiones por cero
         if previous_value != 0:
-            # Calcular el cociente entre el valor actual y el valor del año anterior
+            # Calcular el cociente entre los trimestres correspondientes
             ratio = current_value / previous_value
             
             # Calcular el logaritmo natural de este cociente
             ln_ratio = np.log(ratio)
             
-            # Agregar el resultado a la lista
+            # Guardar el logaritmo natural solo desde 2011 (índice 4) en adelante
             ln_ratios.append(ln_ratio)
 
-    # Calcular el desvío estándar de los logaritmos naturales (único número para cada variable)
+    # 8. Calcular el desvío estándar de los logaritmos naturales SOLO desde 2011 a 2024
     if ln_ratios:
-        std_ln = np.std(ln_ratios, ddof=1)
+        std_ln = np.std(ln_ratios, ddof=1)  # ddof=1 para el desvío estándar de la muestra
     else:
         std_ln = 0
 
-    # Calcular los valores exponenciales del desvío (positivo y negativo)
+    # 9. Calcular los valores exponenciales para el desvío positivo y negativo
     exp_positive = np.exp(std_ln)
     exp_negative = np.exp(-std_ln)
 
-    # Multiplicar los resultados por el valor de la variable en 31/03/2024
+    # 10. Multiplicar los resultados por el valor en 31/03/2024
     value_2024 = df_filtered[df_filtered['Date'] == pd.Timestamp('2024-03-31')][variable].values[0]
     
-    # Actualizar el valor de 31/03/2024 en df_positive y df_negative
+    # Actualizar el valor en 31/03/2024 en los DataFrames df_positive y df_negative
     df_positive.loc[df_positive['Date'] == pd.Timestamp('2024-03-31'), variable] = value_2024 * exp_positive
     df_negative.loc[df_negative['Date'] == pd.Timestamp('2024-03-31'), variable] = value_2024 * exp_negative
 
-# 7. Guardar los resultados en archivos CSV
+# 11. Filtrar los DataFrames positivos y negativos para incluir solo las fechas desde 31/03/2011
+df_positive = df_positive[df_positive['Date'] >= pd.Timestamp('2011-03-31')]
+df_negative = df_negative[df_negative['Date'] >= pd.Timestamp('2011-03-31')]
+
+# 12. Guardar los resultados en archivos CSV
 df_positive.to_csv('corrida_signo_positivo.csv', index=False)
 df_negative.to_csv('corrida_signo_negativo.csv', index=False)
 
 print("Corridas generadas y guardadas en archivos CSV.")
+
 
 
 

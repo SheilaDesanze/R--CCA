@@ -34,15 +34,15 @@ plt.grid(True)
 plt.show()
 
 
+Visual Analysis of Probability of Default (PD) by Segment
+The horizontal bar chart provides a visual representation of the Probability of Default (PD) ranges for the Primary, Secondary, and Tertiary segments. The horizontal axis displays the PD percentage, while the vertical axis identifies the three analyzed segments.
 
-El gráfico de barras horizontales proporciona una representación visual de los rangos de Probabilidad de Default (PD) para los segmentos Primario, Secundario y Terciario. En el eje horizontal se muestra el porcentaje de PD, mientras que el eje vertical identifica los tres segmentos analizados.
+For each segment, the following characteristics are presented:
 
-Para cada segmento, se presentan las siguientes características:
+Primary Segment: The PD varies between 0.99% and 1.11%, with a midpoint ("K") located at 1.05%. This range indicates a moderate sensitivity to changes in macroeconomic variables.
 
-Segmento Primario: La PD varía entre 0.99% y 1.11%, con un punto medio ("K") ubicado en 1.05%. Este rango indica una sensibilidad moderada a los cambios en las variables macroeconómicas.
+Secondary Segment: The PD oscillates between 0.97% and 1.03%, with a midpoint ("K") of 1.00%. This segment shows less variability compared to the Primary segment, suggesting a stability in associated risk.
 
-Segmento Secundario: La PD oscila entre 0.97% y 1.03%, con un valor medio ("K") de 1.00%. Este segmento muestra una menor variabilidad en comparación con el Primario, sugiriendo una estabilidad en el riesgo asociado.
+Tertiary Segment: The PD exhibits a broader range, from 1.81% to 2.30%, with a midpoint ("K") of 2.06%. This reflects a higher risk and variability, indicating greater sensitivity to economic changes.
 
-Segmento Terciario: La PD presenta un rango más amplio, de 1.81% a 2.30%, con un punto medio ("K") de 2.06%. Esto refleja un mayor riesgo y variabilidad, indicando una mayor sensibilidad a los cambios económicos.
-
-El gráfico ilustra claramente cómo las PD se distribuyen alrededor de sus valores medios, resaltando la variación provocada por la aplicación de desvíos estándar a las variables macroeconómicas. La representación de los valores mínimos y máximos permite identificar la amplitud del riesgo en cada segmento, facilitando una comprensión más profunda de la exposición al default en diferentes contextos económicos.
+The graph clearly illustrates how PD values are distributed around their midpoints, highlighting the variation caused by applying standard deviations to macroeconomic variables. The representation of minimum and maximum values allows for the identification of risk amplitude in each segment, facilitating a deeper understanding of default exposure under different economic contexts.

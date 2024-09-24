@@ -1,1 +1,34 @@
-A
+In response to the observation that previous analyses did not assess the impact on the final PiT PD given a defined threshold, we conducted a comprehensive sensitivity analysis based on 2023 values. This analysis involved applying a one standard deviation variation both upwards and downwards to all macroeconomic variables simultaneously, following the sign of each variable in the model (positive or negative).
+
+The impact on the Point-in-Time Probability of Default (PiT PD) was measured for each segment as follows:
+
+Primary Segment: The PiT PD fluctuated between 0.99% and 1.11%, with a midpoint ("K") of 1.05%.
+Secondary Segment: The PiT PD ranged from 0.97% to 1.03%, with a midpoint ("K") of 1.00%.
+Tertiary Segment: The PiT PD varied between 1.81% and 2.30%, with a midpoint ("K") of 2.06%.
+These results demonstrate that the model is sensitive to the combined variation in macroeconomic factors, while maintaining stability within a reasonable range for each segment. The application of these deviations helps to evaluate the potential risk exposure under different economic conditions, and ensures that the model aligns with the expectations for robustness and accuracy.
+
+
+
+
+
+import matplotlib.pyplot as plt
+
+# Datos
+segments = ['Primary', 'Secondary', 'Tertiary']
+min_pd = [0.99, 0.97, 1.81]  # Valores mínimos (desvío hacia abajo)
+max_pd = [1.11, 1.03, 2.30]  # Valores máximos (desvío hacia arriba)
+k_values = [1.05, 1.00, 2.06]  # Valores medios "K"
+
+# Crear gráfico de barras horizontales
+plt.figure(figsize=(8, 5))
+
+# Agregar las barras representando el rango (min -> max)
+for i in range(len(segments)):
+    plt.hlines(y=segments[i], xmin=min_pd[i], xmax=max_pd[i], color='skyblue', linewidth=6)
+    plt.plot(k_values[i], segments[i], 'o', color='blue')  # Punto medio "K"
+
+# Etiquetas y título
+plt.xlabel('Probability of Default (%)')
+plt.title('PD Ranges for Segments (Primary, Secondary, Tertiary)')
+plt.grid(True)
+plt.show()

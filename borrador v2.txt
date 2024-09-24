@@ -46,3 +46,67 @@ Secondary Segment: The PD oscillates between 0.97% and 1.03%, with a midpoint ("
 Tertiary Segment: The PD exhibits a broader range, from 1.81% to 2.30%, with a midpoint ("K") of 2.06%. This reflects a higher risk and variability, indicating greater sensitivity to economic changes.
 
 The graph clearly illustrates how PD values are distributed around their midpoints, highlighting the variation caused by applying standard deviations to macroeconomic variables. The representation of minimum and maximum values allows for the identification of risk amplitude in each segment, facilitating a deeper understanding of default exposure under different economic contexts.
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------
+
+
+### Análisis del Gráfico de Variación Relativa
+
+#### Pregunta 1: Análisis del Gráfico de Variación Relativa
+
+El gráfico de líneas con área sombreada ilustra la variación relativa de la Probabilidad de Default (PD) para los segmentos Primario, Secundario y Terciario. Cada punto en el gráfico representa el valor medio "K" de cada segmento, con la longitud de la línea vertical correspondiente a la variación mínima observada.
+
+- **Segmento Primario**: Muestra una variación relativa mínima de **0.05%**. La proximidad del valor "K" a esta variación indica una sensibilidad baja en comparación con otros segmentos.
+  
+- **Segmento Secundario**: La variación mínima es de **0.0266%**, lo que sugiere una estabilidad aún mayor, reafirmando que este segmento presenta el menor riesgo relativo.
+  
+- **Segmento Terciario**: Presenta una variación mínima de **0.11%**, reflejando una mayor sensibilidad y riesgo, aunque el gráfico indica que la variación relativa aún es manejable.
+
+La representación gráfica permite observar cómo cada segmento responde a cambios en la PD, evidenciando que el Segmento Terciario, aunque presenta mayor variabilidad, aún está dentro de un rango aceptable. La área sombreada ayuda a visualizar las diferencias en la variación relativa de cada segmento, resaltando las características del riesgo asociado.
+
+#### Pregunta 2: Propuesta de Threshold
+
+Para establecer un umbral (threshold) adecuado, es fundamental considerar el contexto económico y los objetivos de gestión del riesgo. Basado en los análisis previos y la variación observada:
+
+- **Propuesta de Threshold**: Un umbral del **1.5%** para el Segmento Primario y Secundario y un umbral del **2.5%** para el Segmento Terciario podría ser adecuado. 
+
+Este enfoque tiene en cuenta la media observada y permite mantener un nivel de riesgo controlado, alineado con las expectativas del mercado y la capacidad de respuesta de la entidad frente a posibles fluctuaciones en la PD. La selección de estos valores debe ser revisada periódicamente para asegurar que se mantenga la alineación con las condiciones macroeconómicas y los objetivos estratégicos de la organización.
+
+Si necesitas más detalles o un enfoque diferente, ¡no dudes en decírmelo!
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXSure! Here’s the analysis and threshold proposal in English:
+
+### Analysis of the Relative Variation Graph
+
+#### Question 1: Analysis of the Relative Variation Graph
+
+The shaded area line graph illustrates the relative variation of the Probability of Default (PD) for the Primary, Secondary, and Tertiary segments. Each point on the graph represents the midpoint "K" for each segment, with the vertical line corresponding to the observed minimum variation.
+
+- **Primary Segment**: Shows a minimum relative variation of **0.05%**. The proximity of the "K" value to this variation indicates low sensitivity compared to the other segments.
+  
+- **Secondary Segment**: Has a minimum variation of **0.0266%**, suggesting even greater stability, reaffirming that this segment presents the lowest relative risk.
+  
+- **Tertiary Segment**: Exhibits a minimum variation of **0.11%**, reflecting higher sensitivity and risk, although the graph indicates that the relative variation remains manageable.
+
+The graphical representation allows for the observation of how each segment responds to changes in PD, showing that while the Tertiary Segment presents greater variability, it is still within an acceptable range. The shaded area helps visualize the differences in relative variation for each segment, highlighting the risk characteristics associated with them.
+
+#### Question 2: Proposed Threshold
+
+To establish an appropriate threshold, it is crucial to consider the economic context and risk management objectives. Based on the previous analyses and the observed variation:
+
+- **Proposed Threshold**: A threshold of **1.5%** for the Primary and Secondary segments, and a threshold of **2.5%** for the Tertiary segment could be appropriate.
+
+This approach takes into account the observed means and allows for maintaining a controlled level of risk, aligned with market expectations and the entity's capacity to respond to potential fluctuations in PD. The selection of these values should be reviewed periodically to ensure alignment with macroeconomic conditions and the organization’s strategic objectives.
+
+If you need further details or a different focus, just let me know!

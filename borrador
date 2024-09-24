@@ -51,11 +51,13 @@ variables_signos = {
     'GBL_WPO_WTI': 1
 }
 
-# 3. Convertir la columna 'date' en formato datetime
-df['date'] = pd.to_datetime(df['date'], format='%d/%m/%Y')
+# 3. Convertir la columna 'date' en formato datetime compatible con pandas 1.1.5
+df['date'] = pd.to_datetime(df['date'], format='%d/%m/%Y', errors='coerce')
 
 # 4. Filtrar las fechas desde 31/03/2011 hasta 31/03/2024
-df_filtered = df[(df['date'] >= '2011-03-31') & (df['date'] <= '2024-03-31')]
+start_date = pd.Timestamp('2011-03-31')
+end_date = pd.Timestamp('2024-03-31')
+df_filtered = df[(df['date'] >= start_date) & (df['date'] <= end_date)]
 
 # 5. Inicializar DataFrames para las corridas con el signo positivo y el signo opuesto
 df_positive = df_filtered.copy()
@@ -64,33 +66,39 @@ df_negative = df_filtered.copy()
 # 6. Procesar cada variable del modelo
 for variable, signo in variables_signos.items():
     
-    # Inicializar listas para almacenar los logaritmos naturales y desviaciones estándar
+    # Inicializar lista para almacenar los logaritmos naturales
     ln_ratios = []
 
     # Para cada fecha desde 31/03/2011 hasta 31/03/2024, calcular el cociente con el mismo trimestre del año anterior
     for i in range(1, len(df_filtered)):
-        # Tomar el valor del trimestre actual (X) y el trimestre del año anterior (X-1)
-        current_value = df_filtered[variable].iloc[i]
-        previous_value = df_filtered[variable].iloc[i - 4]  # Considerando que los datos son trimestrales, se resta 4 filas
-        
-        # Calcular el cociente entre el valor actual y el valor del año anterior
-        ratio = current_value / previous_value
-        
-        # Calcular el logaritmo natural de este cociente
-        ln_ratio = np.log(ratio)
-        
-        # Agregar el resultado a la lista
-        ln_ratios.append(ln_ratio)
-    
+        if i - 4 >= 0:
+            # Tomar el valor del trimestre actual (X) y el trimestre del año anterior (X-1)
+            current_value = df_filtered[variable].iloc[i]
+            previous_value = df_filtered[variable].iloc[i - 4]  # Restar 4 filas para un año
+
+            # Evitar divisiones por cero
+            if previous_value != 0:
+                # Calcular el cociente entre el valor actual y el valor del año anterior
+                ratio = current_value / previous_value
+                
+                # Calcular el logaritmo natural de este cociente
+                ln_ratio = np.log(ratio)
+                
+                # Agregar el resultado a la lista
+                ln_ratios.append(ln_ratio)
+
     # Calcular el desvío estándar de los logaritmos naturales
-    std_ln = np.std(ln_ratios, ddof=1)
-    
+    if ln_ratios:
+        std_ln = np.std(ln_ratios, ddof=1)
+    else:
+        std_ln = 0
+
     # Calcular la exponencial del desvío estándar, tanto positiva como negativa
     exp_positive = np.exp(std_ln)
     exp_negative = np.exp(-std_ln)
     
     # Multiplicar los resultados por el valor de la variable en 31/03/2024
-    value_2024 = df[df['date'] == '2024-03-31'][variable].values[0]
+    value_2024 = df[df['date'] == pd.Timestamp('2024-03-31')][variable].values[0]
     
     # Primera corrida: Signo original
     df_positive[variable] = value_2024 * exp_positive
@@ -108,6 +116,7 @@ df_positive.to_csv('corrida_signo_positivo.csv', index=False)
 df_negative.to_csv('corrida_signo_negativo.csv', index=False)
 
 print("Corridas generadas y guardadas en archivos CSV.")
+
 
 
 

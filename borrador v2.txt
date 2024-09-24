@@ -32,3 +32,17 @@ plt.xlabel('Probability of Default (%)')
 plt.title('PD Ranges for Segments (Primary, Secondary, Tertiary)')
 plt.grid(True)
 plt.show()
+
+
+
+El gráfico de barras horizontales proporciona una representación visual de los rangos de Probabilidad de Default (PD) para los segmentos Primario, Secundario y Terciario. En el eje horizontal se muestra el porcentaje de PD, mientras que el eje vertical identifica los tres segmentos analizados.
+
+Para cada segmento, se presentan las siguientes características:
+
+Segmento Primario: La PD varía entre 0.99% y 1.11%, con un punto medio ("K") ubicado en 1.05%. Este rango indica una sensibilidad moderada a los cambios en las variables macroeconómicas.
+
+Segmento Secundario: La PD oscila entre 0.97% y 1.03%, con un valor medio ("K") de 1.00%. Este segmento muestra una menor variabilidad en comparación con el Primario, sugiriendo una estabilidad en el riesgo asociado.
+
+Segmento Terciario: La PD presenta un rango más amplio, de 1.81% a 2.30%, con un punto medio ("K") de 2.06%. Esto refleja un mayor riesgo y variabilidad, indicando una mayor sensibilidad a los cambios económicos.
+
+El gráfico ilustra claramente cómo las PD se distribuyen alrededor de sus valores medios, resaltando la variación provocada por la aplicación de desvíos estándar a las variables macroeconómicas. La representación de los valores mínimos y máximos permite identificar la amplitud del riesgo en cada segmento, facilitando una comprensión más profunda de la exposición al default en diferentes contextos económicos.

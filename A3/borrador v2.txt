@@ -1,12 +1,1 @@
-The proposed threshold classification for the Probability of Default (PD) is designed to provide a clear and systematic framework for assessing risk exposure across different segments. This classification employs a color-coded system that aids in the quick identification of risk levels, facilitating informed decision-making.
-
-Green (Up to 30%): This range indicates a low risk level. A PD within this threshold suggests that the entity is operating under favorable macroeconomic conditions, with manageable risk exposure. It signals stability and the potential for continued performance, allowing stakeholders to feel confident in the current risk environment.
-
-Amber (30% to 50%): This category reflects a moderate risk level. A PD in this range indicates potential vulnerabilities in the economic landscape or changes in macroeconomic variables that could impact performance. While still within an acceptable range, this level warrants close monitoring and may require proactive risk management strategies to mitigate potential negative impacts.
-
-Red (More than 50%): This threshold denotes a high-risk level. A PD exceeding 50% signifies significant exposure to default risk, likely influenced by adverse macroeconomic conditions or internal factors affecting the entity’s stability. This scenario necessitates immediate attention and potential intervention strategies to safeguard against potential losses.
-
-Rationale for the Proposed Threshold
-The rationale behind this classification lies in the observed maximum relative variation of 10% concerning the baseline. Given this context, setting the thresholds at 30% and 50% allows for a clear distinction between acceptable and concerning risk levels, while also providing a buffer for fluctuations in the PD.
-
-This structured approach enhances the ability to communicate risk effectively among stakeholders and provides a framework for aligning risk management practices with the organization’s strategic objectives. By utilizing this color-coded system, organizations can ensure that risk assessments are both intuitive and actionable, leading to more effective responses to changing economic conditions.
+=IFS(A2="CN";75%;A2="D1";10%;A2="D2";5%;A2="U1";10%)

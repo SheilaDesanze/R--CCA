@@ -1,2 +1,5 @@
 CAPPEO ENTRE 0 Y 1 :
 =IF(A1 < 0, 0, IF(A1 > 1, 1, A1))
+
+VARIOS IF:
+=IFS(A2="CN",75%,A2="D1",10%,A2="D2",5%,A2="U1",10%)

@@ -1,1 +1,12 @@
-A
+Aquí tienes el texto actualizado con el nuevo contenido integrado:
+
+---
+
+Regarding the model’s stability or sensitivity point, the first line of defense had already developed a complementary sensitivity analysis test, which is demonstrated below for each segment. This analysis is based on the standard deviations of macroeconomic variables and the sensitivity of the PD. It is complementary to the local Stress Testing scenarios and the weight analysis of the variables already included in the development document. Additionally, previous tests included **"perfect storm" scenarios**, where joint movements of historical variables were assessed. In the development document, it was already verified that these joint and more common movements of the predicted PDs did not exhibit excessive volatility. This analysis is thoroughly covered in **Section 5.4** of the MDT document, where each segment was analyzed.
+
+Notwithstanding the above, the audit required an analysis of the final Probability of Default, which is developed below.
+
+In this case, and given the circumstances the model has already been implemented and running since **June 2020**, it currently holds a **B rating**, and there are **no open Findings**, the sale of HBAR bank to a local bank and the fact that HSBC will completely leave the country in a short period, and that given that tests on the final and actual PDs of clients would require complete runs of the forecasting process which involve a significant load of calculations and time, we proceeded with this analysis.
+
+Given that a sensitivity test on PDs and macroeconomic variables had already been performed, the analysis presented in response to the audit's request for a sensitivity test on final PDs involved working on a real forecasting and client scenario. The macroeconomic explanatory variables were adjusted by one standard deviation, both in the opposite direction to their signs in the model and in the same direction. This sensitivity was analyzed, and a threshold was defined based on the historical volatility of the default rate for the portfolio.
+

@@ -1,4 +1,3 @@
-Aquí tienes el texto actualizado con el nuevo contenido integrado:
 
 ---
 
@@ -9,4 +8,20 @@ Notwithstanding the above, the audit required an analysis of the final Probabili
 In this case, and given the circumstances the model has already been implemented and running since **June 2020**, it currently holds a **B rating**, and there are **no open Findings**, the sale of HBAR bank to a local bank and the fact that HSBC will completely leave the country in a short period, and that given that tests on the final and actual PDs of clients would require complete runs of the forecasting process which involve a significant load of calculations and time, we proceeded with this analysis.
 
 Given that a sensitivity test on PDs and macroeconomic variables had already been performed, the analysis presented in response to the audit's request for a sensitivity test on final PDs involved working on a real forecasting and client scenario. The macroeconomic explanatory variables were adjusted by one standard deviation, both in the opposite direction to their signs in the model and in the same direction. This sensitivity was analyzed, and a threshold was defined based on the historical volatility of the default rate for the portfolio.
+
+
+----
+
+
+
+
+### Justification of the Threshold
+
+During the development period, it was observed that the default rate exhibited a volatility between **30% and 40%**, measured as the standard deviation over the mean of the default rate. Following the logic of a **RAG (Red, Amber, Green) threshold** system, the sensitivity of the final PD in a forecasting process can be categorized based on this historical volatility.
+
+- If the sensitivity of the PD remains below the **30%** historical volatility, it clearly represents a **GREEN** scenario, indicating that the model operates within acceptable limits.
+- Should the volatility exceed **30%** but stay within **50%** of historical volatility, the status becomes **AMBER**, signaling that the situation requires observation and monitoring.
+- If the volatility surpasses **50%**, entering into "perfect storm" conditions, and clearly exceeding historical volatility, the status moves to **RED**, prompting further analysis to determine the cause.
+
+Therefore, the model would initially reject the hypothesis of exceeding these thresholds unless the "perfect storm" scenario in the test justifies the deviation.
 

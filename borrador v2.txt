@@ -2,7 +2,7 @@
 
 ---
 
-**Response to the Criticism: "Lack of clarity on how the risk driver 'Debt/Outstanding 12 months prior to default (US$)' will be populated during model usage"**
+Response to the Criticism: "Lack of clarity on how the risk driver 'Debt/Outstanding 12 months prior to default (US$)' will be populated during model usage"
 
 To address this concern, we will provide more detailed information about the background of the risk driver "debt/outstanding 12 months prior to default (US$)." Specifically, we will justify why this proposed risk driver is an optimal choice compared to other possible alternatives, and how it will be populated during the model's usage phase.
 

@@ -1,27 +1,14 @@
 
+
 ---
 
-Regarding the model’s stability or sensitivity point, the first line of defense had already developed a complementary sensitivity analysis test, which is demonstrated below for each segment. This analysis is based on the standard deviations of macroeconomic variables and the sensitivity of the PD. It is complementary to the local Stress Testing scenarios and the weight analysis of the variables already included in the development document. Additionally, previous tests included **"perfect storm" scenarios**, where joint movements of historical variables were assessed. In the development document, it was already verified that these joint and more common movements of the predicted PDs did not exhibit excessive volatility. This analysis is thoroughly covered in **Section 5.4** of the MDT document, where each segment was analyzed.
+**Response to the Criticism: "Lack of clarity on how the risk driver 'Debt/Outstanding 12 months prior to default (US$)' will be populated during model usage"**
 
-Notwithstanding the above, the audit required an analysis of the final Probability of Default, which is developed below.
+To address this concern, we will provide more detailed information about the background of the risk driver "debt/outstanding 12 months prior to default (US$)." Specifically, we will justify why this proposed risk driver is an optimal choice compared to other possible alternatives, and how it will be populated during the model's usage phase.
 
-In this case, and given the circumstances the model has already been implemented and running since **June 2020**, it currently holds a **B rating**, and there are **no open Findings**, the sale of HBAR bank to a local bank and the fact that HSBC will completely leave the country in a short period, and that given that tests on the final and actual PDs of clients would require complete runs of the forecasting process which involve a significant load of calculations and time, we proceeded with this analysis.
+It is important to clarify that this risk driver is not intended to compute the debt balance immediately prior to default. Instead, what was measured during model development is the balance at the beginning of the observation period, which spans 12 months prior to default. For purposes of forecasting and provisioning, the relevant balance is **the one at the start of the observation period**, which in the live model corresponds to the current balance at **t_zero** (the present moment). This ensures that the model uses **the actual debt balance at the current time** as a starting point for future calculations, which provides a reliable basis for both 1-year ECL and longer-term ECL estimates.
 
-Given that a sensitivity test on PDs and macroeconomic variables had already been performed, the analysis presented in response to the audit's request for a sensitivity test on final PDs involved working on a real forecasting and client scenario. The macroeconomic explanatory variables were adjusted by one standard deviation, both in the opposite direction to their signs in the model and in the same direction. This sensitivity was analyzed, and a threshold was defined based on the historical volatility of the default rate for the portfolio.
+By using the current outstanding balance and referencing the historical behavior over the 12-month observation window, the model is able to make accurate predictions for ECL, ensuring that the risk driver remains relevant and effectively populated.
 
-
-----
-
-
-
-
-### Justification of the Threshold
-
-During the development period, it was observed that the default rate exhibited a volatility between **30% and 40%**, measured as the standard deviation over the mean of the default rate. Following the logic of a **RAG (Red, Amber, Green) threshold** system, the sensitivity of the final PD in a forecasting process can be categorized based on this historical volatility.
-
-- If the sensitivity of the PD remains below the **30%** historical volatility, it clearly represents a **GREEN** scenario, indicating that the model operates within acceptable limits.
-- Should the volatility exceed **30%** but stay within **50%** of historical volatility, the status becomes **AMBER**, signaling that the situation requires observation and monitoring.
-- If the volatility surpasses **50%**, entering into "perfect storm" conditions, and clearly exceeding historical volatility, the status moves to **RED**, prompting further analysis to determine the cause.
-
-Therefore, the model would initially reject the hypothesis of exceeding these thresholds unless the "perfect storm" scenario in the test justifies the deviation.
+---
 

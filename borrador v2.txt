@@ -1,14 +1,1 @@
 
-
----
-
-Response to the Criticism: "Lack of clarity on how the risk driver 'Debt/Outstanding 12 months prior to default (US$)' will be populated during model usage"
-
-To address this concern, we will provide more detailed information about the background of the risk driver "debt/outstanding 12 months prior to default (US$)." Specifically, we will justify why this proposed risk driver is an optimal choice compared to other possible alternatives, and how it will be populated during the model's usage phase.
-
-It is important to clarify that this risk driver is not intended to compute the debt balance immediately prior to default. Instead, what was measured during model development is the balance at the beginning of the observation period, which spans 12 months prior to default. For purposes of forecasting and provisioning, the relevant balance is **the one at the start of the observation period**, which in the live model corresponds to the current balance at **t_zero** (the present moment). This ensures that the model uses **the actual debt balance at the current time** as a starting point for future calculations, which provides a reliable basis for both 1-year ECL and longer-term ECL estimates.
-
-By using the current outstanding balance and referencing the historical behavior over the 12-month observation window, the model is able to make accurate predictions for ECL, ensuring that the risk driver remains relevant and effectively populated.
-
----
-

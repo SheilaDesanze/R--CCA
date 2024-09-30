@@ -3,3 +3,172 @@ CAPPEO ENTRE 0 Y 1 :
 
 VARIOS IF:
 =IFS(A2="CN",75%,A2="D1",10%,A2="D2",5%,A2="U1",10%)
+
+
+
+
+[00:00.000 --> 00:02.000]  No, ahí.
+[00:04.000 --> 00:06.000]  O sea, ahí ponés la respuesta.
+[00:06.000 --> 00:09.000]  Y más arriba está el guillo.
+[00:11.000 --> 00:13.000]  Ay, perdón, estaba muteada.
+[00:13.000 --> 00:18.000]  O sea, ahí ponés la respuesta, pero más arriba tenés la pregunta, digamos, del guillo.
+[00:19.000 --> 00:22.000]  Claro, es de creer y ver qué vamos a poner.
+[00:30.000 --> 00:43.000]  Ponés lo que hablamos el viernes. Ponés el chamuyo de lo que nos contaste el viernes.
+[00:44.000 --> 00:46.000]  ¿Pero no nos tiene que haber dañado esto?
+[00:48.000 --> 00:51.000]  O dijo que lo ponemos sin que lo vea él.
+[00:52.000 --> 00:53.000]  O dijo...
+[00:54.000 --> 00:56.000]  Sheila, ayudalo a Seba.
+[00:56.000 --> 01:00.000]  No, todavía no escribimos ninguna parte de la respuesta.
+[01:00.000 --> 01:03.000]  Bueno, escribamos otra cosa y después lo veamos.
+[01:03.000 --> 01:05.000]  Después nos olvidamos.
+[01:06.000 --> 01:08.000]  La deuda...
+[01:08.000 --> 01:10.000]  A ver, pará, pará.
+[01:10.000 --> 01:12.000]  Bueno, pará, vuelvo.
+[01:12.000 --> 01:14.000]  No, no, dejá que vamos a la pregunta.
+[01:14.000 --> 01:17.000]  Yo les cuento cómo es para que lo entiendan y después vemos cómo lo escribimos.
+[01:19.000 --> 01:24.000]  Lo que dice acá, bueno, deuda barra outstanding en realidad es la deuda u el outstanding.
+[01:24.000 --> 01:26.000]  No es dividido, ¿no?
+[01:26.000 --> 01:29.000]  Deuda o standing, o sea que es la misma, la deuda.
+[01:29.000 --> 01:33.000]  12 meses antes del default en dólares.
+[01:34.000 --> 01:39.000]  En realidad creo que lo escribimos así, pero no es necesariamente así la variable.
+[01:39.000 --> 01:43.000]  Porque en realidad vos no sabes cuándo es el default.
+[01:43.000 --> 01:45.000]  Ni siquiera sabes si va a entrar en default.
+[01:45.000 --> 01:50.000]  Entonces, si entraba en default, es la deuda que tiene hoy, en realidad.
+[01:50.000 --> 01:52.000]  No necesariamente 12.
+[01:52.000 --> 01:55.000]  Porque puede entrar dentro de 12 meses, pero puede entrar en 11, 10, 9, 8.
+[01:55.000 --> 01:57.000]  O sea, esa es la idea.
+[01:57.000 --> 02:01.000]  Entonces, en realidad lo que usamos es la deuda de hoy.
+[02:01.000 --> 02:05.000]  La deuda de hoy, si está en pesos, la transformamos a dólares.
+[02:05.000 --> 02:07.000]  Y si está en dólares, la dejamos como está.
+[02:07.000 --> 02:09.000]  En la mayor meta está en pesos.
+[02:09.000 --> 02:11.000]  Cuenta corriente está todo en pesos.
+[02:11.000 --> 02:14.000]  Tarjetas, 90% está en pesos y algún pucho en dólares.
+[02:14.000 --> 02:16.000]  Alguna compra del exterior.
+[02:17.000 --> 02:21.000]  Entonces, lo que hacemos es mayormente la dividimos por el tipo de cambio de hoy.
+[02:22.000 --> 02:25.000]  Y lo que está en dólares, lo dejamos en dólares.
+[02:25.000 --> 02:27.000]  ¿El tipo de cambio del momento?
+[02:27.000 --> 02:30.000]  Sí, del momento que estás procesando.
+[02:30.000 --> 02:34.000]  Estás calculando el score. Estás calculando el EAD.
+[02:34.000 --> 02:36.000]  Ahora estamos calculando eso.
+[02:36.000 --> 02:38.000]  Entonces, bueno.
+[02:39.000 --> 02:40.000]  Eso por un lado.
+[02:40.000 --> 02:42.000]  Después.
+[02:42.000 --> 02:48.000]  Una vez que tenemos ese valor de la deuda en dólares, se clasifica en rangos.
+[02:48.000 --> 02:54.000]  O sea, no entra la variable así, sino que entra hasta 900 dólares un rango,
+[02:54.000 --> 02:56.000]  hasta 15.000 dólares otro rango, cosas así.
+[02:56.000 --> 02:58.000]  Eso lo tiene Sheila, lo tiene que buscar vos, Sheila.
+[02:58.000 --> 03:02.000]  En el documento, cómo está la digitalización.
+[03:03.000 --> 03:07.000]  Entonces te dice, si está entre tal valor y tal valor en dólares,
+[03:07.000 --> 03:09.000]  el valor de esta variable es X.
+[03:09.000 --> 03:12.000]  Y si no es Y, y si no es Z, y así.
+[03:12.000 --> 03:14.000]  Creo que son cinco valores posibles.
+[03:14.000 --> 03:16.000]  Y esa es la variable que entra en el modelo.
+[03:16.000 --> 03:18.000]  Habría que explicar eso, por un lado.
+[03:18.000 --> 03:24.000]  Y después explicar que el modelo está desarrollado para tarjetas y cuentas corrientes.
+[03:24.000 --> 03:33.000]  Y que, por definición en el engine, todos esos productos tienen una maturity,
+[03:33.000 --> 03:36.000]  reciben una maturity menor o igual a un año.
+[03:37.000 --> 03:44.000]  Lo que significa que, aún cuando el producto está en Stage 2,
+[03:44.000 --> 03:48.000]  que hay que calcular el lifetime, la ACL lifetime,
+[03:48.000 --> 03:51.000]  es la misma que la ACL de 12 meses.
+[03:51.000 --> 03:54.000]  Porque ningún producto tiene más de 12 meses.
+[03:54.000 --> 03:56.000]  Hay que explicar eso.
+[03:56.000 --> 04:01.000]  Porque el otro tema que surgía acá es lo que seguramente,
+[04:01.000 --> 04:06.000]  lo que seguramente, le estoy tratando de ver la mente al AIMAR,
+[04:06.000 --> 04:08.000]  que en realidad no lo explicaron muy bien.
+[04:08.000 --> 04:13.000]  Si vos tenés que calcular un lifetime, por ejemplo una tarjeta, el segundo año,
+[04:13.000 --> 04:17.000]  vos sabés el EAD de hoy, que es 12 meses antes del default del primer año.
+[04:17.000 --> 04:21.000]  Pero si tuvieras que calcular el default dentro de 24 meses,
+[04:21.000 --> 04:26.000]  tendrías que ver la deuda dentro de un año.
+[04:26.000 --> 04:28.000]  ¿Y cómo divinas la deuda dentro de un año?
+[04:28.000 --> 04:29.000]  ¿No la sabes?
+[04:29.000 --> 04:33.000]  Entonces no está claro cómo se calcula esa variable.
+[04:33.000 --> 04:36.000]  En realidad no lo tenés que calcular nada, porque tomámosla desde ahora y punto.
+[04:36.000 --> 04:37.000]  Nada más.
+[04:37.000 --> 04:43.000]  Para el año de ahora no se usa porque los productos tienen una maturity menor o igual.
+[04:45.000 --> 04:47.000]  Ese es todo lo que hay que poner.
+[04:48.000 --> 04:50.000]  Y bueno, dice que falta documentarlo.
+[04:50.000 --> 04:53.000]  O sea que escribir de más.
+[04:53.000 --> 04:56.000]  Escribir todo lo que se pueda y mandarlo al documento.
+[04:57.000 --> 04:58.000]  Es eso.
+[04:59.000 --> 05:00.000]  ¿Te entendió?
+[05:00.000 --> 05:01.000]  ¿O hay algo que...?
+[05:03.000 --> 05:04.000]  ¿Hola?
+[05:04.000 --> 05:05.000]  Sí, sí.
+[05:07.000 --> 05:08.000]  Ahora hay que escribir eso.
+[05:17.000 --> 05:19.000]  Ahí voy a dejar en la red.
+[05:20.000 --> 05:21.000]  Así vemos ahora.
+[05:26.000 --> 05:30.000]  Ahí dejo en la carpeta lo de los rangos de la deuda.
+[05:30.000 --> 05:34.000]  Para entender bien qué hay que escribir sobre los rangos de la deuda.
+[05:37.000 --> 05:38.000]  Pregunta, pero bueno.
+[05:40.000 --> 05:42.000]  Como la pregunta es que no está claro cómo se calcula la variable.
+[05:42.000 --> 05:46.000]  En realidad la variable que usa el modelo es con esa transformación.
+[05:47.000 --> 05:52.000]  O sea, yo lo primero que empezaría es explicando en palabras qué es la variable.
+[05:52.000 --> 05:54.000]  O sea, deb barro stand en 12 meses.
+[05:55.000 --> 06:03.000]  Es la deuda, el balance al momento del proceso, al momento del cálculo.
+[06:03.000 --> 06:04.000]  Es eso.
+[06:06.000 --> 06:11.000]  Y después explicarle paso a paso qué pasa si... bueno, expresada en dólares.
+[06:12.000 --> 06:14.000]  Entonces ahí lo expresaba.
+[06:14.000 --> 06:16.000]  ¿Cuándo uso el tipo de cambio? ¿Qué tipo de cambio uso?
+[06:16.000 --> 06:20.000]  Bueno, el tipo de cambio al momento del cálculo, tiki tiki, todo eso.
+[06:21.000 --> 06:23.000]  Lo hace el Enmimo Engine, así que.
+[06:27.000 --> 06:30.000]  Y una vez que está eso, se discretiza de esa forma.
+[06:30.000 --> 06:34.000]  Y después de discretizarse se le asignan esos valores con un mapeo ese.
+[06:35.000 --> 06:43.000]  Después explicar por qué la parte de Stage 2 es igual que la de Stage 1, porque no hay maturities largas.
+[06:44.000 --> 06:49.000]  Y después, bueno, nada, lo que quieran meter de relleno, gráficos, lo que sea, que se les ocurra.
+[06:49.000 --> 06:54.000]  No se me viene a la mente ahora, pero métanlo como para si está bien documentado.
+[06:54.000 --> 07:00.000]  Creo que algo debería haber en algún... o en el documento de desarrollo o en algún panel de algo de explicar un poco la variable.
+[07:00.000 --> 07:01.000]  Pero bueno, no sé.
+[07:03.000 --> 07:10.000]  Después hay unos gráficos que creo que son univariados de la variable con el E contra el EAD o contra el AUF o algo de eso.
+[07:11.000 --> 07:15.000]  Que por ahí, no es respuesta al punto, pero capaz que sirve para rellenar.
+[07:15.000 --> 07:18.000]  Pero no es mucho más que eso. O sea, no medita ni un punto esto.
+[07:18.000 --> 07:22.000]  A ver, si esto no lo entendió alguien más, no tendría que hablar de un punto, tendría que haberlo preguntado.
+[07:23.000 --> 07:25.000]  Porque ¿cómo revisás un modelo si no entendés la variable?
+[07:25.000 --> 07:26.000]  Pero bueno.
+[07:30.000 --> 07:36.000]  Creo que quedó, porque según hablábamos otras veces, que tenía que quedar como mínimo X cantidad de variables.
+[07:37.000 --> 07:39.000]  Sí, me suena que era más eso.
+[07:46.000 --> 07:49.000]  Después cuando tengan algo, lo vemos con Darío directo y chao.
+[07:50.000 --> 07:51.000]  Dale.
+[07:51.000 --> 07:53.000]  Para que él le escriba, viste, en la parte de abajo.
+[07:53.000 --> 07:54.000]  Sí.
+[07:55.000 --> 07:56.000]  Bueno, bueno.
+[07:57.000 --> 07:58.000]  Bueno, bueno.
+[07:59.000 --> 08:00.000]  Bueno, bueno.
+[08:01.000 --> 08:02.000]  Bueno, bueno.
+[08:03.000 --> 08:04.000]  Bueno, bueno.
+[08:04.000 --> 08:07.000]  Para que él le escriba, viste, en la parte más política.
+[08:10.000 --> 08:12.000]  Si quiere, si no quiere, lo mandamos.
+[08:13.000 --> 08:16.000]  Si querés, ahí dejé, mirá, tipo, foto de los rangos.
+[08:17.000 --> 08:22.000]  Decí, no, este vence hoy. O sea, hay que armarlo hoy y hoy.
+[08:26.000 --> 08:32.000]  Sí, entonces, fíjense, si les parece, ponemos una reunión en la tarde, de media hora, con Darío.
+[08:32.000 --> 08:36.000]  Ya agéndanla y vemos lo que tengan. No importa lo que tengan.
+[08:37.000 --> 08:39.000]  Vemos lo que tengan y lo...
+[08:40.000 --> 08:43.000]  A ver si ya lo mandamos y si Darío no lo quiere ver, lo mandamos como está.
+[08:43.000 --> 08:45.000]  Por lo menos para que no quede guardiú.
+[08:47.000 --> 08:48.000]  Y...
+[08:50.000 --> 08:54.000]  Y en todo caso que lo rechacen como rechazaron el otro y lo completamos.
+[08:58.000 --> 09:00.000]  Para salir en la foto como que entregamos. Y ya está.
+[09:00.000 --> 09:04.000]  Total, es eso. No hay que hacer grandes investigaciones ni nada.
+[09:16.000 --> 09:19.000]  De cómo calcula la variable, viste, el campo que toma...
+[09:21.000 --> 09:26.000]  O para explicar más técnicamente en operativo, cómo se calcula la variable.
+[09:26.000 --> 09:29.000]  Cómo se calcula la variable, que toma esta columna, la... no sé.
+[09:30.000 --> 09:33.000]  No sé si la divido, ya está prestando ahora y le explicás.
+[09:35.000 --> 09:36.000]  Claro.
+[09:37.000 --> 09:40.000]  Porque ahí tiene que haber algo de las variables del modelo. Así que...
+[09:41.000 --> 09:45.000]  Hasta le podés pegar un... copiar y pegar código de ahí para rellenar. Y queda más largo, nada más.
+[09:49.000 --> 09:51.000]  El documento de implementación debe estar eso.
+[09:57.000 --> 10:01.000]  Bueno, les parece, hacemos así. Hablamos un rato cuando...
+[10:01.000 --> 10:02.000]  Vale.
+[10:02.000 --> 10:05.000]  Más tarde, ¿sí? Me avisan. Bueno, yo los dejo.
+[10:05.000 --> 10:06.000]  Gracias, chicos.
+[10:06.000 --> 10:08.000]  Vale, nos vemos. Chau.
+
+
+
+
+
+
+
+
+
+
+

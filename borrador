@@ -14,3 +14,24 @@ FROM OPENQUERY([CARM], 'SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH
                         AND COLUMN_NAME = ''SECUHEFIND''')
 
 
+
+
+import pyautogui
+import time
+import os
+
+# Ruta para abrir Microsoft Teams (puedes ajustarla según tu sistema)
+teams_path = r"C:\Program Files (x86)\Microsoft\Teams\current\Teams.exe"
+
+# Abrir Microsoft Teams
+os.startfile(teams_path)
+
+# Esperar a que Teams se abra (ajusta el tiempo según sea necesario)
+time.sleep(30)
+
+while True:
+    # Escribir la letra "A"
+    pyautogui.write("A")
+    
+    # Esperar 5 minutos
+    time.sleep(300)

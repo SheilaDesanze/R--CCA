@@ -5,6 +5,16 @@ VARIOS IF:
 =IFS(A2="CN",75%,A2="D1",10%,A2="D2",5%,A2="U1",10%)
     plt.xticks(df_filtered['Date'], df_filtered['Date'].dt.strftime('%m-%Y'), rotation=45)
 
+plt.xticks(ticks=df_filtered['Date'], labels=df_filtered['Date'].dt.strftime('%m-%Y'), rotation=45)
+
+
+
+
+
+
+
+
+
 
 
 import pandas as pd

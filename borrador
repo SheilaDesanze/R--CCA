@@ -46,21 +46,37 @@ for variable in variables:
     df_comparativo['Pct_Change_Downside'] = (df_comparativo['Diff_Central_Downside'] / df_comparativo['Central']) * 100
     df_comparativo['Pct_Change_Upside'] = (df_comparativo['Diff_Central_Upside'] / df_comparativo['Central']) * 100
     
-    # Gráfico comparativo
+    # Gráfico comparativo completo
     plt.figure(figsize=(12, 6))
     plt.plot(df_comparativo['Date'], df_comparativo['Central'], label='Escenario Central', linewidth=2)
     plt.plot(df_comparativo['Date'], df_comparativo['Downside'], label='Escenario Pesimista', linestyle='--')
     plt.plot(df_comparativo['Date'], df_comparativo['Upside'], label='Escenario Optimista', linestyle='-.')
-    plt.title(f"Comparación de {variable} entre Escenarios", fontsize=16)
+    plt.title(f"Comparación de {variable} entre Escenarios (Completo)", fontsize=16)
     plt.xlabel("Fecha", fontsize=12)
     plt.ylabel(variable, fontsize=12)
     plt.legend()
     plt.grid(True)
     plt.tight_layout()
+    graph_path_full = f"{variable}_full.png"
+    plt.savefig(graph_path_full)
+    plt.close()
     
-    # Guarda el gráfico como imagen
-    graph_path = f"{variable}.png"
-    plt.savefig(graph_path)
+    # Filtra los datos desde junio 2024
+    df_filtered = df_comparativo[df_comparativo['Date'] >= '2024-06-01']
+    
+    # Gráfico comparativo desde junio 2024
+    plt.figure(figsize=(12, 6))
+    plt.plot(df_filtered['Date'], df_filtered['Central'], label='Escenario Central', linewidth=2)
+    plt.plot(df_filtered['Date'], df_filtered['Downside'], label='Escenario Pesimista', linestyle='--')
+    plt.plot(df_filtered['Date'], df_filtered['Upside'], label='Escenario Optimista', linestyle='-.')
+    plt.title(f"Comparación de {variable} entre Escenarios (Desde Junio 2024)", fontsize=16)
+    plt.xlabel("Fecha", fontsize=12)
+    plt.ylabel(variable, fontsize=12)
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    graph_path_filtered = f"{variable}_filtered.png"
+    plt.savefig(graph_path_filtered)
     plt.close()
     
     # Crea una hoja en el archivo Excel
@@ -71,9 +87,11 @@ for variable in variables:
         for c_idx, value in enumerate(row, start=1):
             ws.cell(row=r_idx, column=c_idx, value=value)
     
-    # Inserta el gráfico en la hoja
-    img = Image(graph_path)
-    ws.add_image(img, f"A{len(df_comparativo) + 5}")
+    # Inserta los gráficos en la hoja
+    img_full = Image(graph_path_full)
+    img_filtered = Image(graph_path_filtered)
+    ws.add_image(img_full, f"A{len(df_comparativo) + 5}")
+    ws.add_image(img_filtered, f"A{len(df_comparativo) + 30}")  # Ajusta para que no se superpongan
 
 # Elimina la hoja predeterminada creada por openpyxl
 if "Sheet" in wb.sheetnames:

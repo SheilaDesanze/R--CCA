@@ -6,104 +6,80 @@ VARIOS IF:
 
 
 
+import pandas as pd
+import matplotlib.pyplot as plt
+from openpyxl import Workbook
+from openpyxl.drawing.image import Image
+from openpyxl.utils.dataframe import dataframe_to_rows
 
-SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH
-FROM OPENQUERY([CARM], 'SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH
-                        FROM INFORMATION_SCHEMA.COLUMNS
-                        WHERE TABLE_NAME = ''GCSECUP''
-                        AND COLUMN_NAME = ''SECUHEFIND''')
+# Carga de datos
+escenario_central = pd.read_csv('Escenario_Central.csv')
+escenario_downside = pd.read_csv('Escenario_Downside.csv')
+escenario_upside = pd.read_csv('Escenario_Upside.csv')
 
+# Asegúrate de que las fechas estén en el mismo formato
+escenario_central['Date'] = pd.to_datetime(escenario_central['Date'])
+escenario_downside['Date'] = pd.to_datetime(escenario_downside['Date'])
+escenario_upside['Date'] = pd.to_datetime(escenario_upside['Date'])
 
+# Lista de variables
+variables = [
+    "ARG_CASHOVER", "ARG_GN_N", "ARG_GDP", "ARG_M", "ARG_PSH", "ARG_TDEBT_USD",
+    "ARG_TDEBT_DOL_G", "BRA_GDP", "GBL_WPFOOD", "USA_RSH", "USA_RLG", "GBL_WPO_WTI"
+]
 
+# Crea un libro Excel
+wb = Workbook()
 
-import pyautogui
-import time
-import os
-
-# Ruta para abrir Microsoft Teams (puedes ajustarla según tu sistema)
-teams_path = r"C:\Program Files (x86)\Microsoft\Teams\current\Teams.exe"
-
-# Abrir Microsoft Teams
-os.startfile(teams_path)
-
-# Esperar a que Teams se abra (ajusta el tiempo según sea necesario)
-time.sleep(30)
-
-while True:
-    # Escribir la letra "A"
-    pyautogui.write("A")
+for variable in variables:
+    # Crea el dataframe comparativo para la variable
+    df_comparativo = pd.DataFrame({
+        'Date': escenario_central['Date'],
+        'Central': escenario_central[variable],
+        'Downside': escenario_downside[variable],
+        'Upside': escenario_upside[variable]
+    })
     
-    # Esperar 5 minutos
-    time.sleep(300)
+    # Cálculo de métricas
+    df_comparativo['Diff_Central_Downside'] = df_comparativo['Central'] - df_comparativo['Downside']
+    df_comparativo['Diff_Central_Upside'] = df_comparativo['Central'] - df_comparativo['Upside']
+    df_comparativo['Pct_Change_Downside'] = (df_comparativo['Diff_Central_Downside'] / df_comparativo['Central']) * 100
+    df_comparativo['Pct_Change_Upside'] = (df_comparativo['Diff_Central_Upside'] / df_comparativo['Central']) * 100
+    
+    # Gráfico comparativo
+    plt.figure(figsize=(12, 6))
+    plt.plot(df_comparativo['Date'], df_comparativo['Central'], label='Escenario Central', linewidth=2)
+    plt.plot(df_comparativo['Date'], df_comparativo['Downside'], label='Escenario Pesimista', linestyle='--')
+    plt.plot(df_comparativo['Date'], df_comparativo['Upside'], label='Escenario Optimista', linestyle='-.')
+    plt.title(f"Comparación de {variable} entre Escenarios", fontsize=16)
+    plt.xlabel("Fecha", fontsize=12)
+    plt.ylabel(variable, fontsize=12)
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    
+    # Guarda el gráfico como imagen
+    graph_path = f"{variable}.png"
+    plt.savefig(graph_path)
+    plt.close()
+    
+    # Crea una hoja en el archivo Excel
+    ws = wb.create_sheet(title=variable)
+    
+    # Inserta el dataframe en la hoja
+    for r_idx, row in enumerate(dataframe_to_rows(df_comparativo, index=False, header=True), start=1):
+        for c_idx, value in enumerate(row, start=1):
+            ws.cell(row=r_idx, column=c_idx, value=value)
+    
+    # Inserta el gráfico en la hoja
+    img = Image(graph_path)
+    ws.add_image(img, f"A{len(df_comparativo) + 5}")
 
+# Elimina la hoja predeterminada creada por openpyxl
+if "Sheet" in wb.sheetnames:
+    wb.remove(wb["Sheet"])
 
+# Guarda el archivo Excel
+wb.save("Comparacion_Escenarios.xlsx")
 
-
-
-
-
-
-
-********
-
-
-Hay que enviarle un email a Laura.   pidámosle las definiciones de las variables macroeconómicas y la fuente.
-  En el caso alguna fuente por ejemplo es posible que nos diga que es Oxford Economics		, y que Oxford Economics a su vez	 identifique la fuente		que ellos están usando.		
-  entonces le decimos Laura, mirá		
-  necesito que me des la definición		
-  de este listado de variables, qué incluye, qué no incluye		y	  la fuente primaria y la fuente original	, entonces por ahí le ponemos por ejemplo  alguna variable referida a deuda, que nos detalle si es expresadas en dólares	,  la deuda en pesos, en yenes		, o solo en moneda extranjera		.
-Referido a la fuente , preguntar si la información es del gobierno central		, municipal, estatal		, si es más los privados	. Preguntarle  quién te la dio y cuál es la fuente	 que	 tiene el proveedor. 
-
- Le decimos: mirá, necesitamos conocer			
-  la definición exhaustiva de esto, 	 más la fuente	  original			
-  y le das un ejemplo, acto seguido			
-  le pones, 	
-  por ejemplo, ¿de dónde lo saca Moody's?		¿de Banco Mundial, etcétera?			
-  
-  Y comentar que lo necesitamos	con urgencia porque	 va a estar sujeto a auditoría externa	y a regulatoria			
-
-******†**
-
-
-
-
-
-
-
-
-Aquí tienes el email en inglés, incluyendo la mención al archivo adjunto:  
-
----
-
-**Subject:** Request for Definitions and Sources of Macroeconomic Variables  
-
-Dear Laura,  
-
-I hope this email finds you well. We need your support on a key task that is crucial for an upcoming external and regulatory audit. Below are the details of what we require:  
-
-1. **Variable Definitions**  
-   Please provide a comprehensive definition for the attached list of macroeconomic variables. In each definition, we kindly ask you to specify:  
-   - What is included and excluded in the variable.  
-   - Specific details, such as whether a variable related to debt is expressed in USD, local currency, yen, or any other foreign currency.  
-
-2. **Sources of Information**  
-   It is essential to indicate:  
-   - The **primary source** (who provided the data to you).  
-   - The **original source**, i.e., the ultimate origin of the data used by the provider. For example, if the data comes from Oxford Economics, we need to know the source Oxford Economics relies on (e.g., World Bank, Moody's, etc.).  
-
-   To make this clearer, here’s an example:  
-   - Variable: External debt.  
-   - Primary source: Oxford Economics.  
-   - Original source: Central government data.  
-
-Please note that the list of variables for which we need explanations is attached to this email for your reference.  
-
-Lastly, we need this information urgently, as it will be reviewed during the upcoming external and regulatory audits.  
-
-Thank you in advance for your prompt response. Please feel free to reach out if you need any further clarification.  
-
-Best regards,  
-[Your Name]  
-[Your Position]  
-
-
+print("Archivo Excel generado exitosamente: Comparacion_Escenarios.xlsx")

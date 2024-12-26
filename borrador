@@ -112,3 +112,54 @@ if "Sheet" in wb.sheetnames:
 wb.save("Comparacion_Escenarios.xlsx")
 
 print("Archivo Excel generado exitosamente: Comparacion_Escenarios.xlsx")
+
+
+
+
+
+
+
+
+
+
+---------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+import matplotlib.pyplot as plt
+
+# Convierte las fechas a cadenas manualmente si son de tipo datetime
+df_filtered['Formatted_Date'] = df_filtered['Date'].dt.strftime('%m-%Y')
+
+# Gráfico
+plt.figure(figsize=(12, 6))
+
+# Trazar las líneas
+plt.plot(df_filtered['Formatted_Date'], df_filtered['Central'], label='Escenario Central', linewidth=2)
+plt.plot(df_filtered['Formatted_Date'], df_filtered['Downside'], label='Escenario Pesimista', linestyle='--')
+plt.plot(df_filtered['Formatted_Date'], df_filtered['Upside'], label='Escenario Optimista', linestyle='-.')
+
+# Configurar el eje X para mostrar todas las fechas
+plt.xticks(range(len(df_filtered['Formatted_Date'])), df_filtered['Formatted_Date'], rotation=45)
+
+# Personalizar el gráfico
+plt.title("Comparación de Escenarios (Desde Junio 2024)", fontsize=16)
+plt.xlabel("Fecha", fontsize=12)
+plt.ylabel("Valores", fontsize=12)
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+
+# Mostrar el gráfico
+plt.show()
+

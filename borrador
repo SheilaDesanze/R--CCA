@@ -9,6 +9,21 @@ plt.xticks(ticks=df_filtered['Date'], labels=df_filtered['Date'].dt.strftime('%m
 
 
 
+# Variables clave y nombres coloquiales
+variables = {
+    "ARG_TDEBT_USD": "Deuda Total en USD",
+    "ARG_CASHOVER": "Relación de Liquidez",
+    "GBL_WPFOOD": "Índice Global de Precios de Alimentos",
+    "ARG_GC_N": "Consumo Gubernamental Neto",
+    "ARG_PSH": "Gasto del Sector Privado",
+    "ARG_M": "Importaciones Totales",
+    "USA_RSH": "Relación de Ahorro de EE.UU.",
+    "ARG_TDEBT_DOL_G": "Deuda Nominal en Dólares",
+    "ARG_GDP": "PIB de Argentina",
+    "BRA_GDP": "PIB de Brasil",
+    "USA_RLG": "Tasa de Préstamo de EE.UU.",
+    "GBL_WPO_WTI": "Precio del Petróleo WTI"
+}
 
 
 

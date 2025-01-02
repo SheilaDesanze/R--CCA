@@ -4,18 +4,25 @@ import pandas as pd
 prfinal = pd.read_excel('prfinal.xlsx')
 workflow = pd.read_excel('Workflow.xlsx')
 
-# Asegurarse de que las columnas CUIT y CRR estén en el formato correcto
+# Asegurarse de que las columnas clave estén en el formato correcto
 prfinal['CUIT'] = prfinal['CUIT'].astype(str)
 workflow['CUIT'] = workflow['CUIT'].astype(str)
 
-# Cruzar las tablas por la columna CUIT y verificar coincidencia en CRR
+# Definir las columnas a verificar
+columns_to_check = ['dr_amt', 'undr_amt', 'unw_act_lim', 'crr', 'COD', 'delinquen', 'ID']
+
+# Realizar el merge por CUIT
 merged = prfinal.merge(workflow, on='CUIT', suffixes=('_prfinal', '_workflow'))
 
-# Crear una nueva columna para verificar si coinciden los CRR
-merged['CRR_Coincide'] = merged['CRR_prfinal'] == merged['CRR_workflow']
+# Verificar si todas las columnas especificadas coinciden
+for column in columns_to_check:
+    merged[f'{column}_Coincide'] = merged[f'{column}_prfinal'] == merged[f'{column}_workflow']
+
+# Crear una columna final que indique si todas las columnas coinciden
+merged['Todas_Coinciden'] = merged[[f'{col}_Coincide' for col in columns_to_check]].all(axis=1)
 
 # Guardar el resultado en un nuevo archivo Excel
 merged.to_excel('resultado_comparacion.xlsx', index=False)
 
 # Mostrar un resumen
-print(merged[['CUIT', 'CRR_prfinal', 'CRR_workflow', 'CRR_Coincide']])
+print(merged[['CUIT'] + [f'{col}_Coincide' for col in columns_to_check] + ['Todas_Coinciden']])

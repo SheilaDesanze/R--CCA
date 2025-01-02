@@ -1,1 +1,21 @@
+import pandas as pd
 
+# Cargar los archivos Excel
+prfinal = pd.read_excel('prfinal.xlsx')
+workflow = pd.read_excel('Workflow.xlsx')
+
+# Asegurarse de que las columnas CUIT y CRR estén en el formato correcto
+prfinal['CUIT'] = prfinal['CUIT'].astype(str)
+workflow['CUIT'] = workflow['CUIT'].astype(str)
+
+# Cruzar las tablas por la columna CUIT y verificar coincidencia en CRR
+merged = prfinal.merge(workflow, on='CUIT', suffixes=('_prfinal', '_workflow'))
+
+# Crear una nueva columna para verificar si coinciden los CRR
+merged['CRR_Coincide'] = merged['CRR_prfinal'] == merged['CRR_workflow']
+
+# Guardar el resultado en un nuevo archivo Excel
+merged.to_excel('resultado_comparacion.xlsx', index=False)
+
+# Mostrar un resumen
+print(merged[['CUIT', 'CRR_prfinal', 'CRR_workflow', 'CRR_Coincide']])

@@ -1,45 +1,14 @@
 import pandas as pd
 
-# Crear un ejemplo de DataFrame con Delinquency_Band
+# Crear un ejemplo de DataFrame con cod_de_act_especifica
 data = {
-    'Delinquency_Band': [0, 1, 3, 7, 12, 13]
+    'cod_de_act_especifica': [None, 1234, None, 5678, None]
 }
 
 df = pd.DataFrame(data)
 
-# Crear la nueva columna DELINQUENCY_BAND_REF basado en las reglas
-def map_delinquency_band(band):
-    if band == 0:
-        return 'Current'
-    elif band == 1:
-        return 'Up to 29 days past due'
-    elif band == 2:
-        return 'Between 30 & 59 days past due'
-    elif band == 3:
-        return 'Between 60 & 89 days past due'
-    elif band == 4:
-        return 'Between 90 & 119 days past due'
-    elif band == 5:
-        return 'Between 120 & 149 days past due'
-    elif band == 6:
-        return 'Between 150 & 179 days past due'
-    elif band == 7:
-        return 'Between 180 & 209 days past due'
-    elif band == 8:
-        return 'Between 210 & 239 days past due'
-    elif band == 9:
-        return 'Between 240 & 269 days past due'
-    elif band == 10:
-        return 'Between 270 & 299 days past due'
-    elif band == 11:
-        return 'Between 300 & 329 days past due'
-    elif band == 12:
-        return 'Between 330 & 359 days past due'
-    else:
-        return 'More than 360 days past due'
-
-# Aplicar la función al DataFrame
-df['DELINQUENCY_BAND_REF'] = df['Delinquency_Band'].apply(map_delinquency_band)
+# Aplicar la lógica: si está vacío (None o NaN), asignar 7278
+df['cod_de_act_especifica_ref'] = df['cod_de_act_especifica'].apply(lambda x: 7278 if pd.isna(x) else x)
 
 # Mostrar el resultado
 print(df)

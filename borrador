@@ -4,3 +4,218 @@ CAPPEO ENTRE 0 Y 1 :
 VARIOS IF:
 =IFS(A2="CN",75%,A2="D1",10%,A2="D2",5%,A2="U1",10%)
     plt.xticks(df_filtered['Date'], df_filtered['Date'].dt.strftime('%m-%Y'), rotation=45)
+
+
+
+
+
+
+[02:31.000 --> 02:32.000	  Sí.
+[02:32.000 --> 02:33.000	  ¿Tienes un cuadro?
+[02:33.000 --> 02:34.000	  Sí.
+[02:34.000 --> 02:35.000	  ¿Tienes un cuadro?
+[02:35.000 --> 02:36.000	  Sí.
+[02:37.000 --> 02:38.000	  ¿Cómo le costó, o no?
+[02:38.000 --> 02:41.000	  A ver, a ver, a ver, por apoderarme del mail de Darío.
+[02:54.000 --> 02:55.000	  Ese difícil, Darío.
+[03:01.000 --> 03:03.000	  ¿Y nada más, o nada más?
+[03:03.000 --> 03:04.000	  ¿Y nada más?
+[03:04.000 --> 03:11.000	  ...con los textos que escriban a propósito en el modelo, decir las raíces...
+[03:17.000 --> 03:19.000	  ...hasta el CD1.
+[03:19.000 --> 03:21.000	  ¿Qué CD1?
+[03:21.000 --> 03:24.000	  Leí en Day One, ¿te acuerdas?
+[03:26.000 --> 03:28.000	  Y comentó en el dashboard...
+[03:28.000 --> 03:31.000	  ...los textos estadísticos, que pasen, que no pasen...
+[03:32.000 --> 03:34.000	  ...lo que se hiciera...
+[03:37.000 --> 03:39.000	  Él vio la presentación, ¿no?
+[03:39.000 --> 03:43.000	  Bueno, yo le pasé y me dijo, bueno, a partir de eso...
+[03:43.000 --> 03:45.000	  ...no sé, para acá con un texto que...
+[03:45.000 --> 03:48.000	  Bueno, me pasa que no lo vio yo.
+[03:48.000 --> 03:50.000	  Sí, por eso, yo tengo muchas dudas.
+[03:50.000 --> 03:52.000	  Que no sé bien a qué se refiere, sí.
+[03:53.000 --> 03:57.000	  O sea, viste que él habla de sustituir un modelo.
+[03:58.000 --> 04:01.000	  ¿Y la presentación no es sobre PD2016?
+[04:01.000 --> 04:02.000	  ¿Cómo es?
+[04:02.000 --> 04:04.000	  ¿Ustedes hicieron un modelo en PD2016?
+[04:04.000 --> 04:05.000	  Sí.
+[04:05.000 --> 04:07.000	  ¿Y después otro en 2019?
+[04:07.000 --> 04:08.000	  No.
+[04:08.000 --> 04:09.000	  ¿Ah, es el mismo?
+[04:09.000 --> 04:10.000	  No.
+[04:10.000 --> 04:11.000	  ¿Cómo es?
+[04:11.000 --> 04:12.000	  En 2019 no hay nada.
+[04:12.000 --> 04:15.000	  O sea, yo estaba viendo las carpetas viejas...
+[04:16.000 --> 04:17.000	  ...y...
+[04:19.000 --> 04:21.000	  No, pero eso es IFRS.
+[04:21.000 --> 04:23.000	  Este modelo no es de IFRS.
+[04:23.000 --> 04:24.000	  Ah, ahí está.
+[04:24.000 --> 04:25.000	  Se tiene que seguir esa carpeta.
+[04:25.000 --> 04:26.000	  No, no tiene que entrar en IFRS.
+[04:26.000 --> 04:27.000	  Ah, ok.
+[04:27.000 --> 04:29.000	  No, como él me pone...
+[04:29.000 --> 04:32.000	  Fijate, lo de IMR, igual esto no es de IMR.
+[04:32.000 --> 04:33.000	  Sí.
+[04:33.000 --> 04:37.000	  Yo pensé que él se refería a lo que hicimos la otra vez, pero no.
+[04:37.000 --> 04:38.000	  Entonces no.
+[04:38.000 --> 04:41.000	  No, hay una carpeta dentro del desarrollo de IMR.
+[04:41.000 --> 04:42.000	  Ah, listo.
+[04:42.000 --> 04:43.000	  Entonces no.
+[04:43.000 --> 04:46.000	  Yo estaba, por ejemplo, con este IJU que estaba viendo la otra vez, pero...
+[04:46.000 --> 04:49.000	  No, no entra en la carpeta de IFRS porque no hay nada en IFRS.
+[04:49.000 --> 04:50.000	  No tiene nada que ver.
+[04:50.000 --> 04:51.000	  Porque es un modelo de otra cosa.
+[04:51.000 --> 04:52.000	  Está bien.
+[04:52.000 --> 04:53.000	  Hay dos modelos de OPD distintos.
+[04:53.000 --> 04:56.000	  Uno de IFRS y otro de...
+[04:56.000 --> 04:58.000	  Sí, pero el de OPD de IFRS no tiene que ser nada.
+[04:58.000 --> 04:59.000	  No, no, por eso.
+[04:59.000 --> 05:02.000	  Pero para entender, ¿qué se hizo antes?
+[05:02.000 --> 05:03.000	  Es de 2020.
+[05:03.000 --> 05:05.000	  Simplemente un 2020 de IFRS.
+[05:05.000 --> 05:06.000	  Pero ya está.
+[05:06.000 --> 05:07.000	  O sea...
+[05:07.000 --> 05:08.000	  Sí.
+[05:08.000 --> 05:11.000	  Y otro es este de 2016.
+[05:11.000 --> 05:12.000	  Exacto.
+[05:12.000 --> 05:13.000	  Ese es para cerrar.
+[05:13.000 --> 05:14.000	  Ahí está.
+[05:14.000 --> 05:15.000	  Ves la carpeta que dice IMR.
+[05:15.000 --> 05:16.000	  Ah, ok.
+[05:16.000 --> 05:17.000	  No, claro.
+[05:17.000 --> 05:18.000	  Yo no entendía bien para qué era el modelo de OPD.
+[05:18.000 --> 05:19.000	  Pensé que era el otro modelo.
+[05:20.000 --> 05:24.000	  No, el otro modelo de OPD es el de primario, secundario, terciario, etc.
+[05:24.000 --> 05:26.000	  Este modelo de OPD es el que te hacían cerrar.
+[05:26.000 --> 05:27.000	  Ah, ok, ok.
+[05:27.000 --> 05:28.000	  Entonces, nada.
+[05:28.000 --> 05:29.000	  Me lo confundí.
+[05:29.000 --> 05:30.000	  Era este.
+[05:30.000 --> 05:31.000	  Ok.
+[05:31.000 --> 05:32.000	  Que nunca lo usamos, este modelo.
+[05:32.000 --> 05:33.000	  Vale, lo estamos usando ahora.
+[05:33.000 --> 05:36.000	  Pero hasta ahora nunca lo habíamos usado porque usamos uno de México.
+[05:36.000 --> 05:37.000	  Claro, sí.
+[05:37.000 --> 05:39.000	  Vi que estaba todo mezclado con...
+[05:39.000 --> 05:41.000	  Que acá hay uno de México y acá...
+[05:41.000 --> 05:43.000	  No, igual eso de México es otra cosa.
+[05:43.000 --> 05:44.000	  Ah.
+[05:44.000 --> 05:46.000	  Es un modelo que usamos de referencia para desarrollar eso.
+[05:47.000 --> 05:48.000	  Ok.
+[05:49.000 --> 05:53.000	  No, estaba poniendo un tema con eso y se mezclaban los objetivos.
+[05:54.000 --> 05:56.000	  Bueno, entonces vos decís que...
+[05:58.000 --> 06:00.000	  Y él por qué quiere...
+[06:00.000 --> 06:03.000	  ¿Ahora quiere hacer un nuevo modelo que sustituya a esto?
+[06:03.000 --> 06:04.000	  No.
+[06:06.000 --> 06:07.000	  Ah, entonces no sé.
+[06:07.000 --> 06:08.000	  No hay que hacer ningún modelo.
+[06:08.000 --> 06:10.000	  Sustituyendo un modelo anterior de manera transitoria.
+[06:10.000 --> 06:15.000	  Nosotros estábamos usando un modelo de México hasta que se dio a Oaxaca.
+[06:15.000 --> 06:16.000	  Hace menos de un mes.
+[06:16.000 --> 06:17.000	  Ah, ok.
+[06:17.000 --> 06:19.000	  Y ahora estamos usando este.
+[06:19.000 --> 06:20.000	  Que nunca lo habíamos usado antes.
+[06:20.000 --> 06:21.000	  Que nunca se ha usado.
+[06:21.000 --> 06:22.000	  Lo hicimos en 2016.
+[06:22.000 --> 06:24.000	  En 2017 tuvo la ley AMAR.
+[06:24.000 --> 06:26.000	  Y lo hicieron y nunca lo quiso implementar.
+[06:27.000 --> 06:29.000	  Que es un desarrollo que hicimos acá, en Argentina.
+[06:29.000 --> 06:30.000	  Ah, ok.
+[06:30.000 --> 06:35.000	  Nunca lo quiso implementar porque dijo en 2020 vamos a implementar el modelo de México y ya está.
+[06:38.000 --> 06:41.000	  Pero ahora, como el modelo de México no se puede usar más,
+[06:41.000 --> 06:43.000	  dijimos bueno, usemos este.
+[06:43.000 --> 06:45.000	  Que vamos a hacer un desarrollo si no tenemos tiempo para hacer un desarrollo.
+[06:45.000 --> 06:46.000	  Sí.
+[06:47.000 --> 06:51.000	  De hecho empezamos con el tema de desarrollo con los indios y todo eso, pero nunca se desarrolló.
+[06:51.000 --> 06:52.000	  Sí, sí.
+[06:52.000 --> 06:54.000	  Claro, no sabía si él quería retomar ahí.
+[06:54.000 --> 06:55.000	  Se canceló el proyecto.
+[06:55.000 --> 06:56.000	  Sí.
+[06:56.000 --> 06:57.000	  Ese proyecto se canceló.
+[06:57.000 --> 06:58.000	  Entonces es este el modelo.
+[06:58.000 --> 07:00.000	  Ya estaba desarrollado todo.
+[07:01.000 --> 07:02.000	  Ya tuvo AMAR.
+[07:02.000 --> 07:03.000	  Tuvo un Rating C.
+[07:08.000 --> 07:11.000	  Y para leer el modelo este entonces, porque este nunca...
+[07:12.000 --> 07:13.000	  Ok.
+[07:13.000 --> 07:15.000	  Documento de Metamorfosis.
+[07:15.000 --> 07:16.000	  Documento de Metamorfosis.
+[07:16.000 --> 07:17.000	  Y ahí está.
+[07:17.000 --> 07:18.000	  Tenés en PDF.
+[07:18.000 --> 07:19.000	  Este queda...
+[07:19.000 --> 07:21.000	  Te diré que lo agarra en PDF, va a ser más liviano.
+[07:22.000 --> 07:25.000	  Y si no lo abrís en Word.
+[07:25.000 --> 07:26.000	  Está bien.
+[07:26.000 --> 07:28.000	  Estaba repasando el otro, pero nada.
+[07:30.000 --> 07:33.000	  Y en AMAR está el resultado.
+[07:35.000 --> 07:37.000	  Esta es la nota de AMAR?
+[07:37.000 --> 07:38.000	  Creo que sí.
+[07:38.000 --> 07:39.000	  Final Report.
+[07:39.000 --> 07:40.000	  Ah, eso sí.
+[07:45.000 --> 07:46.000	  Ok.
+[07:47.000 --> 07:50.000	  Hay un ojo que hay en Word que dice Respuesta al Draft.
+[07:51.000 --> 07:53.000	  Sí, igual esta tiene fecha después.
+[07:54.000 --> 07:56.000	  Pero bueno, lo veo todo.
+[07:57.000 --> 07:58.000	  Y...
+[07:59.000 --> 08:01.000	  Entonces la idea de él es presentar la Galicia...
+[08:01.000 --> 08:03.000	  Y acá está la presentación que hice yo.
+[08:03.000 --> 08:04.000	  Un backtesting para Galicia.
+[08:04.000 --> 08:05.000	  Sí.
+[08:05.000 --> 08:06.000	  Ahí está la propuesta.
+[08:07.000 --> 08:09.000	  Bueno, yo la tuya la dejé acá.
+[08:09.000 --> 08:10.000	  Lo puse en off.
+[08:10.000 --> 08:13.000	  Y acá la hice con lo de ese de Galicia Message.
+[08:13.000 --> 08:14.000	  Ok.
+[08:14.000 --> 08:15.000	  Bueno.
+[08:17.000 --> 08:18.000	  Y nada, le agregué...
+[08:18.000 --> 08:20.000	  No sé, en realidad no agregué nada.
+[08:20.000 --> 08:22.000	  Puse los slides de lo que él quería agregar.
+[08:22.000 --> 08:24.000	  Para preguntarte bien por qué no estaba...
+[08:25.000 --> 08:26.000	  No sé, la relación.
+[08:26.000 --> 08:27.000	  Bueno.
+[08:28.000 --> 08:29.000	  No, no, tenés que empezar.
+[08:29.000 --> 08:33.000	  Y igual el propósito del modelo, me entiendo que es esto, o no?
+[08:39.000 --> 08:40.000	  No, no.
+[08:40.000 --> 08:42.000	  Ese no es el propósito.
+[08:45.000 --> 08:46.000	  Quizás está en el Word.
+[08:46.000 --> 08:47.000	  Debería.
+[08:49.000 --> 08:51.000	  Igual hay que adaptarlo un poquito, pero...
+[08:51.000 --> 08:52.000	  Ese no es el propósito.
+[08:52.000 --> 08:54.000	  Esa es una descripción de los componentes del modelo.
+[08:54.000 --> 08:55.000	  Claro.
+[08:56.000 --> 08:57.000	  ¿Y el propósito qué sería?
+[08:57.000 --> 08:58.000	  ¿Predecir lo que sale del VR?
+[08:59.000 --> 09:01.000	  Y ahí lo debe decir en el documento.
+[09:01.000 --> 09:04.000	  Calcular la probabilidad de que el juego es regresada.
+[09:06.000 --> 09:09.000	  Estará en una operación más desplegada o volvosa.
+[09:10.000 --> 09:11.000	  Claro, exactamente.
+[09:11.000 --> 09:12.000	  Es para calcular o cerrar.
+[09:12.000 --> 09:17.000	  Cerrar determinando la probabilidad a 12 meses a través del ciclo.
+[09:22.000 --> 09:23.000	  Y la idea de él es que...
+[09:23.000 --> 09:25.000	  Bueno, que describe el propósito del modelo.
+[09:26.000 --> 09:30.000	  Y decir, bueno, que reemplace el modelo que la propiedad de HBC.
+[09:33.000 --> 09:35.000	  Que es una implementación de transición.
+[09:35.000 --> 09:38.000	  Hasta que se adopten los modelos del Banco Galicia.
+[09:42.000 --> 09:43.000	  ¿Cómo es eso?
+[09:43.000 --> 09:45.000	  Y, bueno, entonces esto no sirve.
+[09:47.000 --> 09:48.000	  ¿Y si son del otro modelo, no?
+[09:49.000 --> 09:50.000	  No.
+[09:51.000 --> 09:53.000	  Pero ¿están ustedes acá en esa presentación o no?
+[09:55.000 --> 09:56.000	  ¿Eso no son ustedes?
+[09:57.000 --> 09:58.000	  Bueno, ahí tenés uno.
+[09:58.000 --> 09:59.000	  El de potencia.
+[09:59.000 --> 10:00.000	  Sí.
+[10:05.000 --> 10:07.000	  Esto es análisis de la industria.
+[10:08.000 --> 10:11.000	  Bueno, análisis de los ratios que componen el modelo.
+[10:12.000 --> 10:13.000	  Sí.
+[10:13.000 --> 10:14.000	  Creo que ese es el único test.
+[10:15.000 --> 10:16.000	  A ver, bajá.
+[10:17.000 --> 10:18.000	  Ahí que hay.
+[10:19.000 --> 10:20.000	  ¿Qué son las cuales?
+[10:21.000 --> 10:22.000	  ¿Las cuentas contables?
+[10:22.000 --> 10:23.000	  Sí, sí.
+[10:24.000 --> 10:25.000	  Ah, son anexos igual.
+[10:25.000 --> 10:27.000	  A ver, vuelvo a bajar porque a lo mejor hay un test.
+[10:29.000 --> 10:31.000	  Porque los tests es más de anexo.
+[10:32.000 --> 10:34.000	  Estos son ejemplos de...
+[10:37.000 --> 10:38.000	  Ok.
+

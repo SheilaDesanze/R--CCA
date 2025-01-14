@@ -6,3 +6,483 @@ VARIOS IF:
     plt.xticks(df_filtered['Date'], df_filtered['Date'].dt.strftime('%m-%Y'), rotation=45)
 
 
+to do YA imp foroum 13-1
+[03:55.000 --> 03:58.000]  Ahora le voy a preguntar a Sebas dónde estaba, a ver si no...
+[03:58.000 --> 03:59.000]  si no lo encuentro.
+[03:59.000 --> 04:03.000]  Hay un Excelcito que nosotros usamos como base para esto.
+[04:04.000 --> 04:07.000]  Para reportar el estatuto de los modelos para el Imperial Forum.
+[04:07.000 --> 04:11.000]  Y la idea es agregar comentarios adicionales.
+[04:11.000 --> 04:13.000]  Los comentarios adicionales...
+[04:14.000 --> 04:20.000]  Después de demostrar el rating de diseño y el rating de performance.
+[04:21.000 --> 04:25.000]  Sería actualizar un poquito la performance y comentar un poco los...
+[04:26.000 --> 04:30.000]  la robustez de los modelos, cómo está reportada.
+[04:30.000 --> 04:32.000]  Entonces, como dijimos, ¿sí?
+[04:33.000 --> 04:34.000]  Un listado...
+[04:35.000 --> 04:36.000]  sería...
+[04:40.000 --> 04:41.000]  Tres columnas de bullets.
+[04:41.000 --> 04:49.000]  Donde para cada modelo comentamos los test estadísticos que pasaron.
+[04:49.000 --> 04:53.000]  Y las fuentes de datos y las seguridades con respecto a las fuentes de datos.
+[04:54.000 --> 04:55.000]  Entonces, como comentábamos.
+[04:56.000 --> 04:58.000]  Imaginemos, de izquierda a derecha.
+[04:58.000 --> 05:00.000]  Arranco, voy a tener cuatro columnas.
+[05:01.000 --> 05:02.000]  Voy a tener el CPD.
+[05:03.000 --> 05:04.000]  O voy a tener el...
+[05:05.000 --> 05:06.000]  ¿Cómo es?
+[05:06.000 --> 05:07.000]  O arranco con tres columnas.
+[05:07.000 --> 05:14.000]  Y comentamos que para la próxima vamos a incluir el de PDTTC.
+[05:15.000 --> 05:16.000]  Que...
+[05:17.000 --> 05:19.000]  Que cuando empiece a tener injerencia.
+[05:19.000 --> 05:21.000]  ¿Sí? Cuando empiece a tener injerencia.
+[05:21.000 --> 05:22.000]  Que todavía no la tiene.
+[05:22.000 --> 05:26.000]  Y que ese de PDTTC no lo comentamos porque...
+[05:28.000 --> 05:31.000]  Queda altísimamente radiado por el sobre en silencio.
+[05:31.000 --> 05:32.000]  Entonces, comentás.
+[05:33.000 --> 05:35.000]  ¿Datos certificados basileados?
+[05:35.000 --> 05:36.000]  Sí.
+[05:36.000 --> 05:37.000]  ¿Datos certificados basileados?
+[05:37.000 --> 05:38.000]  Sí.
+[05:38.000 --> 05:39.000]  ¿Datos certificados basileados?
+[05:39.000 --> 05:40.000]  Basilea 3.
+[05:40.000 --> 05:41.000]  No, en ese caso.
+[05:41.000 --> 05:42.000]  ¿Sí?
+[05:45.000 --> 05:46.000]  Análisis de riesgo.
+[05:47.000 --> 05:51.000]  Reconciliación cruzada, reconciliación interna, reconciliación contra el MIF.
+[05:52.000 --> 05:54.000]  Vas comentando ahí las reconciliaciones.
+[05:54.000 --> 05:57.000]  Y después vas comentando todos los test estadísticos que tiene.
+[05:57.000 --> 05:58.000]  ¿Sí?
+[05:58.000 --> 05:59.000]  Todos los test estadísticos que tiene.
+[06:00.000 --> 06:05.000]  ¿Vos ya me habías pasado algún work con test estadísticos para cada uno de los modelos?
+[06:05.000 --> 06:07.000]  De modo que lo podés robar de ahí.
+[06:07.000 --> 06:08.000]  ¿Sí?
+[06:08.000 --> 06:16.000]  Y después, lo que hay que hacer es ampliar un poquito los monitoreos.
+[06:16.000 --> 06:17.000]  ¿Qué es lo que pasa?
+[06:17.000 --> 06:20.000]  El monitoreo de ese PDTTC da en rojo.
+[06:20.000 --> 06:21.000]  Sobreestima mucho.
+[06:22.000 --> 06:24.000]  Pero esa ya es un poquito vieja.
+[06:24.000 --> 06:33.000]  Entonces, lo que tenés que hacer en ese caso particular es ir a ver las PDs que estaban predichas en diciembre del 2023.
+[06:34.000 --> 06:35.000]  Ver cuántos clientes había.
+[06:36.000 --> 06:42.000]  Yo después te voy a pasar cuántos clientes había en el motor de Hosell.
+[06:42.000 --> 06:45.000]  Yo después te voy a pasar los defaults, que ahora los pido.
+[06:46.000 --> 06:48.000]  Sacás un ratio y lo comparás con el control predicho.
+[06:49.000 --> 06:50.000]  ¿Sí?
+[06:50.000 --> 06:51.000]  Y ahí mostramos eso.
+[06:51.000 --> 06:52.000]  Ahí mostramos eso.
+[06:54.000 --> 06:56.000]  Después, para LGD no vamos a tener merca.
+[06:56.000 --> 07:01.000]  Comentamos que simplemente en junio y que todavía no hay masa crítica para monitoreo.
+[07:02.000 --> 07:09.000]  Mientras que para EAD, lo que sí podemos comentar es que hubo poca masa crítica defaults.
+[07:09.000 --> 07:12.000]  Y ahí te vas a tener que ir a buscar cada uno de los defaults.
+[07:12.000 --> 07:17.000]  Y vas a tener que ir a buscar al menos en diciembre, ¿sí?
+[07:17.000 --> 07:20.000]  En diciembre, qué EAD tenían predicho.
+[07:21.000 --> 07:24.000]  Si es que tenían cuenta corriente y si es que tenían tarjeta de crédito.
+[07:25.000 --> 07:30.000]  Y entonces ahí verificamos cuántos predijeron para cada uno de los casos.
+[07:31.000 --> 07:33.000]  Y con cuántos defaultearon.
+[07:34.000 --> 07:35.000]  ¿Me explico así?
+[07:35.000 --> 07:36.000]  Sí, sí.
+[07:37.000 --> 07:38.000]  Dale.
+[07:39.000 --> 07:42.000]  Y en función de eso hacemos los comentarios.
+[07:45.000 --> 07:50.000]  Después chequeate otra cosa allí, chequeate que no estén invertidos los...
+[07:50.000 --> 07:51.000]  Los...
+[07:53.000 --> 07:56.000]  Chequeate que no estén invertidos los...
+[08:00.000 --> 08:02.000]  Los escenarios, ¿sí?
+[08:02.000 --> 08:10.000]  Fijate que el down, fijate que el escenario negativo no tenga menos previsiones que el escenario central.
+[08:10.000 --> 08:15.000]  Y que el escenario positivo no tenga menos ECL que el escenario central también.
+[08:16.000 --> 08:18.000]  Para donde no tenga más, ¿sí?
+[08:18.000 --> 08:23.000]  O sea que el más optimista tenga menos ECL que el más pesimista sea el que más ECL tenga.
+[08:24.000 --> 08:27.000]  Porque ese es un dato que pidieron para el Galicia, me acuerdo.
+[08:28.000 --> 08:31.000]  Y después hacerme acordar que el...
+[08:32.000 --> 08:36.000]  Que tenemos que blanquear o ver cómo blanqueamos esto de los...
+[08:36.000 --> 08:38.000]  No, los Jorge que se extrapolaron.
+[08:38.000 --> 08:40.000]  Dale, sí, sí.
+[08:40.000 --> 08:42.000]  ¿Te respondió Jorge?
+[08:42.000 --> 08:46.000]  Sí, Jorge me respondió, entonces hacerme acordar eso mañana, ¿puede ser?
+[08:46.000 --> 08:48.000]  Tenemos que revisar las dos cosas.
+[08:48.000 --> 08:51.000]  La respuesta Jorge y ver cómo blanqueamos eso.
+[08:52.000 --> 08:54.000]  ¿Te quedó más o menos en claro allí?
+[08:54.000 --> 08:56.000]  Es fácil de hacer, ¿sí?
+[08:56.000 --> 08:58.000]  Por ahí lo más complicado...
+[08:59.000 --> 09:00.000]  ¿Ves?
+[09:00.000 --> 09:04.000]  Es identificar los defaults, ver si tenían cuenta corriente, ver con cuántos se cayeron.
+[09:05.000 --> 09:10.000]  Y irte a la retro para ver cuánto predecía el modelo 12 meses atrás.
+[09:10.000 --> 09:14.000]  Como proxy, vamos a ver en diciembre cuánto predecía el modelo.
+[09:15.000 --> 09:16.000]  Ok.
+[09:16.000 --> 09:17.000]  Sí.
+[09:17.000 --> 09:23.000]  Después, si ves que te da medio basura, lo que predecía el modelo versus lo que...
+[09:24.000 --> 09:25.000]  Lo que...
+[09:26.000 --> 09:29.000]  O muy distinto, lo que predecía el modelo versus lo que dio.
+[09:29.000 --> 09:32.000]  Bueno, ahí debemos de reconstruirlo un poquito mejor.
+[09:33.000 --> 09:35.000]  Pero en principio los datos básicos ya están, ¿sí?
+[09:35.000 --> 09:38.000]  Es ir a ver diciembre las predicciones de EPDES.
+[09:39.000 --> 09:43.000]  Y es ir a ver diciembre las predicciones de ADES.
+[09:43.000 --> 09:44.000]  ¿Sí?
+[09:45.000 --> 09:48.000]  Sí. ¿Y el Excel este que aguantás, dónde está?
+[09:49.000 --> 09:51.000]  El Excel, para que yo lo busco, ¿sí?
+[09:51.000 --> 09:52.000]  Para que yo lo busco...
+[09:53.000 --> 09:54.000]  Abrir...
+[09:55.000 --> 09:57.000]  Pedido, ¿eh?
+[10:00.000 --> 10:01.000]  Entonces...
+[10:02.000 --> 10:03.000]  Carpetas...
+[10:05.000 --> 10:06.000]  Vengo acá...
+[10:14.000 --> 10:15.000]  Ahí lo estoy buscando...
+[13:31.000 --> 13:32.000]  Dale, dale.
+[13:40.000 --> 13:41.000]  Dale, sí, sí.
+[13:46.000 --> 13:47.000]  Dale, muy bien, dale.
+[13:47.000 --> 13:48.000]  Dale, muy bien, dale.
+[13:54.000 --> 13:55.000]  Sí, sí, sí.
+[13:55.000 --> 13:56.000]  Sí, sí, sí.
+[13:56.000 --> 13:57.000]  ¿Y el power point o...?
+[13:57.000 --> 13:58.000]  ¿Y el power point o...?
+[13:58.000 --> 13:59.000]  ¿Y el power point o...?
+[13:59.000 --> 14:00.000]  Ah, no, igual debe estar todavía...
+[14:00.000 --> 14:01.000]  Ah, no, igual debe estar todavía...
+[14:01.000 --> 14:02.000]  Dale, voy buscando también.
+[14:02.000 --> 14:03.000]  Dale, voy buscando también.
+[14:03.000 --> 14:04.000]  A ver si hay otro.
+[14:04.000 --> 14:05.000]  Dale, voy buscando también.
+[14:05.000 --> 14:06.000]  A ver si hay otro.
+[14:13.000 --> 14:14.000]  Un email, ¿no me lo ha mandado?
+[14:14.000 --> 14:15.000]  Un email, ¿no me lo ha mandado?
+[14:30.000 --> 14:35.000]  de las comunidades indígenas de la región.
+[14:35.000 --> 14:40.000]  La comunidad indígena es una de las comunidades
+[14:40.000 --> 14:45.000]  más afectadas por el cambio climático.
+[14:45.000 --> 14:50.000]  La comunidad indígena es una de las comunidades
+[14:50.000 --> 14:55.000]  más afectadas por el cambio climático.
+[14:55.000 --> 15:00.000]  La comunidad indígena es una de las comunidades
+[15:00.000 --> 15:05.000]  más afectadas por el cambio climático.
+[15:05.000 --> 15:10.000]  La comunidad indígena es una de las comunidades
+[15:10.000 --> 15:15.000]  más afectadas por el cambio climático.
+[15:15.000 --> 15:20.000]  La comunidad indígena es una de las comunidades
+[15:20.000 --> 15:25.000]  más afectadas por el cambio climático.
+[15:25.000 --> 15:30.000]  La comunidad indígena es una de las comunidades
+[15:30.000 --> 15:35.000]  más afectadas por el cambio climático.
+[15:35.000 --> 15:40.000]  La comunidad indígena es una de las comunidades
+[15:40.000 --> 15:45.000]  más afectadas por el cambio climático.
+[15:45.000 --> 15:50.000]  La comunidad indígena es una de las comunidades
+[15:50.000 --> 15:55.000]  más afectadas por el cambio climático.
+[15:55.000 --> 16:00.000]  La comunidad indígena es una de las comunidades
+[16:00.000 --> 16:05.000]  más afectadas por el cambio climático.
+[16:05.000 --> 16:10.000]  La comunidad indígena es una de las comunidades
+[16:10.000 --> 16:15.000]  más afectadas por el cambio climático.
+[16:15.000 --> 16:20.000]  La comunidad indígena es una de las comunidades
+[16:20.000 --> 16:25.000]  más afectadas por el cambio climático.
+[16:25.000 --> 16:30.000]  La comunidad indígena es una de las comunidades
+[16:30.000 --> 16:35.000]  más afectadas por el cambio climático.
+[16:35.000 --> 16:38.760]  pidieron que mandemos un template con
+[16:41.800 --> 16:48.120]  pidieron que mandemos un template con... ahí te lo mando, si
+[16:49.480 --> 16:52.080]  si
+[16:54.680 --> 17:01.280]  esto y cualquier cosa lo vemos
+[17:01.280 --> 17:04.000]  acá
+[17:05.000 --> 17:08.000]  si tenés el...
+[17:08.080 --> 17:10.880]  si tenés
+[17:23.200 --> 17:27.200]  no se, no tengo el antecedente 011
+[17:29.080 --> 17:32.760]  listo, le mando un whatsapp y le pregunto dónde está
+[17:32.760 --> 17:38.760]  a mi no me llegó nada si mandaste recién o capaz de estar cargando, no sé
+[17:38.760 --> 17:42.760]  te digo, si si lo mandé, lo mandé seguro
+[17:52.760 --> 17:58.760]  hay que hacer un par de slides con los escenarios
+[17:58.760 --> 18:03.760]  con los escenarios
+[18:04.080 --> 18:09.360]  ahí de los escenarios de Jorge, si, entonces
+[18:09.360 --> 18:14.240]  en algún caso lo que se puede hacer es
+[18:15.920 --> 18:21.160]  en algún caso lo que se puede hacer es tomar
+[18:22.120 --> 18:26.160]  los gráficos que ya están, por ejemplo el de variación anual
+[18:26.160 --> 18:30.280]  por ejemplo PBI de argentina, PBI de
+[18:31.240 --> 18:37.280]  de brasil y en otros, bueno, tomemos los datos que entran en las
+[18:37.280 --> 18:42.360]  variables, los datos que entran con sus transformaciones y veamos cuán
+[18:42.360 --> 18:48.080]  entendibles quedan, veamos cuán entendibles quedan
+[18:50.280 --> 18:55.760]  porque por ahí viste, no sé, variación del gasto o algo por el estilo nos
+[18:55.760 --> 19:01.760]  interpreta mucho, pero variación de PBI, variación de precios de las commodities, etcétera
+[19:01.760 --> 19:07.760]  esos debieran ser entendibles, vos esos gráficos ya los tenés, te llegó, sí?
+[19:07.760 --> 19:10.760]  no, sabes que no, pero
+[19:10.760 --> 19:12.760]  te queda una maldita salida o algo así?
+[19:12.760 --> 19:15.760]  no, no, no, no
+[19:16.440 --> 19:21.680]  no, no está en la depending, no está en la depending para nada
+[19:21.840 --> 19:24.680]  ¿estoy yo o alguien con un nombre parecido?
+[19:24.680 --> 19:28.680]  Sheila Sánchez y copia Adrián y Adiós
+[19:35.680 --> 19:38.680]  bueno, pues inicia el auto, ojalá
+[19:51.680 --> 19:53.680]  bueno, bueno, bueno
+[20:08.680 --> 20:10.680]  bueno, bueno, bueno
+[20:11.680 --> 20:14.680]  bueno, bueno, entonces se queda una
+[20:21.680 --> 20:23.680]  bueno, bueno
+[20:52.680 --> 20:55.680]  espera, espera, le vuelvo a mandar entonces
+[20:56.680 --> 20:59.680]  D, C, R, O, C, L
+[21:04.680 --> 21:07.680]  Sheila, Sánchez, Adrián
+[21:09.680 --> 21:10.680]  Diego
+[21:11.680 --> 21:16.680]  che, y bueno, no, perfecto, lo que podemos hacer entonces allí es
+[21:17.680 --> 21:21.680]  que Adri comente esto en el informe en forum, sí?
+[21:21.680 --> 21:23.680]  la idea sería
+[21:23.680 --> 21:28.680]  poner el gráfico, mostrar las variables más importantes
+[21:30.680 --> 21:35.680]  poner en realidad todas las variables, pero ponemos bien grandes las más importantes
+[21:35.680 --> 21:39.680]  y comentamos el cambio que tuvieron versus la proyección de grupo, sabes?
+[21:40.680 --> 21:44.680]  y ponemos el cambio que tuvieron versus la proyección de grupo
+[21:44.680 --> 21:50.680]  o sea, armamos unos slides con lo que sea la
+[21:51.680 --> 21:55.680]  el rayonal que le armamos a Valeré que fue para Luciana
+[21:55.680 --> 21:58.680]  che, entonces, mirá, esta es la evolución de PBI
+[21:58.680 --> 22:00.680]  es un poco más optimista
+[22:00.680 --> 22:03.680]  pero coincide con la de las REN, sí?
+[22:03.680 --> 22:05.680]  eso sería el estilo
+[22:05.680 --> 22:08.680]  entonces, vamos con las variables más importantes
+[22:08.680 --> 22:14.680]  y comentamos en qué estado están y cuánto cambian versus el anterior
+[22:14.680 --> 22:16.680]  porque en esto la historia es importante
+[22:16.680 --> 22:17.680]  en esto la historia es importante
+[22:17.680 --> 22:19.680]  bueno, mirá, yo estoy laburando con esto
+[22:19.680 --> 22:22.680]  y es más o menos lo mismo con lo que venía laburando, sí?
+[22:23.680 --> 22:24.680]  che, yo estoy laburando con esto
+[22:24.680 --> 22:26.680]  cambio con respecto a lo que venía laburando
+[22:26.680 --> 22:28.680]  pero está recuerdado para el REN, sí?
+[22:31.680 --> 22:32.680]  ¿te llegó G?
+[22:32.680 --> 22:33.680]  sí, sí, ahí llegó, mirá
+[22:33.680 --> 22:35.680]  ¿lo mandaste de nuevo?
+[22:35.680 --> 22:36.680]  sí
+[22:36.680 --> 22:37.680]  llegó una sola vez igual
+[22:37.680 --> 22:38.680]  llegó una sola vez
+[22:57.680 --> 22:59.680]  ah, pero es un power vacío
+[22:59.680 --> 23:01.680]  sí, exacto, eso es lo que tiene que ser así
+[23:07.680 --> 23:36.680]  listo, entonces lo que queda ahí son gráficos con las variables más importantes y con los conceptos
+[23:36.680 --> 23:38.680]  sí, entonces el principal de concepto es
+[23:39.680 --> 23:41.680]  los escenarios
+[23:43.680 --> 23:44.680]  utilizados
+[23:44.680 --> 23:46.680]  12 variables en total
+[23:50.680 --> 23:55.680]  son similares al escenario previo diseñado por el viejo grupo HFC
+[23:57.680 --> 24:02.680]  con algunas variaciones un poco más importantes
+[24:03.680 --> 24:07.680]  en 3 variables, las que correspondan
+[24:08.680 --> 24:16.680]  en cuyo caso los nuevos valores coincidan basurablemente con las medianas de E
+[24:17.680 --> 24:22.680]  entonces podés mostrarse el de PBI y comentás cuánto era el viejo
+[24:22.680 --> 24:28.680]  o podés comentar, podés mostrar el PBI viejo y el nuevo
+[24:29.680 --> 24:34.680]  y le metés algún globito o algo, alguna viñeta comentando cómo se movió
+[24:35.680 --> 24:40.680]  o a dónde fue a parar, a menos de un desvío estándar de la red
+[24:46.680 --> 24:47.680]  dale, perfecto
+[24:48.680 --> 24:50.680]  y ahí después se hace el comentario
+[24:50.680 --> 24:54.680]  y le pones el comentario sobre lo que eran los...
+[24:55.680 --> 24:57.680]  y te estoy mandando el de Jorge
+[25:02.680 --> 25:03.680]  Jorge Morgate
+[25:06.680 --> 25:10.680]  ah, Jorge me mandó, sí, el rayonal, entonces pegá el rayonal de Jorge, sí
+[25:14.680 --> 25:15.680]  sí, estás copiada
+[25:15.680 --> 25:17.680]  proyección de variables macroeconómicas
+[25:18.680 --> 25:24.680]  entonces listo, ahí agarrás y pones un slide con los conceptos
+[25:26.680 --> 25:29.680]  entonces, lo que sería la premisa central
+[25:30.680 --> 25:32.680]  tomás lo básico de Jorge
+[25:34.680 --> 25:36.680]  después comentás que los escenarios razonablemente coinciden
+[25:37.680 --> 25:39.680]  con los de grupo viejo, salvo 3 variables
+[25:40.680 --> 25:42.680]  que están razonablemente alineadas con las redes
+[25:43.680 --> 25:44.680]  y pones PBI, las claves
+[25:44.680 --> 25:49.680]  y después vas a un slide donde mostras el PBI nuevo de Jorge y el viejo de grupo
+[25:50.680 --> 25:52.680]  siempre coincidiendo con las fechas temporales
+[25:53.680 --> 25:56.680]  y ahí en ese caso particular lo que haces es
+[25:57.680 --> 26:02.680]  por ahí le pones alguna viñeta donde el PBI nuestro que va a estar más alto, el nuevo
+[26:03.680 --> 26:06.680]  decís está alineado con las expectativas de mercado
+[26:07.680 --> 26:08.680]  con orden de banco central
+[26:09.680 --> 26:11.680]  y después abajo ponemos una nota diciendo
+[26:11.680 --> 26:13.680]  se considera alineado cuando el desvío
+[26:14.680 --> 26:18.680]  con respecto a la medida de mercado es de las remes menor a un desvío estándar
+[26:21.680 --> 26:22.680]  dale, super
+[26:24.680 --> 26:26.680]  comparo solo el central de los viejos o los 3?
+[26:27.680 --> 26:30.680]  sí, solo el central, porque con respecto a los otros sí
+[26:31.680 --> 26:34.680]  y eso tenemos que ver, lo esperable es que se compensen
+[26:36.680 --> 26:38.680]  hay que decir que se mudó a una
+[26:39.680 --> 26:41.680]  a una distribución equitativa
+[26:42.680 --> 26:44.680]  a una distribución equitativa de solo los 3 escenarios
+[26:45.680 --> 26:47.680]  lo que más o menos pusiste en el mail
+[26:50.680 --> 26:53.680]  entonces antes eran 4 con una sobreponderación del
+[26:57.680 --> 26:58.680]  ¿cómo es?
+[26:59.680 --> 27:03.680]  antes eran 4 con una sobreponderación de los malos y lo que está en el mail para luciana
+[27:04.680 --> 27:06.680]  claro, pero tipo presentación
+[27:07.680 --> 27:09.680]  tipo presentación, de bullets
+[27:10.680 --> 27:14.680]  lindas letras, pocas palabras, cosa de que el orador comente lo clave
+[27:15.680 --> 27:17.680]  bueno, fuimos a 3 escenarios
+[27:18.680 --> 27:21.680]  después yo profundizaría sobre los 3 escenarios
+[27:22.680 --> 27:23.680]  después vemos la cuestión de los pesos
+[27:24.680 --> 27:27.680]  pero se puede comentar que el escenario malo y el bueno
+[27:28.680 --> 27:30.680]  tienen el mismo peso, 15% que se compensan
+[27:31.680 --> 27:33.680]  entonces hacemos foco en el escenario central
+[27:33.680 --> 27:35.680]  que ahora pesa tanto, antes pesaba tanto
+[27:38.680 --> 27:40.680]  el escenario central que es el gran diver
+[27:41.680 --> 27:42.680]  en este caso particular
+[27:43.680 --> 27:44.680]  respeta
+[27:45.680 --> 27:47.680]  las proyecciones previamente existentes
+[27:48.680 --> 27:49.680]  salvo 3 variables
+[27:50.680 --> 27:51.680]  que se apartan más
+[27:52.680 --> 27:55.680]  donde coincide razonablemente con las rem
+[27:56.680 --> 27:57.680]  y después va a ser los gráficos
+[28:04.680 --> 28:06.680]  los gráficos que más o menos ya obtengo
+[28:08.680 --> 28:09.680]  si, exacto
+[28:10.680 --> 28:13.680]  fíjate que queden lindos, que sean legibles, que tengan letras grandes
+[28:14.680 --> 28:15.680]  que no quede un gráfico sin un título
+[28:16.680 --> 28:19.680]  que el gráfico sea autoexplicativo y fácil de leer
+[28:21.680 --> 28:22.680]  autoexplicativo y fácil de leer
+[28:25.680 --> 28:26.680]  si, dale
+[28:27.680 --> 28:28.680]  dale
+[28:29.680 --> 28:30.680]  perfecto, sí
+[28:30.680 --> 28:31.680]  cualquier duda me llamas
+[28:32.680 --> 28:34.680]  ahí me llegó el segundo mail, mirá
+[28:35.680 --> 28:36.680]  sé que está medio...
+[28:38.680 --> 28:39.680]  confesionado
+[28:40.680 --> 28:41.680]  bueno, dale
+[28:45.680 --> 28:46.680]  no, no, no
+[28:47.680 --> 28:49.680]  vale, vale, vamos
+
+
+resumen previo en staff.. tod o miercoles
+H:\Mi unidad\HSBC\Audios>whisper "13 ene, 13.01​ todo mier.mp3" --model large --language es
+[00:00.000 --> 00:12.000]  ...lo que es el material para el comité de modelos.
+[00:12.000 --> 00:16.000]  Para el material del comité de modelos vamos a tener dos cosas.
+[00:16.000 --> 00:21.000]  Por un lado presentar el modelo TTC y por otro lado habrá que presentar también el modelo capital económico.
+[00:21.000 --> 00:29.000]  Y acordate Adri que el 29 va a estar el ALCO.
+[00:29.000 --> 00:32.000]  Donde va a haber que ir yo ya voy a estar.
+[00:32.000 --> 00:36.000]  No, por eso me preocupa más. Me parece que yo podría hacer más foco en el ALCO.
+[00:36.000 --> 00:45.000]  Entonces, vos obviamente ahora tenés que cerrar lo más crítico que es la parte de capital económico,
+[00:45.000 --> 00:47.000]  que es la parte donde incluso tampoco está operativa.
+[00:47.000 --> 00:50.000]  Y lo otro es dar explicaciones y mostrar que...
+[01:18.000 --> 01:26.000]  Y va a estar trabajando con el material para el IMPARMENFORO.
+[01:26.000 --> 01:35.000]  Yo me estoy agendando ya mismo, voy a hacer lobby para que el IMPARMENFORO sea...
+[01:35.000 --> 01:41.000]  Ya estoy inclusive cruzando todos los idiomas, estoy hecho mierda.
+[01:42.000 --> 01:54.000]  Entonces para Darío Mangano pedir IMPARMENFORUM a los premios.
+[01:54.000 --> 01:59.000]  Entonces voy a hablar con Vicky para decirle, che Vicky, mirá, nosotros tenemos que presentar varias cosas.
+[01:59.000 --> 02:05.000]  Si el IMPARMENFORUM lo podés dejar para febrero, entradito, mucho mejor.
+[02:11.000 --> 02:16.000]  Y bueno, listo.
+[02:16.000 --> 02:19.000]  Entonces, esa es la tarea mía.
+[02:19.000 --> 02:27.000]  Y Sheila, ahora le vamos a pedir que dé una mano, y esto tiene que ser rapidito, con las validaciones.
+[02:27.000 --> 02:32.000]  Entonces, esto se trata de algo muy, muy sencillo.
+[02:32.000 --> 02:44.000]  Rodri, pasale la data, hay que ver cuantos, incluso cuantos clientes había en la base de diciembre del año pasado.
+[02:44.000 --> 02:49.000]  Ver cual fue el default rate efectivo, cual fue el default rate efectivo.
+[02:49.000 --> 02:51.000]  Yo insisto, fueron 6 defaults.
+[02:51.000 --> 02:55.000]  4 que le pasaron a Rodri, más estos de los grobos que se cayeron ahora.
+[02:55.000 --> 02:57.000]  Que son, ascienden a 6.
+[02:57.000 --> 03:05.000]  Y compararlo con la predicción de PD que había en aquel entonces.
+[03:05.000 --> 03:09.000]  Que probablemente te va a dar bastante arte y comentar, bueno, cual es la predicción de PD ahora.
+[03:09.000 --> 03:16.000]  Y después para esos 6 defaults, hay que verificarles el cumplimiento del modelo DEAD.
+[03:16.000 --> 03:19.000]  Entonces esto es sencillo, reconstruir.
+[03:19.000 --> 03:26.000]  Cuanto tenían de EAD proyectado, que diciembre del año pasado ya cerró con EAD.
+[03:26.000 --> 03:28.000]  Ya estaba el modelo de EAD operativo.
+[03:28.000 --> 03:30.000]  O fue local.
+[03:30.000 --> 03:32.000]  No me acuerdo.
+[03:32.000 --> 03:34.000]  Pero ya estaba en ese.
+[03:34.000 --> 03:37.000]  Ya estaba, entonces, esto es muy sencillo.
+[03:37.000 --> 03:43.000]  El modelo tenía, ya el modelo predecía un EAD.
+[03:43.000 --> 03:45.000]  Ya el modelo predecía un EAD.
+[03:46.000 --> 03:50.000]  Ya predecía, dado los límites, predecía una utilización.
+[03:50.000 --> 03:55.000]  Ir y fijarte con cuantos se cayeron, cuantos estaban utilizando, y listo.
+[03:55.000 --> 03:57.000]  Sí, y listo.
+[03:57.000 --> 03:59.000]  Los defaults más tempranos, claro.
+[03:59.000 --> 04:01.000]  Los defaults más tempranos para el EGD.
+[04:01.000 --> 04:03.000]  Se haya caído en junio.
+[04:03.000 --> 04:06.000]  Todavía no estaba el modelo con 12 meses de vida.
+[04:06.000 --> 04:09.000]  Pero bueno, ahí vemos qué va dando.
+[04:09.000 --> 04:11.000]  Y vemos qué mostramos.
+[04:11.000 --> 04:13.000]  Y después para el EGD no hay mucho que hacer.
+[04:13.000 --> 04:15.000]  Porque se implementó hace 6 meses.
+[04:15.000 --> 04:17.000]  Veremos de tirarlo más adelante.
+[04:17.000 --> 04:21.000]  Me hubiera encantado llegar con data para votar, ganar, etc.
+[04:21.000 --> 04:23.000]  Pero bueno, no se llegó.
+[04:23.000 --> 04:25.000]  Y está malo eso.
+[04:25.000 --> 04:27.000]  Está malo eso.
+[04:27.000 --> 04:31.000]  Porque había, así como, responsabilidades divididas.
+[04:31.000 --> 04:40.000]  E insisto, esto uno nunca sabe, en todos estos lugares donde hay exposición o no.
+[04:40.000 --> 04:45.000]  Nunca sabe cuál es uno más y cuál es uno a destacarse.
+[04:45.000 --> 04:53.000]  Cuál es uno donde realmente logra generar algún reconocimiento, alguna recordación o algo por el estilo.
+[04:54.000 --> 04:57.000]  Con lo cual, listo, ahí estamos.
+[04:58.000 --> 05:00.000]  Vamos, ahora.
+[05:01.000 --> 05:02.000]  El 3 testing, ¿sí?
+[05:02.000 --> 05:05.000]  El 3 testing hay una reunión el miércoles.
+[05:06.000 --> 05:09.000]  Espera, tengo una duda corta.
+[05:10.000 --> 05:11.000]  Mejor me pongo igual.
+[05:11.000 --> 05:12.000]  Mencionaste, perdón.
+[05:12.000 --> 05:16.000]  Pero Mayola, que tiene un hijo el viernes, era este miércoles.
+[05:21.000 --> 05:23.000]  Ah, dale, para presentar el EGD.
+[05:23.000 --> 05:24.000]  Sí, sí.
+[05:24.000 --> 05:25.000]  Ok.
+[06:05.000 --> 06:06.000]  Bien.
+[06:35.000 --> 06:36.000]  Bien.
+[07:05.000 --> 07:06.000]  Bien.
+[07:35.000 --> 07:36.000]  Bien.
+[08:05.000 --> 08:12.000]  Estos eran los clientes que habían defaulteado, que habían defaulteado en el 2024.
+[08:13.000 --> 08:14.000]  Y eran 4.
+[08:15.000 --> 08:17.000]  Los Grobo y Agrofina son grupos.
+[08:17.000 --> 08:19.000]  Tengo miedo de que sean iguales como nosotros.
+[08:19.000 --> 08:20.000]  ¿Son grupo?
+[08:20.000 --> 08:21.000]  Sí.
+[08:21.000 --> 08:22.000]  Ok.
+[08:23.000 --> 08:24.000]  Ok.
+[08:24.000 --> 08:25.000]  Ok.
+[08:25.000 --> 08:26.000]  Ok.
+[08:26.000 --> 08:27.000]  Ok.
+[08:27.000 --> 08:28.000]  Ok.
+[08:28.000 --> 08:29.000]  Ok.
+[08:29.000 --> 08:30.000]  Ok.
+[08:30.000 --> 08:31.000]  Ok.
+[08:31.000 --> 08:32.000]  Ok.
+[08:32.000 --> 08:33.000]  Ok.
+[08:33.000 --> 08:34.000]  Ok.
+[08:35.000 --> 08:37.000]  Tal vez se cuente con uno solo.
+[08:37.000 --> 08:40.000]  Pero bueno, y a eso hay que sumarle los Grobo y Agrofina.
+[08:40.000 --> 08:47.000]  Pero bueno, por las dudas, ahora también se le puede pedir, se le puede pedir a Mariela, ¿sí?
+[08:47.000 --> 08:51.000]  Che, mirá, este es un dato que pedimos, pero Sebas...
+[08:51.000 --> 08:53.000]  ¿Dónde está Sebas? ¿Dónde está?
+[08:54.000 --> 08:58.000]  Necesitamos que nos cuente el default de Carmen, entendemos que fueron 6.
+[08:58.000 --> 09:01.000]  Igual me parece que los Grobo y Agrofina ya estaban en default, ¿eh?
+[09:02.000 --> 09:05.000]  Sí, es lo que dije yo. Sí, sí, sí, bien era cierto.
+[09:07.000 --> 09:11.000]  ...se fue en el mercado, pero el Chivichic se lo consideraba que fuera este tiempo.
+[09:11.000 --> 09:19.000]  Lo que pasó ahora me parece es que le hicieron un update de la... de VCL.
+[09:20.000 --> 09:24.000]  Porque estábamos provisionando un porcentaje y creo que de Galicia dijeron que no,
+[09:24.000 --> 09:27.000]  que no provisionamos más, así que le pusieron más de eso.
+[09:28.000 --> 09:29.000]  Ah, ok, perfecto.
+[09:30.000 --> 09:32.000]  ¿Ustedes dijeron algo más? Yo voy a corregirme.
+[09:33.000 --> 09:34.000]  No, ya venían.
+[09:35.000 --> 09:36.000]  Ya estaban en default.
+[09:42.000 --> 09:49.000]  Con lo cual, no nos olvidemos de allí, entonces, eso, tenés para...
+[09:49.000 --> 09:52.000]  también para hacer ese rapidito porque es para el miércoles, ¿sí?
+[09:53.000 --> 09:54.000]  Y...
+[09:58.000 --> 10:04.000]  que no estoy viendo la invitación, tal vez estén esperando algo del CQL o nos estén dejando fuera,
+[10:05.000 --> 10:10.000]  pero bueno, yo voy a presionar un poquito ahí para decirles, che, mirá,
+[10:11.000 --> 10:14.000]  recuerda que nosotros tenemos que mandar un material y comentarlo, ¿sí?
+[10:15.000 --> 10:18.000]  Y la otra, para hacer, la otra es para hacer por el informe en foro,
+[10:20.000 --> 10:24.000]  es listar las fortalezas de los modelos, ¿sí?
+[10:25.000 --> 10:30.000]  Entonces para cada uno de los tres modelos listamos todos los test que pasaron, ¿sí?
+[10:31.000 --> 10:36.000]  Todos los test que pasaron, con un capo de certificación internacional,
+[10:36.000 --> 10:41.000]  revisión regulatoria internacional, sí, le ponemos,
+[10:42.000 --> 10:47.000]  y más con los controles de datos que se hayan aplicado, ¿sí?
+[10:47.000 --> 10:49.000]  Con los controles de datos que se hayan aplicado.
+[10:50.000 --> 10:55.000]  Y alguna aclaración, por ejemplo, para el modelo de CPD comentando que
+[10:56.000 --> 11:00.000]  está desarrollado sobre defaults no certificados, entonces,
+[11:00.000 --> 11:05.000]  para el modelo de AE y LGD se ponen reconciliación endógena, reconciliación exógena,
+[11:06.000 --> 11:08.000]  bullets, ¿sí? Bullets.
+[11:09.000 --> 11:14.000]  Que sea visualmente que uno vea tres listados, uno de un lado y el otro,
+[11:15.000 --> 11:19.000]  y que uno vea, arrancamos por AE, reconciliación endógena, reconciliación exógena,
+[11:20.000 --> 11:21.000]  certificación de frailness.
+[11:22.000 --> 11:24.000]  Igual están certificados, pero con un criterio anterior.
+[11:25.000 --> 11:26.000]  Exacto.
+[11:26.000 --> 11:27.000]  Exacto.
+[11:28.000 --> 11:31.000]  No está certificado, claro, porque nosotros teníamos un modelo que iba hasta 2007
+[11:32.000 --> 11:36.000]  y tuvimos que cortar la serie a 2011 porque era certificado.
+[11:37.000 --> 11:38.000]  Exacto.
+[11:38.000 --> 11:40.000]  El modelo actual está certificado, lo que pasa es que después salió Basilea 3.
+[11:41.000 --> 11:42.000]  Exacto.
+[11:43.000 --> 11:44.000]  Exacto.
+[11:45.000 --> 11:50.000]  Entonces ponemos, ahí se pone, certificado Basilea 2, sí.
+[11:51.000 --> 11:54.000]  Certificado Basilea 3, no, en este caso es CPD.
+[11:54.000 --> 11:56.000]  Claro, nosotros podemos hacer sí, ¿sí?
+[11:57.000 --> 11:59.000]  Cosa de UD vuelta, sí?
+[12:00.000 --> 12:01.000]  De APAULLA.
+[12:02.000 --> 12:06.000]  Decirle, mirá flaco, esto es un cañe, y obviamente cuando le agregamos que es un cañe,
+[12:07.000 --> 12:11.000]  vamos a ver que tenemos problemas de performance, entonces para CPD hay que aclararlo.
+[12:12.000 --> 12:13.000]  Decirle que, ¿cómo es?
+[12:14.000 --> 12:21.000]  Que, bueno, obviamente las certificaciones Basilea 2, que son refolds un poquito más altos,
+[12:21.000 --> 12:27.000]  y que abarcan un periodo que están desarrollados hasta el 2019 incluso,
+[12:28.000 --> 12:33.000]  incluyendo la data de testeo, o 2018, no, 2017.
+[12:34.000 --> 12:36.000]  Bueno, hay que poner ese dato, ¿sí?
+[12:37.000 --> 12:41.000]  Comentando que es un periodo de refolds histórico más alto del portafolio, ¿sí?
+[12:42.000 --> 12:48.000]  Que puede haber algún sesgo por eso, pero el problema es que la historia un poquito más reciente
+[12:48.000 --> 12:52.000]  está distorsionada por la salida de la pandemia, está distorsionada por el de risking,
+[12:53.000 --> 12:56.000]  porque se cayeron muchos clientes por la licuación, entonces la realidad es que no sabés
+[12:57.000 --> 13:01.000]  si esa realidad no se vuelve o no se va a volver o no a esa realidad.
+[13:02.000 --> 13:05.000]  Entonces eso es de cara al IMPARMEM Forum del miércoles.
+[13:06.000 --> 13:11.000]  Eso hay que hacerlo rapidito porque nos van a pedir material antes porque lo van a querer ver, ¿sí?
+[13:12.000 --> 13:17.000]  Cortito, ¿sí? Corto, pero mostrando lo que hay que mostrar.
+[13:18.000 --> 13:25.000]  Entonces, yo, a ver, si lo tenemos acá en la memoria, si no llega a ser,
+[13:26.000 --> 13:36.000]  archivo, inicio, abrir, copiar, status, claves, vamos, vamos, eso lo podemos buscar.
+[13:36.000 --> 13:38.000]  Entonces eso lo podemos buscar.
+[13:39.000 --> 13:44.000]  Estamos por ese lado. Por el lado de estrés test, se toman todos los atajes posibles,
+[13:45.000 --> 13:50.000]  todos los atajes posibles, ¿sí? Todos los atajes posibles para lo que sea desarrollo,
+[13:51.000 --> 13:57.000]  para lo que sea dato, para un ejercicio independiente que no tiene ningún sentido.
+[13:58.000 --> 14:00.000]  Hace seis meses esto desaparece.
+[14:01.000 --> 14:03.000]  Por ahí un concentrado tiene un punto y me dice ok.
+
+[28:50.680 --> 28:51.680]  vale, chau, chau
+[29:00.680 --> 29:04.680]  Subtítulos realizados por la comunidad de Amara.org

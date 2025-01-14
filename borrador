@@ -6,6 +6,8 @@ VARIOS IF:
     plt.xticks(df_filtered['Date'], df_filtered['Date'].dt.strftime('%m-%Y'), rotation=45)
 
 https://youtu.be/sJEQpBIUGs8
+https://youtu.be/sJEQpBIUGs8?si=NweDGAb4MDMlx8OT
+
 
 to do YA imp foroum 13-1
 [03:55.000 --> 03:58.000]  Ahora le voy a preguntar a Sebas dónde estaba, a ver si no...

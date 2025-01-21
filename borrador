@@ -5,3 +5,32 @@ VARIOS IF:
 =IFS(A2="CN",75%,A2="D1",10%,A2="D2",5%,A2="U1",10%)
     plt.xticks(df_filtered['Date'], df_filtered['Date'].dt.strftime('%m-%Y'), rotation=45)
 
+import pandas as pd
+
+# Datos de la tabla
+data = {
+    'Escenario/Fecha': [2023, 2024, 2025, 2026, 2027, 2028, 2029],
+    'PBI PROM VAR ANUAL (Base)': [-1.61, -2.33, 5.01, 3.25, 2.83, 2.83, None],
+    'PBI PROM VAR ANUAL (Optimista)': [-1.61, -2.3, 6.83, 4.91, 4.27, 4.27, None],
+    'PBI PROM VAR ANUAL (Pesimista)': [-1.61, -2.37, 3.13, 1.62, 1.41, 1.41, None],
+    'PBI PROM VAR ANUAL (Pesimista 2)': [-1.61, -2.37, 3.13, 1.62, 1.41, 1.41, None],
+    'Tipo de Cambio prom var anual (Base)': [126.38, 209.47, 18.52, 12.62, 10.02, 4.99, None],
+    'Tipo de Cambio prom var anual (Optimista)': [126.38, 209.47, 18.52, 11.8, 6.76, 2.83, None],
+    'Tipo de Cambio prom var anual (Pesimista)': [126.38, 209.47, 18.52, 13.61, 14.05, 7.64, None],
+    'Tipo de Cambio prom var anual (Pesimista 2)': [126.38, 209.47, 18.52, 13.61, 14.05, 7.64, None],
+    'Tasa corto plazo prom anual (Base)': [95.00, 53.63, 29.75, 25.91, 23.89, 22.17, None],
+    'Tasa corto plazo prom anual (Optimista)': [95.00, 53.63, 29.75, 25.91, 23.89, 22.17, None],
+    'Tasa corto plazo prom anual (Pesimista)': [95.00, 53.63, 29.75, 25.91, 23.89, 22.17, None],
+    'Tasa corto plazo prom anual (Pesimista 2)': [95.00, 53.63, 29.75, 25.91, 23.89, 22.17, None]
+}
+
+# Crear el DataFrame
+df = pd.DataFrame(data)
+
+# Renombrar columnas para mejor legibilidad
+df.columns = ['Año', 'PBI_Base', 'PBI_Optimista', 'PBI_Pesimista', 'PBI_Pesimista2',
+              'TC_Base', 'TC_Optimista', 'TC_Pesimista', 'TC_Pesimista2',
+              'Tasa_Base', 'Tasa_Optimista', 'Tasa_Pesimista', 'Tasa_Pesimista2']
+
+# Mostrar el DataFrame
+print(df)

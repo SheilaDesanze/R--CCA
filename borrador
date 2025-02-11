@@ -5,32 +5,189 @@ VARIOS IF:
 =IFS(A2="CN",75%,A2="D1",10%,A2="D2",5%,A2="U1",10%)
     plt.xticks(df_filtered['Date'], df_filtered['Date'].dt.strftime('%m-%Y'), rotation=45)
 
-import pandas as pd
+¿Cuándo habrá graduaciones?
+Bueno, primero, viste esto de que no sabía bien cómo meterlo,
+lo puse como un disclaimer, pero bueno, no sabía bien qué título ponerle,
+de que va a reemplazar el modelo anterior.
+Perfecto, después le cambiamos el título y le ponemos propósito general.
+Entonces, propósito, o sea, característica principal,
+el presente modelo busca reemplazar, ¿sí?
+Y fue, ¿cómo es?
+Aprovechando un desarrollo existente, fue diseñado para,
+con el objetivo de que otorgue más o menos las mismas recomendaciones
+de rating que el modelo previamente existente, ¿sí?
+Punto.
+Bueno, capaz lo apliqué un poco más.
+Sí, dale, dale, no importa.
+Se pone un primer título donde uno dice esto bien concreto,
+mirá, lo que tenés que saber es esto, ¿sí?
+Su modelo que busca reemplazar otro modelo apuntando para decir
+más o menos lo mismo que lo que está ahora, ¿sí?
+Sí.
+Y listo.
+Después aprovechamos todo lo que hayas escrito, que puedas sumar,
+y si hacés alguna aclaración diciendo, bueno, mirá,
+igual se hicieron algunas, pero eso después vemos, dale, chico.
+Ah, bueno, claro, acá puse esa parte donde aclaramos que antes
+era el de México y después reemplazamos por uno nuestro.
+Acá está el approach del modelo que más o menos estuve leyendo
+los días, el documento de Todo Lógico y lo de Eymar.
+Tratá de traducirlo en castellano.
+Eso te iba a preguntar.
+Mandale un traductor y después toquetearlo en castellano
+es una borde, se fue fácil.
+Sí, sí, sí.
+Es más, yo quería hacerlo en castellano, bueno, dije, mejor de una,
+luego en inglés, si es que hay que hacerlo en inglés.
+No, no sé, después le puse las ventajas que vi que mencionaba acá
+en el modelo en sí, el de por qué se reemplazaba,
+porque no salía bien si, bueno, le pongo el approach, el scope,
+y qué más ponía, bueno, una que otra ventaja,
+y por qué mejoraba, qué se mejoraba de este modelo
+respecto a lo que había antes, que estaba también acá
+en el Código de Desarrollo, lo resumí un poquito,
+y unos cuadritos que había acá con el dato.
+Dale.
+Y después acá estuvimos, bueno, esto también lo estuve viendo
+con Adri, reciclando lo que había hecho él allá hace un tiempo.
+Súper.
+Con todos estos test y las cosas.
+No sé, decir mucho más o...
+No, sí, sí.
+No, no, esto en concreto, entonces.
+Ahora, vamos a una partecita donde después de dar el concepto general,
+incluso diciendo que se espera que el modelo tenga una sobrevida
+de aproximadamente 6 meses transitoria, etcétera, etcétera,
+donde uno aclara y dice, mirá, ¿está claro?
+Que esto es para salir del paso.
+Sí, sí.
+Y respetar, sustituir una herramienta preexistente
+buscando que me diga más o menos lo mismo, ¿sí?
+Sí.
+Entonces una vez que se dice eso, ahí uno agarra y dice, bueno,
+consecuentemente se hicieron una prueba de tantos casos
+para verificar que la recomendación fuera igual
+y se cuenta que el modelo desarrollado corresponde a...
+Perdón, que el modelo desarrollado pasó los siguientes test hileristas,
+cosa de lucirse.
+Ta, ta, cabeza, selección, selección, ta, ta, ta, ta, ta, ta, ta, ta, ta, ta,
+y después ¿cómo?
+Limitaciones, comentás, todos los test que no pasó,
+con más todas las objeciones de EMR,
+cosa de que vean y digan, wow, este la tiene atada,
+este la ve todas, qué increíble,
+sabe que hay que hacer estos 10 millones de cosas
+que yo ni siquiera sabía que existían estos 10 millones de cosas
+e hizo 5 millones de cosas, ¿sí?
+Y después, sí, vamos a la partecita, ¿sí?, a la partecita donde, o previamente comentamos la ventaja,
+que es que tiene una derivación estadística, que el viejo no, que esto que el otro, etc, etc.
+Entonces, te cuento, esto es para salir del paso, no es un modelo que busca para decir PD,
+sino busca para decir, más o menos, que prediga igual que el que estaba, ¿sí?, para salir del paso.
+Es una mejora, porque tiene una base estadística, el otro no, etc, etc.
+Y te cuento que, anda, básicamente deriva un desarrollo sobre clientela XXX,
+con, anda, habiendo superado todos los siguientes test, tácate,
+y no habiéndose podido verificar las siguientes pruebas.
+Y listas todos, ¿sí?
+Sí.
+Y después haces un resumencito, ¿sí?
+Favorable con respecto a, no sé, tiene una recuadrada de tanto, algo muy con punch para decir,
+y listo, después vamos al detalle para que ustedes se lo busquen.
+Dale, dale, sí.
+Vamos al detalle para que ustedes se lo busquen.
+Si tenía dudas, si incluía todo lo negativo a llamarlo, incluyo.
+Sí, sí, sí, sí, sí, sí, sí, sí.
+Está, está, está, está, listo.
+Esto es Fertilize.
+Tiene pros y tiene cons.
+Sí.
+Yo te transparento todo para que veas que la tengo adaptada, ¿sí?
+Que sí, es un montón más que vos.
+Y si hay una partecita que la quieren dejar en inglés, de detalle más que nada, ¿sí?
+Que haya un mensaje muy claro para un N de 8 años, ¿sí?
+Sí.
+Que después sea, venga con un detalle para un N de 12, después 18, que quede último en material para el actuario,
+y el último en material para el actuario queda en inglés.
+Cosa de, por ahí, de lucirse, pero que todo lo primero sea en cartellano, ¿sí?
+Lo más claro.
+Sí, en cartellano, ¿sí?
+Entonces que los tipos digan, mirá, son muy claros para castellano, sé un montón, lo puedo comunicar,
+esto es lo que tenés que saber, fíjate, ¿verdad?
+Ahora, después, cuando vamos a los detalles, mirá, tomá, en inglés.
+Tomá, papi.
+Dale, dale, dale.
+Tomá.
+Dale.
+Gracias.
+A ver, en cinco minutos te veo.
+Dale, dale.
+¿Te respondió, Eugenio?
+¿Cómo?
+¿Te respondió la fecha?
+Sí, en invierno que viene.
+¿En invierno que viene?
+Guau.
+Pero que tentativamente, que no sé qué, que todavía no tiene gente.
+No sabe quién viene, que ayer va a venir...
+Pero este...
+Esto de PDTC no es para el Inperman, ¿no?
+¿O sí?
+No.
 
-# Datos de la tabla
-data = {
-    'Escenario/Fecha': [2023, 2024, 2025, 2026, 2027, 2028, 2029],
-    'PBI PROM VAR ANUAL (Base)': [-1.61, -2.33, 5.01, 3.25, 2.83, 2.83, None],
-    'PBI PROM VAR ANUAL (Optimista)': [-1.61, -2.3, 6.83, 4.91, 4.27, 4.27, None],
-    'PBI PROM VAR ANUAL (Pesimista)': [-1.61, -2.37, 3.13, 1.62, 1.41, 1.41, None],
-    'PBI PROM VAR ANUAL (Pesimista 2)': [-1.61, -2.37, 3.13, 1.62, 1.41, 1.41, None],
-    'Tipo de Cambio prom var anual (Base)': [126.38, 209.47, 18.52, 12.62, 10.02, 4.99, None],
-    'Tipo de Cambio prom var anual (Optimista)': [126.38, 209.47, 18.52, 11.8, 6.76, 2.83, None],
-    'Tipo de Cambio prom var anual (Pesimista)': [126.38, 209.47, 18.52, 13.61, 14.05, 7.64, None],
-    'Tipo de Cambio prom var anual (Pesimista 2)': [126.38, 209.47, 18.52, 13.61, 14.05, 7.64, None],
-    'Tasa corto plazo prom anual (Base)': [95.00, 53.63, 29.75, 25.91, 23.89, 22.17, None],
-    'Tasa corto plazo prom anual (Optimista)': [95.00, 53.63, 29.75, 25.91, 23.89, 22.17, None],
-    'Tasa corto plazo prom anual (Pesimista)': [95.00, 53.63, 29.75, 25.91, 23.89, 22.17, None],
-    'Tasa corto plazo prom anual (Pesimista 2)': [95.00, 53.63, 29.75, 25.91, 23.89, 22.17, None]
-}
 
-# Crear el DataFrame
-df = pd.DataFrame(data)
 
-# Renombrar columnas para mejor legibilidad
-df.columns = ['Año', 'PBI_Base', 'PBI_Optimista', 'PBI_Pesimista', 'PBI_Pesimista2',
-              'TC_Base', 'TC_Optimista', 'TC_Pesimista', 'TC_Pesimista2',
-              'Tasa_Base', 'Tasa_Optimista', 'Tasa_Pesimista', 'Tasa_Pesimista2']
 
-# Mostrar el DataFrame
-print(df)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
